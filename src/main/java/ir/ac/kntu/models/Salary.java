@@ -44,4 +44,10 @@ public class Salary {
     public int hashCode() {
         return Objects.hash(salaryType, amount);
     }
+
+    @Override
+    public String toString() {
+        return "salaryType=" + salaryType +
+                ", amount=" + amount;
+    }
 }
