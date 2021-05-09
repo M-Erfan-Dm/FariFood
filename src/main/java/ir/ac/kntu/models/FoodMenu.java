@@ -23,8 +23,8 @@ public class FoodMenu {
         foods.add(food);
     }
 
-    public void removeFood(Food food){
-        foods.remove(food);
+    public boolean removeFood(Food food){
+       return foods.remove(food);
     }
 
     @Override
