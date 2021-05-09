@@ -44,4 +44,10 @@ public class Customer {
     public int hashCode() {
         return Objects.hash(phoneNumber);
     }
+
+    @Override
+    public String toString() {
+        return "phoneNumber='" + phoneNumber + '\'' +
+                ", address='" + address + '\'';
+    }
 }

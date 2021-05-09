@@ -1,5 +1,6 @@
 package ir.ac.kntu.models;
 
+import java.text.DecimalFormat;
 import java.util.Objects;
 
 public class Time {
@@ -43,5 +44,11 @@ public class Time {
     @Override
     public int hashCode() {
         return Objects.hash(hour, minute);
+    }
+
+    @Override
+    public String toString() {
+        DecimalFormat decimalFormat = new DecimalFormat("00");
+        return decimalFormat.format(hour) + ":" + decimalFormat.format(minute);
     }
 }

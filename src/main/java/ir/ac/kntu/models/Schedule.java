@@ -57,4 +57,11 @@ public class Schedule {
     public int hashCode() {
         return Objects.hash(startTime, endTime, days);
     }
+
+    @Override
+    public String toString() {
+        return "startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", days=" + days;
+    }
 }
