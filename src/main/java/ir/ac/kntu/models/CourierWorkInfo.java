@@ -55,4 +55,11 @@ public class CourierWorkInfo {
     public int hashCode() {
         return Objects.hash(restaurant, schedule, salary);
     }
+
+    @Override
+    public String toString() {
+        return "restaurant=" + restaurant +
+                ", schedule=" + schedule +
+                ", salary=" + salary;
+    }
 }
