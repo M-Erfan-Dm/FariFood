@@ -1,9 +1,9 @@
 package ir.ac.kntu.utils;
 
-public class RestaurantIdGenerator {
+public class IdGenerator {
     private static int id = 101;
 
-    private RestaurantIdGenerator(){}
+    private IdGenerator(){}
 
 
     public static int generateNewId(){
