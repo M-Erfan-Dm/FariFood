@@ -1,18 +1,15 @@
 package ir.ac.kntu.models;
 
-import ir.ac.kntu.db.CouriersDB;
 
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 public class CouriersService {
-    private final CouriersDB couriersDB;
 
     private Set<Courier> couriers;
 
-    public CouriersService(CouriersDB couriersDB, Set<Courier> couriers) {
-        this.couriersDB = couriersDB;
+    public CouriersService(Set<Courier> couriers) {
         this.couriers = couriers;
     }
 
@@ -24,13 +21,8 @@ public class CouriersService {
         this.couriers = couriers;
     }
 
-    public boolean hireCourier(String courierPhoneNumber){
-        Courier courier = couriersDB.getCourierByPhoneNumber(courierPhoneNumber);
-        if (courier==null){
-            return false;
-        }
+    public void hireCourier(Courier courier){
         couriers.add(courier);
-        return true;
     }
 
     public boolean dismissCourier(String courierPhoneNumber){
