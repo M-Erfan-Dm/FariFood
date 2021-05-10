@@ -48,8 +48,8 @@ public class OrdersService {
         return null;
     }
 
-    public ArrayList<Order> getOrdersByCustomer(Customer customer){
-        ArrayList<Order> foundOrders = new ArrayList<>();
+    public Set<Order> getOrdersByCustomer(Customer customer){
+        Set<Order> foundOrders = new HashSet<>();
         for (Order order : orders){
             if (order.getCustomer().equals(customer)){
                 foundOrders.add(order);
@@ -58,8 +58,8 @@ public class OrdersService {
         return foundOrders;
     }
 
-    public ArrayList<Order> getOrdersByCourier(Courier courier){
-        ArrayList<Order> foundOrders = new ArrayList<>();
+    public Set<Order> getOrdersByCourier(Courier courier){
+        Set<Order> foundOrders = new HashSet<>();
         for (Order order : orders){
             if (order.getCourier().equals(courier)){
                 foundOrders.add(order);
@@ -68,8 +68,8 @@ public class OrdersService {
         return foundOrders;
     }
 
-    public ArrayList<Order> getOrdersByFood(Food food){
-        ArrayList<Order> foundOrders = new ArrayList<>();
+    public Set<Order> getOrdersByFood(Food food){
+        Set<Order> foundOrders = new HashSet<>();
         for (Order order : orders){
             if (order.getFood().equals(food)){
                 foundOrders.add(order);
@@ -78,8 +78,8 @@ public class OrdersService {
         return foundOrders;
     }
 
-    public ArrayList<Order> getOrdersByState(OrderState orderState){
-        ArrayList<Order> foundOrders = new ArrayList<>();
+    public Set<Order> getOrdersByState(OrderState orderState){
+        Set<Order> foundOrders = new HashSet<>();
         for (Order order : orders){
             if (order.getOrderState()==orderState){
                 foundOrders.add(order);
