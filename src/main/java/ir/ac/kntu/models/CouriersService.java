@@ -53,6 +53,10 @@ public class CouriersService {
         return null;
     }
 
+    public int getCountOfCouriers(){
+        return couriers.size();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
