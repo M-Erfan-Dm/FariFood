@@ -1,7 +1,10 @@
 package ir.ac.kntu.db;
 
 import ir.ac.kntu.models.Courier;
+import ir.ac.kntu.models.Order;
+import ir.ac.kntu.models.OrdersService;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -34,6 +37,15 @@ public class CouriersDB {
             if (courier.getPhoneNumber().equals(phoneNumber)){
                 return courier;
             }
+        }
+        return null;
+    }
+
+    public Set<Order> getOrdersOfCourier(String courierPhoneNumber,RestaurantsDB restaurantsDB){
+        Courier courier = getCourierByPhoneNumber(courierPhoneNumber);
+        if (courier!=null){
+            OrdersService ordersService = new OrdersService(restaurantsDB.getAllOrders());
+            return ordersService.getOrdersByCourier(courier);
         }
         return null;
     }
