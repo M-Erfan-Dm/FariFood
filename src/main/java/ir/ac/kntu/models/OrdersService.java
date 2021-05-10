@@ -2,6 +2,8 @@ package ir.ac.kntu.models;
 
 import ir.ac.kntu.utils.IdGenerator;
 
+import java.awt.image.AreaAveragingScaleFilter;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -46,31 +48,44 @@ public class OrdersService {
         return null;
     }
 
-    public Order getOrderByCustomer(Customer customer){
+    public ArrayList<Order> getOrdersByCustomer(Customer customer){
+        ArrayList<Order> foundOrders = new ArrayList<>();
         for (Order order : orders){
             if (order.getCustomer().equals(customer)){
-                return order;
+                foundOrders.add(order);
             }
         }
-        return null;
+        return foundOrders;
     }
 
-    public Order getOrderByCourier(Courier courier){
+    public ArrayList<Order> getOrdersByCourier(Courier courier){
+        ArrayList<Order> foundOrders = new ArrayList<>();
         for (Order order : orders){
             if (order.getCourier().equals(courier)){
-                return order;
+                foundOrders.add(order);
             }
         }
-        return null;
+        return foundOrders;
     }
 
-    public Order getOrderByFood(Food food){
+    public ArrayList<Order> getOrdersByFood(Food food){
+        ArrayList<Order> foundOrders = new ArrayList<>();
         for (Order order : orders){
             if (order.getFood().equals(food)){
-                return order;
+                foundOrders.add(order);
             }
         }
-        return null;
+        return foundOrders;
+    }
+
+    public ArrayList<Order> getOrdersByState(OrderState orderState){
+        ArrayList<Order> foundOrders = new ArrayList<>();
+        for (Order order : orders){
+            if (order.getOrderState()==orderState){
+                foundOrders.add(order);
+            }
+        }
+        return foundOrders;
     }
 
     @Override
