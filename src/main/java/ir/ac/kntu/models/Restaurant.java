@@ -20,11 +20,11 @@ public class Restaurant {
 
     private CouriersService couriers;
 
-    private OrdersService orders;
+    private OrdersService ordersService;
 
     public Restaurant(int id, String name, String address, FoodMenu foodMenu,
                       Schedule schedule, RestaurantPriceType priceType
-            , CouriersService couriers, OrdersService orders) {
+            , CouriersService couriers, OrdersService ordersService) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -32,19 +32,19 @@ public class Restaurant {
         this.schedule = schedule;
         this.priceType = priceType;
         this.couriers = couriers;
-        this.orders = orders;
+        this.ordersService = ordersService;
     }
 
     public Restaurant(String name, String address, FoodMenu foodMenu,
                       Schedule schedule, RestaurantPriceType priceType
-            , CouriersService couriers, OrdersService orders) {
+            , CouriersService couriers, OrdersService ordersService) {
         this.name = name;
         this.address = address;
         this.foodMenu = foodMenu;
         this.schedule = schedule;
         this.priceType = priceType;
         this.couriers = couriers;
-        this.orders = orders;
+        this.ordersService = ordersService;
     }
 
     public int getId() {
@@ -103,12 +103,12 @@ public class Restaurant {
         this.couriers = couriers;
     }
 
-    public OrdersService getOrders() {
-        return orders;
+    public OrdersService getOrdersService() {
+        return ordersService;
     }
 
-    public void setOrders(OrdersService orders) {
-        this.orders = orders;
+    public void setOrdersService(OrdersService ordersService) {
+        this.ordersService = ordersService;
     }
 
     @Override
