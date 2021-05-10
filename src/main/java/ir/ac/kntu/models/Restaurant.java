@@ -1,5 +1,6 @@
 package ir.ac.kntu.models;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Restaurant {
@@ -111,6 +112,16 @@ public class Restaurant {
         this.ordersService = ordersService;
     }
 
+    public double updateRating(){
+        ArrayList<Feedback> feedbacks = ordersService.getAllFeedbacks();
+        double sum = 5;
+        for (Feedback feedback : feedbacks){
+            sum+=feedback.getRating().getValue();
+        }
+        double avg = sum/(feedbacks.size()+1);
+        rating = avg;
+        return avg;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o){
