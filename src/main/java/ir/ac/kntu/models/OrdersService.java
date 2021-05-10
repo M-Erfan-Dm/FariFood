@@ -88,6 +88,17 @@ public class OrdersService {
         return foundOrders;
     }
 
+    public ArrayList<Feedback> getAllFeedbacks(){
+        ArrayList<Feedback> feedbacks = new ArrayList<>();
+        for (Order order : orders){
+            Feedback feedback = order.getFeedback();
+            if (feedback!=null){
+                feedbacks.add(feedback);
+            }
+        }
+        return feedbacks;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
