@@ -99,6 +99,17 @@ public class OrdersService {
         return feedbacks;
     }
 
+    public int getCountOfAllFeedbacks(){
+        int count = 0;
+        for (Order order : orders){
+            Feedback feedback = order.getFeedback();
+            if (feedback!=null){
+                count++;
+            }
+        }
+        return count;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
