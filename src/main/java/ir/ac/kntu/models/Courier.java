@@ -10,7 +10,7 @@ public class Courier {
 
     private VehicleType vehicleType;
 
-    private CourierWorkInfo[] courierWorksInfo = new CourierWorkInfo[2];
+    private CourierJobInfo[] jobsInfo = new CourierJobInfo[2];
 
     public Courier(String phoneNumber, String name, VehicleType vehicleType) {
         this.phoneNumber = phoneNumber;
@@ -42,8 +42,37 @@ public class Courier {
         this.vehicleType = vehicleType;
     }
 
-    public CourierWorkInfo[] getCourierWorksInfo() {
-        return courierWorksInfo.clone();
+    public CourierJobInfo[] getJobsInfo() {
+        return jobsInfo.clone();
+    }
+
+    public CourierJobInfo getJobInfoByRestaurantId(int id){
+        for (CourierJobInfo courierJobInfo : jobsInfo){
+            if (courierJobInfo.getRestaurant().getId()==id){
+                return courierJobInfo;
+            }
+        }
+        return null;
+    }
+
+
+    public boolean addJob(CourierJobInfo newJob){
+        for (int i = 0 ;i<jobsInfo.length;i++){
+            if (jobsInfo[i]==null){
+                jobsInfo[i] = newJob;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void quitJob(int restaurantId){
+        for (int i = 0;i<jobsInfo.length;i++){
+            CourierJobInfo courierJobInfo = jobsInfo[i];
+            if (courierJobInfo.getRestaurant().getId()==restaurantId){
+                jobsInfo[i] = null;
+            }
+        }
     }
 
     @Override
@@ -68,6 +97,6 @@ public class Courier {
         return "phoneNumber='" + phoneNumber + '\'' +
                 ", name='" + name + '\'' +
                 ", vehicleType=" + vehicleType +
-                ", courierWorksInfo=" + Arrays.toString(courierWorksInfo);
+                ", courierWorksInfo=" + Arrays.toString(jobsInfo);
     }
 }
