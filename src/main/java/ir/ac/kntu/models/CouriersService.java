@@ -21,16 +21,21 @@ public class CouriersService {
         this.couriers = couriers;
     }
 
-    public void hireCourier(Courier courier){
-        couriers.add(courier);
+    public boolean hireCourier(Courier courier,CourierJobInfo courierJobInfo){
+        boolean isCourierHired = courier.addJob(courierJobInfo);
+        if (isCourierHired) {
+            couriers.add(courier);
+            return true;
+        }
+        return false;
     }
 
-    public boolean dismissCourier(String courierPhoneNumber){
-        for (Courier courier : couriers){
-            if (courier.getPhoneNumber().equals(courierPhoneNumber)){
-                couriers.remove(courier);
-                return true;
-            }
+    public boolean dismissCourier(String courierPhoneNumber, int restaurantId){
+        Courier courier = getCourierByPhoneNumber(courierPhoneNumber);
+        if (courier!=null){
+            courier.quitJob(restaurantId);
+            couriers.remove(courier);
+            return true;
         }
         return false;
     }

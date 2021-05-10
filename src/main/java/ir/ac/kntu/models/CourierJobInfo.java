@@ -2,14 +2,14 @@ package ir.ac.kntu.models;
 
 import java.util.Objects;
 
-public class CourierWorkInfo {
+public class CourierJobInfo {
     private Restaurant restaurant;
 
     private Schedule schedule;
 
     private Salary salary;
 
-    public CourierWorkInfo(Restaurant restaurant, Schedule schedule, Salary salary) {
+    public CourierJobInfo(Restaurant restaurant, Schedule schedule, Salary salary) {
         this.restaurant = restaurant;
         this.schedule = schedule;
         this.salary = salary;
@@ -47,7 +47,7 @@ public class CourierWorkInfo {
         if (o == null || getClass() != o.getClass()){
             return false;
         }
-        CourierWorkInfo that = (CourierWorkInfo) o;
+        CourierJobInfo that = (CourierJobInfo) o;
         return restaurant.equals(that.restaurant) && schedule.equals(that.schedule) && salary.equals(that.salary);
     }
 
