@@ -1,6 +1,7 @@
 package ir.ac.kntu.models;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Objects;
 
 public class Restaurant {
@@ -122,6 +123,15 @@ public class Restaurant {
         rating = avg;
         return avg;
     }
+
+    public boolean isActive(){
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+        Day day = Day.values()[calendar.get(Calendar.DAY_OF_WEEK)-1];
+        return schedule.getDays().contains(day) && schedule.isTimeInInterval(new Time(hour, minute));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
