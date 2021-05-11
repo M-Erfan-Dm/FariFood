@@ -74,6 +74,37 @@ public class RestaurantsDB {
         return feedbacks;
     }
 
+    public List<Restaurant> getBestRestaurants(int count){
+        List<Restaurant> orderedRestaurants = getOrderedListOfRestaurantsByRating(false);
+        if (orderedRestaurants.size()>count){
+            orderedRestaurants =  orderedRestaurants.subList(0,count);
+        }
+        return orderedRestaurants;
+    }
+
+    public List<Food> getBestFoodsOfEachRestaurant(int bestFoodsCountOfEachRestaurant){
+        List<Food> bestFoods = new ArrayList<>();
+        for (Restaurant restaurant : restaurants){
+            bestFoods.addAll(restaurant.getOrdersService().getBestFoods(bestFoodsCountOfEachRestaurant));
+        }
+        return bestFoods;
+    }
+
+    public List<Restaurant> getBestRestaurantsByFood(String foodName , int count){
+        List<Restaurant> orderedList = new ArrayList<>(restaurants);
+        orderedList.sort(new Comparator<Restaurant>() {
+            @Override
+            public int compare(Restaurant o1, Restaurant o2) {
+                return compareNumbers(o2.getOrdersService().getRatingAverageOfFood(foodName),
+                        o1.getOrdersService().getRatingAverageOfFood(foodName));
+            }
+        });
+        if (orderedList.size()>count){
+            orderedList = orderedList.subList(0,count);
+        }
+        return orderedList;
+    }
+
     public List<Restaurant> getOrderedListOfRestaurantsByRating(boolean isAscending) {
         List<Restaurant> orderedList = new ArrayList<>(restaurants);
         orderedList.sort(new Comparator<Restaurant>() {
