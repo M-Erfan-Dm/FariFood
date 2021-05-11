@@ -1,5 +1,7 @@
 package ir.ac.kntu.db;
 
+import ir.ac.kntu.models.Feedback;
+import ir.ac.kntu.models.Food;
 import ir.ac.kntu.models.Order;
 import ir.ac.kntu.models.Restaurant;
 import ir.ac.kntu.utils.IdGenerator;
@@ -62,6 +64,14 @@ public class RestaurantsDB {
             orders.addAll(restaurant.getOrdersService().getOrders());
         }
         return orders;
+    }
+
+    public List<Feedback> getAllFeedbacksOfFood(Food food){
+        List<Feedback> feedbacks = new ArrayList<>();
+        for (Restaurant restaurant : restaurants){
+            feedbacks.addAll(restaurant.getOrdersService().getFeedbacksOfFood(food));
+        }
+        return feedbacks;
     }
 
     public List<Restaurant> getOrderedListOfRestaurantsByRating(boolean isAscending) {
