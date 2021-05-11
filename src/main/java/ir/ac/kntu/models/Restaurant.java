@@ -152,6 +152,10 @@ public class Restaurant {
         return false;
     }
 
+    public double getAlphaScore(){
+        return 2 * rating + ordersService.getCount();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
