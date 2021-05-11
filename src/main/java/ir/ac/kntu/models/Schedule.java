@@ -1,5 +1,6 @@
 package ir.ac.kntu.models;
 
+import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -39,6 +40,24 @@ public class Schedule {
 
     public void setDays(Set<Day> days) {
         this.days = new HashSet<>(days);
+    }
+
+    public boolean isTimeInInterval(Time time){
+        Calendar now = Calendar.getInstance();
+        int year = now.get(Calendar.YEAR);
+        int month = now.get(Calendar.MONTH);
+        int day = now.get(Calendar.DAY_OF_MONTH);
+
+        Calendar mainCalendar = Calendar.getInstance();
+        mainCalendar.set(year,month,day,time.getHour(),time.getMinute());
+
+        Calendar startTimeCalendar = Calendar.getInstance();
+        startTimeCalendar.set(year,month,day,startTime.getHour(),startTime.getMinute());
+
+        Calendar endTimeCalendar = Calendar.getInstance();
+        endTimeCalendar.set(year,month,day,endTime.getHour(),endTime.getMinute());
+
+        return endTimeCalendar.after(mainCalendar) && startTimeCalendar.before(mainCalendar);
     }
 
     @Override
