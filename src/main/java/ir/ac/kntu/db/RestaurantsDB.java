@@ -37,6 +37,16 @@ public class RestaurantsDB {
         }
     }
 
+    public Set<Restaurant> getActiveRestaurants(){
+        Set<Restaurant> activeRestaurants = new HashSet<>();
+        for (Restaurant restaurant : restaurants){
+            if (restaurant.isActive()){
+                activeRestaurants.add(restaurant);
+            }
+        }
+        return activeRestaurants;
+    }
+
     public Restaurant getRestaurantById(int restaurantId) {
         for (Restaurant restaurant : restaurants) {
             if (restaurant.getId() == restaurantId) {
