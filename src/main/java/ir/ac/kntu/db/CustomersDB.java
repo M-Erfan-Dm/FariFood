@@ -1,13 +1,8 @@
 package ir.ac.kntu.db;
 
-import ir.ac.kntu.models.Courier;
-import ir.ac.kntu.models.Customer;
-import ir.ac.kntu.models.Order;
-import ir.ac.kntu.models.OrdersService;
+import ir.ac.kntu.models.*;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class CustomersDB {
     private Set<Customer> customers;
@@ -48,6 +43,18 @@ public class CustomersDB {
             return ordersService.getOrdersByCustomer(customer);
         }
         return null;
+    }
+
+    public List<Feedback> getFeedbacksOfCustomer(String customerPhoneNumber, RestaurantsDB restaurantsDB){
+        List<Feedback> feedbacks = new ArrayList<>();
+        Set<Order> orders = getOrdersOfCustomer(customerPhoneNumber,restaurantsDB);
+        for (Order order : orders){
+            Feedback feedback = order.getFeedback();
+            if (feedback!=null){
+                feedbacks.add(feedback);
+            }
+        }
+        return feedbacks;
     }
 
     @Override
