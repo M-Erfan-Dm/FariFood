@@ -24,7 +24,7 @@ public class RestaurantsDB {
     public void addRestaurant(Restaurant restaurant) {
         Restaurant newRestaurant = new Restaurant(IdGenerator.generateNewId(), restaurant.getName(),
                 restaurant.getAddress(), restaurant.getFoodMenu(),
-                restaurant.getSchedule(), restaurant.getPriceType(), restaurant.getCouriers(), restaurant.getOrdersService());
+                restaurant.getSchedule(), restaurant.getPriceType(), restaurant.getHiredCouriers(), restaurant.getOrdersService());
 
         restaurants.add(newRestaurant);
     }

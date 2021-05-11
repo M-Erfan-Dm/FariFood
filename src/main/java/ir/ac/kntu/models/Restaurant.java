@@ -1,5 +1,7 @@
 package ir.ac.kntu.models;
 
+import ir.ac.kntu.db.CouriersDB;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Objects;
@@ -20,32 +22,32 @@ public class Restaurant {
 
     private double rating = 5;
 
-    private CouriersService couriers;
+    private CouriersDB hiredCouriers;
 
     private OrdersService ordersService;
 
     public Restaurant(int id, String name, String address, FoodMenu foodMenu,
                       Schedule schedule, RestaurantPriceType priceType
-            , CouriersService couriers, OrdersService ordersService) {
+            , CouriersDB hiredCouriers, OrdersService ordersService) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.foodMenu = foodMenu;
         this.schedule = schedule;
         this.priceType = priceType;
-        this.couriers = couriers;
+        this.hiredCouriers = hiredCouriers;
         this.ordersService = ordersService;
     }
 
     public Restaurant(String name, String address, FoodMenu foodMenu,
                       Schedule schedule, RestaurantPriceType priceType
-            , CouriersService couriers, OrdersService ordersService) {
+            , CouriersDB hiredCouriers, OrdersService ordersService) {
         this.name = name;
         this.address = address;
         this.foodMenu = foodMenu;
         this.schedule = schedule;
         this.priceType = priceType;
-        this.couriers = couriers;
+        this.hiredCouriers = hiredCouriers;
         this.ordersService = ordersService;
     }
 
@@ -97,12 +99,12 @@ public class Restaurant {
         this.priceType = priceType;
     }
 
-    public CouriersService getCouriers() {
-        return couriers;
+    public CouriersDB getHiredCouriers() {
+        return hiredCouriers;
     }
 
-    public void setCouriers(CouriersService couriers) {
-        this.couriers = couriers;
+    public void setHiredCouriers(CouriersDB hiredCouriers) {
+        this.hiredCouriers = hiredCouriers;
     }
 
     public OrdersService getOrdersService() {
@@ -130,6 +132,24 @@ public class Restaurant {
         int minute = calendar.get(Calendar.MINUTE);
         Day day = Day.values()[calendar.get(Calendar.DAY_OF_WEEK)-1];
         return schedule.getDays().contains(day) && schedule.isTimeInInterval(new Time(hour, minute));
+    }
+
+    public boolean hireCourier(Courier courier,CourierJobInfo courierJobInfo){
+        boolean isCourierHired = courier.addJob(courierJobInfo);
+        if (isCourierHired) {
+            hiredCouriers.addCourier(courier);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean dismissCourier(String courierPhoneNumber, int restaurantId){
+        Courier courier = hiredCouriers.getCourierByPhoneNumber(courierPhoneNumber);
+        if (courier!=null){
+            courier.quitJob(restaurantId);
+            return hiredCouriers.removeCourier(courier);
+        }
+        return false;
     }
 
     @Override
