@@ -134,6 +134,21 @@ public class OrdersService {
         return bestFoods;
     }
 
+    public double getRatingAverageOfFood(String foodName){
+        double sum = 0;
+        int count = 0;
+        for (Order order : orders){
+            if (order.getFood().getName().equals(foodName) && order.getFeedback()!=null){
+                sum += order.getFeedback().getRating().getValue();
+                count++;
+            }
+        }
+        if (count == 0){
+            return 0;
+        }
+        return sum/count;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
