@@ -116,6 +116,24 @@ public class OrdersService {
         return feedbacks;
     }
 
+    public List<Food> getBestFoods(int count){
+        List<Order> allOrders = new ArrayList<>(getOrdersByState(OrderState.DELIVERED));
+        allOrders.sort(new Comparator<Order>() {
+            @Override
+            public int compare(Order o1, Order o2) {
+                return o2.getFeedback().getRating().getValue() - o1.getFeedback().getRating().getValue();
+            }
+        });
+        if (allOrders.size()>count){
+            allOrders =  allOrders.subList(0,count);
+        }
+        List<Food> bestFoods = new ArrayList<>();
+        for (Order order : allOrders){
+            bestFoods.add(order.getFood());
+        }
+        return bestFoods;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
