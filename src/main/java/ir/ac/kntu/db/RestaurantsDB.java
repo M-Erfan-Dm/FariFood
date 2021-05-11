@@ -1,9 +1,6 @@
 package ir.ac.kntu.db;
 
-import ir.ac.kntu.models.Feedback;
-import ir.ac.kntu.models.Food;
-import ir.ac.kntu.models.Order;
-import ir.ac.kntu.models.Restaurant;
+import ir.ac.kntu.models.*;
 import ir.ac.kntu.utils.IdGenerator;
 
 import java.util.*;
@@ -37,6 +34,26 @@ public class RestaurantsDB {
                 restaurants.remove(restaurant);
             }
         }
+    }
+
+    public Set<Restaurant> getRestaurantsByName(String name){
+        Set<Restaurant> foundRestaurants = new HashSet<>();
+        for (Restaurant restaurant : restaurants){
+            if (restaurant.getName().equals(name)){
+                foundRestaurants.add(restaurant);
+            }
+        }
+        return foundRestaurants;
+    }
+
+    public Set<Restaurant> getRestaurantsByPriceType(RestaurantPriceType priceType){
+        Set<Restaurant> foundRestaurants = new HashSet<>();
+        for (Restaurant restaurant : restaurants){
+            if (restaurant.getPriceType()==priceType){
+                foundRestaurants.add(restaurant);
+            }
+        }
+        return foundRestaurants;
     }
 
     public Set<Restaurant> getActiveRestaurants(){
