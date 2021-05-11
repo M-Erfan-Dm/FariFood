@@ -149,6 +149,10 @@ public class OrdersService {
         return sum/count;
     }
 
+    public int getCount(){
+        return orders.size();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
