@@ -154,6 +154,17 @@ public class RestaurantsDB {
         return orderedList;
     }
 
+    public List<Restaurant> getWeakerRestaurants(){
+        List<Restaurant> orderedRestaurants = new ArrayList<>(restaurants);
+        orderedRestaurants.sort(new Comparator<Restaurant>() {
+            @Override
+            public int compare(Restaurant o1, Restaurant o2) {
+                return compareNumbers(o1.getAlphaScore(),o2.getAlphaScore());
+            }
+        });
+        return orderedRestaurants;
+    }
+
     private int compareNumbers(double one, double two) {
         if (one < two) {
             return -1;
