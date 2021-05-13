@@ -1,4 +1,4 @@
-package ir.ac.kntu.ui;
+package ir.ac.kntu.menu;
 
 import ir.ac.kntu.db.AdminsDB;
 import ir.ac.kntu.models.Admin;
@@ -20,20 +20,23 @@ public class AdminMenu {
         System.out.println("Welcome to Fari Food");
         AdminOption adminOption = printMenuOptions();
         while (adminOption != AdminOption.EXIT) {
-            switch (adminOption) {
-                case LOGIN:
-                    login();
-                    break;
-                case REGISTER:
-                    register();
-                    break;
+            if (adminOption!=null) {
+
+                switch (adminOption) {
+                    case LOGIN:
+                        login();
+                        break;
+                    case REGISTER:
+                        register();
+                        break;
+                }
             }
             adminOption = printMenuOptions();
         }
         System.exit(0);
     }
 
-    public AdminOption getOption() {
+    private AdminOption getOption() {
         int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
         AdminOption[] adminOptions = AdminOption.values();
         if (choice >= 0 && choice < adminOptions.length) {
@@ -42,7 +45,7 @@ public class AdminMenu {
         return null;
     }
 
-    public AdminOption printMenuOptions() {
+    private AdminOption printMenuOptions() {
         System.out.println("\n1.Login\n" +
                 "2.Register\n" +
                 "3.Exit\n");
