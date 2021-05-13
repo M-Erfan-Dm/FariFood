@@ -4,10 +4,7 @@ import ir.ac.kntu.models.Courier;
 import ir.ac.kntu.models.Order;
 import ir.ac.kntu.models.OrdersService;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class CouriersDB {
     private Set<Courier> couriers;
@@ -29,39 +26,47 @@ public class CouriersDB {
         couriers.add(courier);
     }
 
-    public boolean removeCourier(Courier courier){
+    public boolean removeCourier(Courier courier) {
         return couriers.remove(courier);
     }
 
 
-    public Courier getCourierByPhoneNumber(String phoneNumber){
-        for (Courier courier : couriers){
-            if (courier.getPhoneNumber().equals(phoneNumber)){
+    public Courier getCourierByPhoneNumber(String phoneNumber) {
+        for (Courier courier : couriers) {
+            if (courier.getPhoneNumber().equals(phoneNumber)) {
                 return courier;
             }
         }
         return null;
     }
 
-    public Set<Order> getOrdersOfCourier(String courierPhoneNumber,RestaurantsDB restaurantsDB){
+    public Set<Order> getOrdersOfCourier(String courierPhoneNumber, RestaurantsDB restaurantsDB) {
         Courier courier = getCourierByPhoneNumber(courierPhoneNumber);
-        if (courier!=null){
+        if (courier != null) {
             OrdersService ordersService = new OrdersService(restaurantsDB.getAllOrders());
             return ordersService.getOrdersByCourier(courier);
         }
         return null;
     }
 
-    public boolean containsCourier(Courier courier){
+    public boolean containsCourier(Courier courier) {
         return couriers.contains(courier);
+    }
+
+    public void printAllCouriers() {
+        List<Courier> courierList = new ArrayList<>(couriers);
+        for (int i = 0; i < courierList.size(); i++) {
+            Courier courier = courierList.get(i);
+            System.out.println("No." + (i + 1) + " " + courier);
+        }
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         CouriersDB that = (CouriersDB) o;
