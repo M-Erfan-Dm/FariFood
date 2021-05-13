@@ -1,11 +1,13 @@
 package ir.ac.kntu.menu.couriers;
 
 import ir.ac.kntu.db.CouriersDB;
+import ir.ac.kntu.db.RestaurantsDB;
 import ir.ac.kntu.menu.Menu;
-import ir.ac.kntu.models.Courier;
-import ir.ac.kntu.models.CourierJobInfo;
-import ir.ac.kntu.models.VehicleType;
+import ir.ac.kntu.models.*;
 import ir.ac.kntu.utils.ScannerWrapper;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class CouriersMenu {
 
@@ -13,9 +15,12 @@ public class CouriersMenu {
 
     private final CouriersDB couriersDB;
 
-    public CouriersMenu(Menu menu, CouriersDB couriersDB) {
+    private final RestaurantsDB restaurantsDB;
+
+    public CouriersMenu(Menu menu, CouriersDB couriersDB, RestaurantsDB restaurantsDB) {
         this.menu = menu;
         this.couriersDB = couriersDB;
+        this.restaurantsDB = restaurantsDB;
     }
 
     public void show() {
@@ -100,7 +105,26 @@ public class CouriersMenu {
             System.out.println("Courier not found");
             return;
         }
-        System.out.println("Found courier : " + courier);
+        System.out.println("1.General info\n" +
+                "2.Feedbacks of Courier\n" +
+                "3.Orders history\n");
+        System.out.println("Enter your choice :");
+        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
+        switch (choice) {
+            case 0:
+                showGeneralInfoOfCourier(courier);
+                break;
+            case 1:
+                showFeedbacksOfCourier(courier);
+                break;
+            case 2:
+                showOrdersHistoryOfCourier(courier);
+                break;
+            default:
+                System.out.println("Wrong choice!");
+                break;
+        }
+
     }
 
 
@@ -137,5 +161,31 @@ public class CouriersMenu {
         }
         VehicleType vehicleType = VehicleType.values()[choice];
         return new Courier(phoneNumber, name, vehicleType);
+    }
+
+    private void showGeneralInfoOfCourier(Courier courier) {
+        System.out.println("General info of courier : " + courier);
+    }
+
+    private void showFeedbacksOfCourier(Courier courier) {
+        List<Order> orders = new ArrayList<>(couriersDB.getOrdersOfCourier(courier.getPhoneNumber(), restaurantsDB));
+        int count = 0;
+        for (int i = 0; i < orders.size(); i++) {
+            Feedback feedback = orders.get(i).getFeedback();
+            if (feedback != null) {
+                count++;
+                System.out.println("No." + (i + 1) + " " + feedback);
+            }
+        }
+        System.out.println(count + " feedbacks found");
+    }
+
+    private void showOrdersHistoryOfCourier(Courier courier) {
+        List<Order> orders = new ArrayList<>(couriersDB.getOrdersOfCourier(courier.getPhoneNumber(), restaurantsDB));
+        for (int i = 0; i < orders.size(); i++) {
+            Order order = orders.get(i);
+            System.out.println("No." + (i + 1) + " " + order);
+        }
+        System.out.println(orders.size() + " orders found");
     }
 }
