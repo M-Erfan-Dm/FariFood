@@ -143,10 +143,10 @@ public class Restaurant {
         return false;
     }
 
-    public boolean dismissCourier(String courierPhoneNumber, int restaurantId){
+    public boolean dismissCourier(String courierPhoneNumber){
         Courier courier = hiredCouriers.getCourierByPhoneNumber(courierPhoneNumber);
         if (courier!=null){
-            courier.quitJob(restaurantId);
+            courier.quitJob(id);
             return hiredCouriers.removeCourier(courier);
         }
         return false;

@@ -59,6 +59,7 @@ public class CouriersDB {
             Courier courier = courierList.get(i);
             System.out.println("No." + (i + 1) + " " + courier);
         }
+        System.out.println(courierList.size() + " couriers found");
     }
 
     @Override
