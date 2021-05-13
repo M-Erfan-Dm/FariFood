@@ -13,4 +13,14 @@ public class Menu {
         System.out.println("Enter your password : ");
         return ScannerWrapper.nextLine();
     }
+
+    public String getPhoneNumber(){
+        System.out.println("Enter your phone number : ");
+        return ScannerWrapper.nextLine();
+    }
+
+    public String getName(){
+        System.out.println("Enter name : ");
+        return ScannerWrapper.nextLine();
+    }
 }
