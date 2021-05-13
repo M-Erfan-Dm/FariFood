@@ -1,5 +1,6 @@
-package ir.ac.kntu.menu;
+package ir.ac.kntu.menu.main;
 
+import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.utils.ScannerWrapper;
 
 public class MainMenu {
@@ -11,7 +12,6 @@ public class MainMenu {
     }
 
     public void show() {
-        System.out.println("----------Main Menu----------");
         MainMenuOption mainMenuOption = printMenuOptions();
         while (mainMenuOption != MainMenuOption.BACK) {
             if (mainMenuOption != null) {
@@ -43,6 +43,7 @@ public class MainMenu {
     }
 
     private MainMenuOption printMenuOptions() {
+        System.out.println("----------Main Menu----------");
         System.out.println("\n1.Orders\n" +
                 "2.Couriers\n" +
                 "3.Restaurants\n" +

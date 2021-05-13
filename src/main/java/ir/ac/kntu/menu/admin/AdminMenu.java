@@ -1,6 +1,8 @@
-package ir.ac.kntu.menu;
+package ir.ac.kntu.menu.admin;
 
 import ir.ac.kntu.db.AdminsDB;
+import ir.ac.kntu.menu.main.MainMenu;
+import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.models.Admin;
 import ir.ac.kntu.utils.ScannerWrapper;
 
@@ -46,6 +48,7 @@ public class AdminMenu {
     }
 
     private AdminOption printMenuOptions() {
+        System.out.println("----------Admin Menu----------");
         System.out.println("\n1.Login\n" +
                 "2.Register\n" +
                 "3.Exit\n");

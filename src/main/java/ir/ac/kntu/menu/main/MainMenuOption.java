@@ -1,4 +1,4 @@
-package ir.ac.kntu.menu;
+package ir.ac.kntu.menu.main;
 
 public enum MainMenuOption {
     ORDERS,

@@ -1,4 +1,4 @@
-package ir.ac.kntu.ui;
+package ir.ac.kntu.menu;
 
 import ir.ac.kntu.utils.ScannerWrapper;
 
