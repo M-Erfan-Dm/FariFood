@@ -24,13 +24,15 @@ public class CouriersDB {
         this.couriers = couriers;
     }
 
-    public void addCourier(Courier courier){
+    public void addCourier(Courier courier) {
+        removeCourier(courier);
         couriers.add(courier);
     }
 
     public boolean removeCourier(Courier courier){
         return couriers.remove(courier);
     }
+
 
     public Courier getCourierByPhoneNumber(String phoneNumber){
         for (Courier courier : couriers){
@@ -48,6 +50,10 @@ public class CouriersDB {
             return ordersService.getOrdersByCourier(courier);
         }
         return null;
+    }
+
+    public boolean containsCourier(Courier courier){
+        return couriers.contains(courier);
     }
 
     @Override
