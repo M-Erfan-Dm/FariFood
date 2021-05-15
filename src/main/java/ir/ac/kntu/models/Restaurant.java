@@ -175,11 +175,19 @@ public class Restaurant {
 
     @Override
     public String toString() {
+        String isActive;
+        if (isActive()){
+            isActive = "Yes";
+        }else {
+            isActive = "No";
+        }
         return "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", schedule=" + schedule +
                 ", priceType=" + priceType +
-                ", rating=" + rating ;
+                ", rating=" + rating+
+                ", alpha score="+getAlphaScore()+
+                ", is active="+isActive;
     }
 }

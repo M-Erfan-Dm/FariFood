@@ -3,18 +3,18 @@ package ir.ac.kntu.models;
 import java.util.Objects;
 
 public class Settings {
-    private RestaurantsListingStrategy restaurantsListingStrategy;
+    private RestaurantsFilteringStrategy restaurantsFilteringStrategy;
 
-    public Settings(RestaurantsListingStrategy restaurantsListingStrategy) {
-        this.restaurantsListingStrategy = restaurantsListingStrategy;
+    public Settings(RestaurantsFilteringStrategy restaurantsFilteringStrategy) {
+        this.restaurantsFilteringStrategy = restaurantsFilteringStrategy;
     }
 
-    public RestaurantsListingStrategy getRestaurantsListingStrategy() {
-        return restaurantsListingStrategy;
+    public RestaurantsFilteringStrategy getRestaurantsFilteringStrategy() {
+        return restaurantsFilteringStrategy;
     }
 
-    public void setRestaurantsListingStrategy(RestaurantsListingStrategy restaurantsListingStrategy) {
-        this.restaurantsListingStrategy = restaurantsListingStrategy;
+    public void setRestaurantsFilteringStrategy(RestaurantsFilteringStrategy restaurantsFilteringStrategy) {
+        this.restaurantsFilteringStrategy = restaurantsFilteringStrategy;
     }
 
     @Override
@@ -26,16 +26,16 @@ public class Settings {
             return false;
         }
         Settings settings = (Settings) o;
-        return restaurantsListingStrategy == settings.restaurantsListingStrategy;
+        return restaurantsFilteringStrategy == settings.restaurantsFilteringStrategy;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(restaurantsListingStrategy);
+        return Objects.hash(restaurantsFilteringStrategy);
     }
 
     @Override
     public String toString() {
-        return "restaurantsListingStrategy=" + restaurantsListingStrategy;
+        return "restaurantsListingStrategy=" + restaurantsFilteringStrategy;
     }
 }

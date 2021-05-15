@@ -1,6 +1,6 @@
 package ir.ac.kntu.models;
 
-public enum RestaurantsListingStrategy {
+public enum RestaurantsFilteringStrategy {
     BY_RATING_ASCENDING,
     BY_RATING_DESCENDING,
     BY_FEEDBACKS_COUNT_ASCENDING,

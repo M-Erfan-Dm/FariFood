@@ -4,6 +4,8 @@ import ir.ac.kntu.db.CustomersDB;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.menu.courier.CouriersMenu;
 import ir.ac.kntu.menu.customer.CustomersMenu;
+import ir.ac.kntu.menu.settings.SettingsMenu;
+import ir.ac.kntu.models.Settings;
 import ir.ac.kntu.utils.ScannerWrapper;
 
 public class MainMenu extends Menu {
@@ -13,9 +15,12 @@ public class MainMenu extends Menu {
 
     private final CustomersMenu customersMenu;
 
-    public MainMenu(CouriersMenu couriersMenu,CustomersMenu customersMenu) {
+    private final SettingsMenu settingsMenu;
+
+    public MainMenu(CouriersMenu couriersMenu,CustomersMenu customersMenu,SettingsMenu settingsMenu) {
         this.couriersMenu = couriersMenu;
         this.customersMenu = customersMenu;
+        this.settingsMenu = settingsMenu;
     }
 
     @Override
@@ -35,6 +40,7 @@ public class MainMenu extends Menu {
                         customersMenu.show();
                         break;
                     case SETTINGS:
+                        settingsMenu.show();
                         break;
                 }
 
