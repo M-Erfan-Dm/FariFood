@@ -62,6 +62,15 @@ public class CustomersDB {
         return feedbacks;
     }
 
+    public void printAllCustomers(){
+        List<Customer> customersList = new ArrayList<>(customers);
+        for (int i = 0; i < customersList.size(); i++) {
+            Customer customer = customersList.get(i);
+            System.out.println("No." + (i + 1) + " " + customer);
+        }
+        System.out.println(customersList.size() + " customers found");
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
