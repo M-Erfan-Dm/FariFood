@@ -2,7 +2,9 @@ package ir.ac.kntu.menu;
 
 import ir.ac.kntu.utils.ScannerWrapper;
 
-public class Menu {
+public abstract class Menu {
+
+    public abstract void show();
 
     public String getUsername(){
         System.out.println("Enter your username : ");

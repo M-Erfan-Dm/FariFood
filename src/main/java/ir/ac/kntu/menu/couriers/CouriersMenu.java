@@ -9,20 +9,19 @@ import ir.ac.kntu.utils.ScannerWrapper;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CouriersMenu {
+public class CouriersMenu extends Menu {
 
-    private final Menu menu;
 
     private final CouriersDB couriersDB;
 
     private final RestaurantsDB restaurantsDB;
 
-    public CouriersMenu(Menu menu, CouriersDB couriersDB, RestaurantsDB restaurantsDB) {
-        this.menu = menu;
+    public CouriersMenu(CouriersDB couriersDB, RestaurantsDB restaurantsDB) {
         this.couriersDB = couriersDB;
         this.restaurantsDB = restaurantsDB;
     }
 
+    @Override
     public void show() {
         CouriersOption couriersOption = printMenuOptions();
         while (couriersOption != CouriersOption.BACK) {
@@ -99,7 +98,7 @@ public class CouriersMenu {
     }
 
     private void findByPhoneNumber() {
-        String phoneNumber = menu.getPhoneNumber();
+        String phoneNumber = getPhoneNumber();
         Courier courier = couriersDB.getCourierByPhoneNumber(phoneNumber);
         if (courier == null) {
             System.out.println("Courier not found");
@@ -133,7 +132,7 @@ public class CouriersMenu {
     }
 
     private void removeCourier() {
-        String phoneNumber = menu.getPhoneNumber();
+        String phoneNumber = getPhoneNumber();
         Courier courier = couriersDB.getCourierByPhoneNumber(phoneNumber);
         if (courier == null) {
             System.out.println("Courier not found");
@@ -149,8 +148,8 @@ public class CouriersMenu {
     }
 
     private Courier getCourierInfo() {
-        String phoneNumber = menu.getPhoneNumber();
-        String name = menu.getName();
+        String phoneNumber = getPhoneNumber();
+        String name = getName();
         System.out.println("1.Car\n" +
                 "2.Motorcycle\n");
         System.out.println("Enter your vehicle type :");

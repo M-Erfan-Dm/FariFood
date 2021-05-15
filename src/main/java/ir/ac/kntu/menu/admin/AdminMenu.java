@@ -6,18 +6,17 @@ import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.models.Admin;
 import ir.ac.kntu.utils.ScannerWrapper;
 
-public class AdminMenu {
+public class AdminMenu extends Menu{
 
-    private final Menu menu;
     private final AdminsDB adminsDB;
     private final MainMenu mainMenu;
 
-    public AdminMenu(Menu menu, AdminsDB adminsDB, MainMenu mainMenu) {
-        this.menu = menu;
+    public AdminMenu(AdminsDB adminsDB, MainMenu mainMenu) {
         this.adminsDB = adminsDB;
         this.mainMenu = mainMenu;
     }
 
+    @Override
     public void show() {
         System.out.println("Welcome to Fari Food");
         AdminOption adminOption = printMenuOptions();
@@ -59,8 +58,8 @@ public class AdminMenu {
 
     private void login() {
         System.out.println("---Login---");
-        String username = menu.getUsername();
-        String password = menu.getPassword();
+        String username = getUsername();
+        String password = getPassword();
         Admin admin = new Admin(username, password);
         if (adminsDB.isAdminValid(admin)) {
             mainMenu.show();
@@ -71,8 +70,8 @@ public class AdminMenu {
 
     private void register() {
         System.out.println("---Register---");
-        String username = menu.getUsername();
-        String password = menu.getPassword();
+        String username = getUsername();
+        String password = getPassword();
         Admin admin = new Admin(username, password);
         boolean isAdded = adminsDB.addAdmin(admin);
         if (isAdded) {
