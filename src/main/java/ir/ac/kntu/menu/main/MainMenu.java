@@ -1,7 +1,9 @@
 package ir.ac.kntu.menu.main;
 
+import ir.ac.kntu.db.CustomersDB;
 import ir.ac.kntu.menu.Menu;
-import ir.ac.kntu.menu.couriers.CouriersMenu;
+import ir.ac.kntu.menu.courier.CouriersMenu;
+import ir.ac.kntu.menu.customer.CustomersMenu;
 import ir.ac.kntu.utils.ScannerWrapper;
 
 public class MainMenu extends Menu {
@@ -9,8 +11,11 @@ public class MainMenu extends Menu {
 
     private final CouriersMenu couriersMenu;
 
-    public MainMenu(CouriersMenu couriersMenu) {
+    private final CustomersMenu customersMenu;
+
+    public MainMenu(CouriersMenu couriersMenu,CustomersMenu customersMenu) {
         this.couriersMenu = couriersMenu;
+        this.customersMenu = customersMenu;
     }
 
     @Override
@@ -27,6 +32,7 @@ public class MainMenu extends Menu {
                     case RESTAURANTS:
                         break;
                     case CUSTOMERS:
+                        customersMenu.show();
                         break;
                     case SETTINGS:
                         break;

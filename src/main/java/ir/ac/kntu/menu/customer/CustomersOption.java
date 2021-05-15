@@ -1,6 +1,6 @@
-package ir.ac.kntu.menu.couriers;
+package ir.ac.kntu.menu.customer;
 
-public enum CouriersOption {
+public enum CustomersOption {
     REGISTER,
     UPDATE,
     FIND_BY_PHONE_NUMBER,

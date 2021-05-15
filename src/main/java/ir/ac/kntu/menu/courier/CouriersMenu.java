@@ -1,4 +1,4 @@
-package ir.ac.kntu.menu.couriers;
+package ir.ac.kntu.menu.courier;
 
 import ir.ac.kntu.db.CouriersDB;
 import ir.ac.kntu.db.RestaurantsDB;

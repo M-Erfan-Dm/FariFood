@@ -25,4 +25,9 @@ public abstract class Menu {
         System.out.println("Enter name : ");
         return ScannerWrapper.nextLine();
     }
+
+    public String getAddress(){
+        System.out.println("Enter address : ");
+        return ScannerWrapper.nextLine();
+    }
 }
