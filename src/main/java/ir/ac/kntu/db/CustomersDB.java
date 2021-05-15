@@ -20,11 +20,16 @@ public class CustomersDB {
     }
 
     public void addCustomer(Customer customer){
+        removeCustomer(customer);
         customers.add(customer);
     }
 
     public boolean removeCustomer(Customer customer){
         return customers.remove(customer);
+    }
+
+    public boolean containsCustomer(Customer customer){
+        return customers.contains(customer);
     }
 
     public Customer getCustomerByPhoneNumber(String phoneNumber){
