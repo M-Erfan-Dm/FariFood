@@ -1,6 +1,7 @@
 package ir.ac.kntu.models;
 
 import java.text.DecimalFormat;
+import java.util.Calendar;
 import java.util.Objects;
 
 public class Time {
@@ -27,6 +28,20 @@ public class Time {
 
     public void setMinute(int minute) {
         this.minute = minute;
+    }
+
+    public boolean isAfter(Time time){
+        Calendar now = Calendar.getInstance();
+        int year = now.get(Calendar.YEAR);
+        int month = now.get(Calendar.MONTH);
+        int day = now.get(Calendar.DAY_OF_MONTH);
+
+        Calendar firstCalendar = Calendar.getInstance();
+        firstCalendar.set(year,month,day,hour,minute);
+
+        Calendar secondCalendar = Calendar.getInstance();
+        secondCalendar.set(year,month,day,time.getHour(),time.getMinute());
+        return firstCalendar.after(secondCalendar);
     }
 
     @Override
