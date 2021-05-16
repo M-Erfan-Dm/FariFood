@@ -49,14 +49,7 @@ public class CouriersMenu extends Menu {
         }
     }
 
-    private CouriersOption getOption() {
-        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
-        CouriersOption[] couriersOptions = CouriersOption.values();
-        if (choice >= 0 && choice < couriersOptions.length) {
-            return couriersOptions[choice];
-        }
-        return null;
-    }
+
 
     private CouriersOption printMenuOptions() {
         System.out.println("----------Couriers Menu----------");
@@ -68,7 +61,7 @@ public class CouriersMenu extends Menu {
                 "6.Back\n");
 
         System.out.print("Enter your choice : ");
-        return getOption();
+        return getOption(CouriersOption.class);
     }
 
     private void registerCourier() {
@@ -108,19 +101,20 @@ public class CouriersMenu extends Menu {
                 "2.Feedbacks of Courier\n" +
                 "3.Orders history\n");
         System.out.println("Enter your choice :");
-        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
-        switch (choice) {
-            case 0:
+        CourierInfoOption courierInfoOption = getOption(CourierInfoOption.class);
+        if (courierInfoOption==null){
+            System.out.println("Wrong choice!");
+            return;
+        }
+        switch (courierInfoOption) {
+            case GENERAL:
                 showGeneralInfoOfCourier(courier);
                 break;
-            case 1:
+            case FEEDBACKS:
                 showFeedbacksOfCourier(courier);
                 break;
-            case 2:
+            case ORDERS_HISTORY:
                 showOrdersHistoryOfCourier(courier);
-                break;
-            default:
-                System.out.println("Wrong choice!");
                 break;
         }
 
@@ -153,12 +147,11 @@ public class CouriersMenu extends Menu {
         System.out.println("1.Car\n" +
                 "2.Motorcycle\n");
         System.out.println("Enter your vehicle type :");
-        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
-        if (choice < 0 || choice >= 2) {
+        VehicleType vehicleType = getOption(VehicleType.class);
+        if (vehicleType == null){
             System.out.println("Wrong Choice!");
             return null;
         }
-        VehicleType vehicleType = VehicleType.values()[choice];
         return new Courier(phoneNumber, name, vehicleType);
     }
 

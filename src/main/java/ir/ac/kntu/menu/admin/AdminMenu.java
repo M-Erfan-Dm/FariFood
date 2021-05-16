@@ -37,14 +37,7 @@ public class AdminMenu extends Menu{
         System.exit(0);
     }
 
-    private AdminOption getOption() {
-        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
-        AdminOption[] adminOptions = AdminOption.values();
-        if (choice >= 0 && choice < adminOptions.length) {
-            return adminOptions[choice];
-        }
-        return null;
-    }
+
 
     private AdminOption printMenuOptions() {
         System.out.println("----------Admin Menu----------");
@@ -53,7 +46,7 @@ public class AdminMenu extends Menu{
                 "3.Exit\n");
 
         System.out.print("Enter your choice : ");
-        return getOption();
+        return getOption(AdminOption.class);
     }
 
     private void login() {

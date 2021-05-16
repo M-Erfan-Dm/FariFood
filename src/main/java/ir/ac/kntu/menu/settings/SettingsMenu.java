@@ -31,14 +31,7 @@ public class SettingsMenu extends Menu {
         }
     }
 
-    private SettingsOption getOption() {
-        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
-        SettingsOption[] settingsOptions = SettingsOption.values();
-        if (choice >= 0 && choice < settingsOptions.length) {
-            return settingsOptions[choice];
-        }
-        return null;
-    }
+
 
     private SettingsOption printMenuOptions() {
         System.out.println("----------Settings Menu----------");
@@ -47,7 +40,7 @@ public class SettingsMenu extends Menu {
                 "3.Back\n");
 
         System.out.print("Enter your choice : ");
-        return getOption();
+        return getOption(SettingsOption.class);
     }
 
     private void filterRestaurants(){

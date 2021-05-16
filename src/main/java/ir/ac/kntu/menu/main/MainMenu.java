@@ -49,14 +49,7 @@ public class MainMenu extends Menu {
         }
     }
 
-    private MainMenuOption getOption() {
-        int choice = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
-        MainMenuOption[] mainMenuOptions = MainMenuOption.values();
-        if (choice >= 0 && choice < mainMenuOptions.length) {
-            return mainMenuOptions[choice];
-        }
-        return null;
-    }
+
 
     private MainMenuOption printMenuOptions() {
         System.out.println("----------Main Menu----------");
@@ -68,7 +61,7 @@ public class MainMenu extends Menu {
                 "6.Back\n");
 
         System.out.print("Enter your choice : ");
-        return getOption();
+        return getOption(MainMenuOption.class);
     }
 
 }
