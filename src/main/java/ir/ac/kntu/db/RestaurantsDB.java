@@ -20,46 +20,59 @@ public class RestaurantsDB {
         this.restaurants = restaurants;
     }
 
-    public void addRestaurant(Restaurant restaurant) {
+    public boolean addRestaurant(Restaurant restaurant) {
+        if (containsRestaurant(restaurant.getName(), restaurant.getAddress())) {
+            return false;
+        }
         Restaurant newRestaurant = new Restaurant(IdGenerator.generateNewId(), restaurant.getName(),
                 restaurant.getAddress(), restaurant.getFoodMenu(),
                 restaurant.getSchedule(), restaurant.getPriceType(), restaurant.getHiredCouriers(), restaurant.getOrdersService());
 
         restaurants.add(newRestaurant);
+        return true;
     }
 
-    public void removeRestaurant(int restaurantId) {
+    public boolean removeRestaurant(Restaurant restaurant) {
+        return restaurants.remove(restaurant);
+    }
+
+    public boolean containsRestaurant(Restaurant restaurant) {
+        return restaurants.contains(restaurant);
+    }
+
+    public boolean containsRestaurant(String name, String address) {
         for (Restaurant restaurant : restaurants) {
-            if (restaurant.getId() == restaurantId) {
-                restaurants.remove(restaurant);
+            if (restaurant.getName().equals(name) && restaurant.getAddress().equals(address)) {
+                return true;
             }
         }
+        return false;
     }
 
-    public Set<Restaurant> getRestaurantsByName(String name){
+    public Set<Restaurant> getRestaurantsByName(String name) {
         Set<Restaurant> foundRestaurants = new HashSet<>();
-        for (Restaurant restaurant : restaurants){
-            if (restaurant.getName().equals(name)){
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.getName().equals(name)) {
                 foundRestaurants.add(restaurant);
             }
         }
         return foundRestaurants;
     }
 
-    public Set<Restaurant> getRestaurantsByPriceType(RestaurantPriceType priceType){
+    public Set<Restaurant> getRestaurantsByPriceType(RestaurantPriceType priceType) {
         Set<Restaurant> foundRestaurants = new HashSet<>();
-        for (Restaurant restaurant : restaurants){
-            if (restaurant.getPriceType()==priceType){
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.getPriceType() == priceType) {
                 foundRestaurants.add(restaurant);
             }
         }
         return foundRestaurants;
     }
 
-    public Set<Restaurant> getActiveRestaurants(){
+    public Set<Restaurant> getActiveRestaurants() {
         Set<Restaurant> activeRestaurants = new HashSet<>();
-        for (Restaurant restaurant : restaurants){
-            if (restaurant.isActive()){
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.isActive()) {
                 activeRestaurants.add(restaurant);
             }
         }
@@ -83,31 +96,31 @@ public class RestaurantsDB {
         return orders;
     }
 
-    public List<Feedback> getAllFeedbacksOfFood(Food food){
+    public List<Feedback> getAllFeedbacksOfFood(Food food) {
         List<Feedback> feedbacks = new ArrayList<>();
-        for (Restaurant restaurant : restaurants){
+        for (Restaurant restaurant : restaurants) {
             feedbacks.addAll(restaurant.getOrdersService().getFeedbacksOfFood(food));
         }
         return feedbacks;
     }
 
-    public List<Restaurant> getBestRestaurants(int count){
+    public List<Restaurant> getBestRestaurants(int count) {
         List<Restaurant> orderedRestaurants = getOrderedListOfRestaurantsByRating(false);
-        if (orderedRestaurants.size()>count){
-            orderedRestaurants =  orderedRestaurants.subList(0,count);
+        if (orderedRestaurants.size() > count) {
+            orderedRestaurants = orderedRestaurants.subList(0, count);
         }
         return orderedRestaurants;
     }
 
-    public List<Food> getBestFoodsOfEachRestaurant(int bestFoodsCountOfEachRestaurant){
+    public List<Food> getBestFoodsOfEachRestaurant(int bestFoodsCountOfEachRestaurant) {
         List<Food> bestFoods = new ArrayList<>();
-        for (Restaurant restaurant : restaurants){
+        for (Restaurant restaurant : restaurants) {
             bestFoods.addAll(restaurant.getOrdersService().getBestFoods(bestFoodsCountOfEachRestaurant));
         }
         return bestFoods;
     }
 
-    public List<Restaurant> getBestRestaurantsByFood(String foodName , int count){
+    public List<Restaurant> getBestRestaurantsByFood(String foodName, int count) {
         List<Restaurant> orderedList = new ArrayList<>(restaurants);
         orderedList.sort(new Comparator<Restaurant>() {
             @Override
@@ -116,8 +129,8 @@ public class RestaurantsDB {
                         o1.getOrdersService().getRatingAverageOfFood(foodName));
             }
         });
-        if (orderedList.size()>count){
-            orderedList = orderedList.subList(0,count);
+        if (orderedList.size() > count) {
+            orderedList = orderedList.subList(0, count);
         }
         return orderedList;
     }
@@ -154,15 +167,31 @@ public class RestaurantsDB {
         return orderedList;
     }
 
-    public List<Restaurant> getWeakerRestaurants(){
+    public List<Restaurant> getWeakerRestaurants() {
         List<Restaurant> orderedRestaurants = new ArrayList<>(restaurants);
         orderedRestaurants.sort(new Comparator<Restaurant>() {
             @Override
             public int compare(Restaurant o1, Restaurant o2) {
-                return compareNumbers(o1.getAlphaScore(),o2.getAlphaScore());
+                return compareNumbers(o1.getAlphaScore(), o2.getAlphaScore());
             }
         });
         return orderedRestaurants;
+    }
+
+    public List<Restaurant> getOrderedListOfRestaurants(Settings settings){
+        switch (settings.getRestaurantsFilteringStrategy()){
+            case BY_RATING_ASCENDING:
+                return getOrderedListOfRestaurantsByRating(true);
+            case BY_RATING_DESCENDING:
+                return getOrderedListOfRestaurantsByRating(false);
+            case BY_FEEDBACKS_COUNT_ASCENDING:
+                return getOrderedListOfRestaurantsByFeedbacksCount(true);
+            case BY_FEEDBACKS_COUNT_DESCENDING:
+                return getOrderedListOfRestaurantsByFeedbacksCount(false);
+            case BY_ALPHA_SCORE:
+                return getWeakerRestaurants();
+        }
+        return getOrderedListOfRestaurantsByRating(false);
     }
 
     private int compareNumbers(double one, double two) {
@@ -172,6 +201,14 @@ public class RestaurantsDB {
             return 1;
         }
         return 0;
+    }
+
+    public void printRestaurants(List<Restaurant> restaurants) {
+        for (int i = 0; i < restaurants.size(); i++) {
+            Restaurant restaurant = restaurants.get(i);
+            System.out.println("No." + (i + 1) + " " + restaurant);
+        }
+        System.out.println(restaurants.size() + " restaurants found");
     }
 
 }

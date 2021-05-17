@@ -119,8 +119,10 @@ public class RestaurantsMenu extends Menu {
                     showRestaurantCouriers(restaurant);
                     break;
                 case ORDER:
+                    showOrders(restaurant);
                     break;
                 case FEEDBACK:
+                    showFeedbacks(restaurant);
                     break;
             }
             RestaurantInfoOption.printOptions();
@@ -186,6 +188,19 @@ public class RestaurantsMenu extends Menu {
     private void showRestaurantCouriers(Restaurant restaurant){
         RestaurantCourierMenu restaurantCourierMenu = new RestaurantCourierMenu(couriersDB,restaurant);
         restaurantCourierMenu.show();
+    }
+
+    private void showOrders(Restaurant restaurant){
+        restaurant.getOrdersService().printAllOrders();
+    }
+
+    private void showFeedbacks(Restaurant restaurant){
+        List<Feedback> feedbacks = restaurant.getOrdersService().getAllFeedbacks();
+        for (int i = 0;i< feedbacks.size();i++){
+            Feedback feedback = feedbacks.get(i);
+            System.out.println("No."+(i+1)+" "+feedback);
+        }
+        System.out.println(feedbacks.size() + " feedbacks found");
     }
 
 }

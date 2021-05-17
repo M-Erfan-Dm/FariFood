@@ -8,6 +8,7 @@ import ir.ac.kntu.menu.admin.AdminMenu;
 import ir.ac.kntu.menu.courier.CouriersMenu;
 import ir.ac.kntu.menu.customer.CustomersMenu;
 import ir.ac.kntu.menu.main.MainMenu;
+import ir.ac.kntu.menu.restaurant.RestaurantsMenu;
 import ir.ac.kntu.menu.settings.SettingsMenu;
 import ir.ac.kntu.models.RestaurantsFilteringStrategy;
 import ir.ac.kntu.models.Settings;
@@ -33,7 +34,8 @@ public class FariFood {
         SettingsMenu settingsMenu = new SettingsMenu(settings);
         CustomersMenu customersMenu = new CustomersMenu(customersDB,restaurantsDB);
         CouriersMenu couriersMenu = new CouriersMenu(couriersDB, restaurantsDB);
-        MainMenu mainMenu = new MainMenu(couriersMenu,customersMenu,settingsMenu);
+        RestaurantsMenu restaurantsMenu = new RestaurantsMenu(restaurantsDB,settings,couriersDB);
+        MainMenu mainMenu = new MainMenu(couriersMenu,restaurantsMenu,customersMenu,settingsMenu);
         adminMenu = new AdminMenu(adminsDB,mainMenu);
     }
 }

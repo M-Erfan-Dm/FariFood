@@ -84,8 +84,8 @@ public class OrdersService {
         return foundOrders;
     }
 
-    public ArrayList<Feedback> getAllFeedbacks() {
-        ArrayList<Feedback> feedbacks = new ArrayList<>();
+    public List<Feedback> getAllFeedbacks() {
+        List<Feedback> feedbacks = new ArrayList<>();
         for (Order order : orders) {
             Feedback feedback = order.getFeedback();
             if (feedback != null) {
@@ -116,7 +116,7 @@ public class OrdersService {
         return feedbacks;
     }
 
-    public List<Food> getBestFoods(int count){
+    public List<Food> getBestFoods(int count) {
         List<Order> allOrders = new ArrayList<>(getOrdersByState(OrderState.DELIVERED));
         allOrders.sort(new Comparator<Order>() {
             @Override
@@ -124,33 +124,42 @@ public class OrdersService {
                 return o2.getFeedback().getRating().getValue() - o1.getFeedback().getRating().getValue();
             }
         });
-        if (allOrders.size()>count){
-            allOrders =  allOrders.subList(0,count);
+        if (allOrders.size() > count) {
+            allOrders = allOrders.subList(0, count);
         }
         List<Food> bestFoods = new ArrayList<>();
-        for (Order order : allOrders){
+        for (Order order : allOrders) {
             bestFoods.add(order.getFood());
         }
         return bestFoods;
     }
 
-    public double getRatingAverageOfFood(String foodName){
+    public double getRatingAverageOfFood(String foodName) {
         double sum = 0;
         int count = 0;
-        for (Order order : orders){
-            if (order.getFood().getName().equals(foodName) && order.getFeedback()!=null){
+        for (Order order : orders) {
+            if (order.getFood().getName().equals(foodName) && order.getFeedback() != null) {
                 sum += order.getFeedback().getRating().getValue();
                 count++;
             }
         }
-        if (count == 0){
+        if (count == 0) {
             return 0;
         }
-        return sum/count;
+        return sum / count;
     }
 
-    public int getCount(){
+    public int getCount() {
         return orders.size();
+    }
+
+    public void printAllOrders() {
+        List<Order> ordersList = new ArrayList<>(orders);
+        for (int i = 0; i < ordersList.size(); i++) {
+            Order order = ordersList.get(i);
+            System.out.println("No." + (i + 1) + " " + order);
+        }
+        System.out.println(ordersList.size() + " orders found");
     }
 
     @Override

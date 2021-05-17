@@ -4,6 +4,7 @@ import ir.ac.kntu.db.CouriersDB;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Objects;
 
 public class Restaurant {
@@ -49,6 +50,13 @@ public class Restaurant {
         this.priceType = priceType;
         this.hiredCouriers = hiredCouriers;
         this.ordersService = ordersService;
+    }
+
+    public Restaurant(String name, String address, Schedule schedule, RestaurantPriceType priceType) {
+        this.name = name;
+        this.address = address;
+        this.schedule = schedule;
+        this.priceType = priceType;
     }
 
     public int getId() {
@@ -116,7 +124,7 @@ public class Restaurant {
     }
 
     public double updateRating(){
-        ArrayList<Feedback> feedbacks = ordersService.getAllFeedbacks();
+        List<Feedback> feedbacks = ordersService.getAllFeedbacks();
         double sum = 5;
         for (Feedback feedback : feedbacks){
             sum+=feedback.getRating().getValue();
