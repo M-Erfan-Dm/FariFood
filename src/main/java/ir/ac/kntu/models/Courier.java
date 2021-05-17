@@ -1,6 +1,7 @@
 package ir.ac.kntu.models;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Objects;
 
 public class Courier {
@@ -46,18 +47,18 @@ public class Courier {
         return jobsInfo.clone();
     }
 
-    public CourierJobInfo getJobInfoByRestaurantId(int id){
-        for (CourierJobInfo courierJobInfo : jobsInfo){
-            if (courierJobInfo.getRestaurant().getId()==id){
+    public CourierJobInfo getJobInfoByRestaurantId(int id) {
+        for (CourierJobInfo courierJobInfo : jobsInfo) {
+            if (courierJobInfo.getRestaurant().getId() == id) {
                 return courierJobInfo;
             }
         }
         return null;
     }
 
-    public boolean updateJobInfo(CourierJobInfo newJobInfo){
+    public boolean updateJobInfo(CourierJobInfo newJobInfo) {
         CourierJobInfo jobInfo = getJobInfoByRestaurantId(newJobInfo.getRestaurant().getId());
-        if (jobInfo==null){
+        if (jobInfo == null) {
             return false;
         }
         jobInfo.setSchedule(newJobInfo.getSchedule());
@@ -66,9 +67,9 @@ public class Courier {
     }
 
 
-    public boolean addJob(CourierJobInfo newJob){
-        for (int i = 0 ;i<jobsInfo.length;i++){
-            if (jobsInfo[i]==null){
+    public boolean addJob(CourierJobInfo newJob) {
+        for (int i = 0; i < jobsInfo.length; i++) {
+            if (jobsInfo[i] == null) {
                 jobsInfo[i] = newJob;
                 return true;
             }
@@ -76,22 +77,33 @@ public class Courier {
         return false;
     }
 
-    public void quitJob(int restaurantId){
-        for (int i = 0;i<jobsInfo.length;i++){
+    public void quitJob(int restaurantId) {
+        for (int i = 0; i < jobsInfo.length; i++) {
             CourierJobInfo courierJobInfo = jobsInfo[i];
-            if (courierJobInfo!=null && courierJobInfo.getRestaurant().getId()==restaurantId){
+            if (courierJobInfo != null && courierJobInfo.getRestaurant().getId() == restaurantId) {
                 jobsInfo[i] = null;
                 break;
             }
         }
     }
 
+    public boolean isAvailable(int restaurantId) {
+        CourierJobInfo jobInfo = getJobInfoByRestaurantId(restaurantId);
+        if (jobInfo == null) {
+            return false;
+        }
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        int minute = calendar.get(Calendar.MINUTE);
+        return jobInfo.getSchedule().isTimeInInterval(new Time(hour, minute));
+    }
+
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Courier courier = (Courier) o;
