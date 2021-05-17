@@ -20,6 +20,7 @@ public class FoodMenu {
     }
 
     public void addFood(Food food){
+        removeFood(food);
         foods.add(food);
     }
 
@@ -34,6 +35,10 @@ public class FoodMenu {
             }
         }
         return null;
+    }
+
+    public boolean containsFood(Food food){
+        return foods.contains(food);
     }
 
     @Override
