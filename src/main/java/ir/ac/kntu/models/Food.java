@@ -12,6 +12,10 @@ public class Food {
         this.price = price;
     }
 
+    public Food(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }

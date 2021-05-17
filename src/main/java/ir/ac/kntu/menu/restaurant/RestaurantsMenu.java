@@ -25,7 +25,7 @@ public class RestaurantsMenu extends Menu {
 
     @Override
     public void show() {
-        RestaurantsOption restaurantsOption = printMenuOption();
+        RestaurantsOption restaurantsOption = printMenuOptions();
         while (restaurantsOption != RestaurantsOption.BACK) {
             if (restaurantsOption != null) {
                 switch (restaurantsOption) {
@@ -52,11 +52,11 @@ public class RestaurantsMenu extends Menu {
                         break;
                 }
             }
-            restaurantsOption = printMenuOption();
+            restaurantsOption = printMenuOptions();
         }
     }
 
-    private RestaurantsOption printMenuOption() {
+    private RestaurantsOption printMenuOptions() {
         System.out.println("----------Restaurants Menu----------");
         RestaurantsOption.printOptions();
         System.out.print("Enter your choice : ");

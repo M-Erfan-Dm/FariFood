@@ -25,14 +25,8 @@ public class OrdersService {
         orders.add(newOrder);
     }
 
-    public boolean removeOrder(int orderId) {
-        for (Order order : orders) {
-            if (order.getId() == orderId) {
-                orders.remove(order);
-                return true;
-            }
-        }
-        return false;
+    public boolean removeOrder(Order order) {
+        return orders.remove(order);
     }
 
     public Order getOrderById(int orderId) {

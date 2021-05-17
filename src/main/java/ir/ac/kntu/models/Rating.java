@@ -14,4 +14,8 @@ public enum Rating {
     public int getValue() {
         return value;
     }
+
+    public static void printOptions(){
+        System.out.println("1.One 2.Two 3.Three 4.Four 5.Five");
+    }
 }

@@ -77,6 +77,15 @@ public class Order {
         this.orderState = orderState;
     }
 
+    public OrderState getNextOrderState(){
+        if (orderState==OrderState.PROCESSING){
+            return OrderState.SENDING;
+        }else if (orderState==OrderState.SENDING) {
+            return OrderState.DELIVERED;
+        }
+        return null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){

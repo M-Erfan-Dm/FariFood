@@ -5,6 +5,8 @@ import ir.ac.kntu.models.Food;
 import ir.ac.kntu.models.FoodMenu;
 import ir.ac.kntu.models.Restaurant;
 
+import java.util.ArrayList;
+
 public class RestaurantFoodMenu extends Menu {
 
     private Restaurant restaurant;

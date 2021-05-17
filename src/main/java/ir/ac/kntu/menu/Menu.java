@@ -1,9 +1,6 @@
 package ir.ac.kntu.menu;
 
-import ir.ac.kntu.models.Day;
-import ir.ac.kntu.models.RestaurantPriceType;
-import ir.ac.kntu.models.Schedule;
-import ir.ac.kntu.models.Time;
+import ir.ac.kntu.models.*;
 import ir.ac.kntu.utils.ScannerWrapper;
 
 import java.util.Arrays;
@@ -128,5 +125,17 @@ public abstract class Menu {
         RestaurantPriceType.printOptions();
         System.out.println("Enter restaurant price type : ");
         return getOption(RestaurantPriceType.class);
+    }
+
+    public Feedback getFeedback(){
+        System.out.println("Enter rating :");
+        Rating.printOptions();
+        Rating rating = getOption(Rating.class);
+        if (rating==null){
+            rating = Rating.FIVE;
+        }
+        System.out.println("Enter comment :");
+        String comment = ScannerWrapper.nextLine();
+        return new Feedback(rating,comment);
     }
 }

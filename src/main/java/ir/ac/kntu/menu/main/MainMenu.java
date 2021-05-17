@@ -4,6 +4,7 @@ import ir.ac.kntu.db.CustomersDB;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.menu.courier.CouriersMenu;
 import ir.ac.kntu.menu.customer.CustomersMenu;
+import ir.ac.kntu.menu.order.OrdersMenu;
 import ir.ac.kntu.menu.restaurant.RestaurantsMenu;
 import ir.ac.kntu.menu.settings.SettingsMenu;
 import ir.ac.kntu.models.Settings;
@@ -11,6 +12,7 @@ import ir.ac.kntu.utils.ScannerWrapper;
 
 public class MainMenu extends Menu {
 
+    private final OrdersMenu ordersMenu;
 
     private final CouriersMenu couriersMenu;
 
@@ -20,7 +22,8 @@ public class MainMenu extends Menu {
 
     private final SettingsMenu settingsMenu;
 
-    public MainMenu(CouriersMenu couriersMenu,RestaurantsMenu restaurantsMenu,CustomersMenu customersMenu,SettingsMenu settingsMenu) {
+    public MainMenu(OrdersMenu ordersMenu ,CouriersMenu couriersMenu,RestaurantsMenu restaurantsMenu,CustomersMenu customersMenu,SettingsMenu settingsMenu) {
+        this.ordersMenu = ordersMenu;
         this.couriersMenu = couriersMenu;
         this.restaurantsMenu = restaurantsMenu;
         this.customersMenu = customersMenu;
@@ -34,6 +37,7 @@ public class MainMenu extends Menu {
             if (mainMenuOption != null) {
                 switch (mainMenuOption) {
                     case ORDERS:
+                        ordersMenu.show();
                         break;
                     case COURIERS:
                         couriersMenu.show();
