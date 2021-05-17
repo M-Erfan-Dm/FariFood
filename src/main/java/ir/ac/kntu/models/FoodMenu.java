@@ -1,8 +1,6 @@
 package ir.ac.kntu.models;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class FoodMenu {
     private Set<Food> foods;
@@ -39,6 +37,15 @@ public class FoodMenu {
 
     public boolean containsFood(Food food){
         return foods.contains(food);
+    }
+
+    public void printAllFoods(){
+        List<Food> foodsList = new ArrayList<>(foods);
+        for (int i = 0;i<foodsList.size();i++){
+            Food food = foodsList.get(i);
+            System.out.println("No."+(i+1)+" "+food);
+        }
+        System.out.println(foodsList.size() + " foods found");
     }
 
     @Override
