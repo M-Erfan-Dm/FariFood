@@ -153,6 +153,15 @@ public class OrdersService {
         return orders.size();
     }
 
+    public boolean containsOrder(int id){
+        for (Order order : orders){
+            if (order.getId()==id){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void printAllOrders() {
         List<Order> ordersList = new ArrayList<>(orders);
         for (int i = 0; i < ordersList.size(); i++) {
