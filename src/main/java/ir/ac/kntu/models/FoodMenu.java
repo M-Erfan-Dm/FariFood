@@ -27,6 +27,15 @@ public class FoodMenu {
        return foods.remove(food);
     }
 
+    public Food getFoodByName(String name){
+        for (Food food : foods){
+            if (food.getName().equals(name)){
+                return food;
+            }
+        }
+        return null;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o){
