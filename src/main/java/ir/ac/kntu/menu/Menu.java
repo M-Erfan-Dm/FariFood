@@ -101,18 +101,18 @@ public abstract class Menu {
     }
 
     public Schedule getSchedule() {
-        System.out.println("Enter opening time : ");
+        System.out.println("Enter start time : ");
         Time startTime = getTime();
         if (startTime == null) {
             return null;
         }
-        System.out.println("Enter closing time : ");
+        System.out.println("Enter end time : ");
         Time endTime = getTime();
         if (endTime == null) {
             return null;
         }
         if (startTime.isAfter(endTime)){
-            System.out.println("Opening time is after closing time!");
+            System.out.println("start time is after end time!");
             return null;
         }
         System.out.println("Working days :");

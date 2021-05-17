@@ -15,9 +15,12 @@ public class RestaurantsMenu extends Menu {
 
     private final Settings settings;
 
-    public RestaurantsMenu(RestaurantsDB restaurantsDB, Settings settings) {
+    private final CouriersDB couriersDB;
+
+    public RestaurantsMenu(RestaurantsDB restaurantsDB, Settings settings , CouriersDB couriersDB) {
         this.restaurantsDB = restaurantsDB;
         this.settings = settings;
+        this.couriersDB = couriersDB;
     }
 
     @Override
@@ -104,22 +107,25 @@ public class RestaurantsMenu extends Menu {
         RestaurantInfoOption.printOptions();
         System.out.println("Enter your choice :");
         RestaurantInfoOption restaurantInfoOption = getOption(RestaurantInfoOption.class);
-        if (restaurantInfoOption == null){
-            return;
-        }
-        switch (restaurantInfoOption){
-            case GENERAL:
-                showRestaurantGeneralInfo(restaurant);
-                break;
-            case FOOD:
-                showRestaurantFoodMenu(restaurant);
-                break;
-            case COURIER:
-                break;
-            case ORDER:
-                break;
-            case FEEDBACK:
-                break;
+        while (restaurantInfoOption!=null && restaurantInfoOption!=RestaurantInfoOption.BACK) {
+            switch (restaurantInfoOption) {
+                case GENERAL:
+                    showRestaurantGeneralInfo(restaurant);
+                    break;
+                case FOOD:
+                    showRestaurantFoodMenu(restaurant);
+                    break;
+                case COURIER:
+                    showRestaurantCouriers(restaurant);
+                    break;
+                case ORDER:
+                    break;
+                case FEEDBACK:
+                    break;
+            }
+            RestaurantInfoOption.printOptions();
+            System.out.println("Enter your choice :");
+            restaurantInfoOption = getOption(RestaurantInfoOption.class);
         }
     }
 
@@ -175,6 +181,11 @@ public class RestaurantsMenu extends Menu {
     private void showRestaurantFoodMenu(Restaurant restaurant){
         RestaurantFoodMenu restaurantFoodMenu = new RestaurantFoodMenu(restaurant);
         restaurantFoodMenu.show();
+    }
+
+    private void showRestaurantCouriers(Restaurant restaurant){
+        RestaurantCourierMenu restaurantCourierMenu = new RestaurantCourierMenu(couriersDB,restaurant);
+        restaurantCourierMenu.show();
     }
 
 }
