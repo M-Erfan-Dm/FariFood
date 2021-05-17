@@ -135,6 +135,15 @@ public class RestaurantsDB {
         return orderedList;
     }
 
+    public Restaurant getRestaurantByOrderId(int orderId){
+        for (Restaurant restaurant : restaurants){
+            if (restaurant.getOrdersService().containsOrder(orderId)){
+                return restaurant;
+            }
+        }
+        return null;
+    }
+
     public List<Restaurant> getOrderedListOfRestaurantsByRating(boolean isAscending) {
         List<Restaurant> orderedList = new ArrayList<>(restaurants);
         orderedList.sort(new Comparator<Restaurant>() {
