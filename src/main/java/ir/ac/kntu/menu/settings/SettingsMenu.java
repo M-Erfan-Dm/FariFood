@@ -35,29 +35,19 @@ public class SettingsMenu extends Menu {
 
     private SettingsOption printMenuOptions() {
         System.out.println("----------Settings Menu----------");
-        System.out.println("1.Restaurants filtering\n" +
-                "2.Show current settings\n" +
-                "3.Back\n");
-
+        SettingsOption.printOptions();
         System.out.print("Enter your choice : ");
         return getOption(SettingsOption.class);
     }
 
     private void filterRestaurants(){
-        System.out.println("1.Ascending by rating\n" +
-                "2.Descending by rating\n" +
-                "3.Ascending by feedbacks count\n" +
-                "4.Descending by feedbacks count\n" +
-                "5.By alpha score\n");
-
+        RestaurantsFilteringStrategy.printOptions();
         System.out.println("Enter your choice of filtering restaurants :");
-        int choice = Integer.parseInt(ScannerWrapper.nextLine())-1;
-        RestaurantsFilteringStrategy[] restaurantsFilteringStrategies = RestaurantsFilteringStrategy.values();
-        if (choice<0 || choice >= restaurantsFilteringStrategies.length){
-            System.out.println("Wrong choice!");
+        RestaurantsFilteringStrategy restaurantsFilteringStrategy = getOption(RestaurantsFilteringStrategy.class);
+        if (restaurantsFilteringStrategy==null){
             return;
         }
-        settings.setRestaurantsFilteringStrategy(restaurantsFilteringStrategies[choice]);
+        settings.setRestaurantsFilteringStrategy(restaurantsFilteringStrategy);
     }
 
     private void showSettings(){

@@ -4,6 +4,7 @@ import ir.ac.kntu.db.CustomersDB;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.menu.courier.CouriersMenu;
 import ir.ac.kntu.menu.customer.CustomersMenu;
+import ir.ac.kntu.menu.restaurant.RestaurantsMenu;
 import ir.ac.kntu.menu.settings.SettingsMenu;
 import ir.ac.kntu.models.Settings;
 import ir.ac.kntu.utils.ScannerWrapper;
@@ -13,12 +14,15 @@ public class MainMenu extends Menu {
 
     private final CouriersMenu couriersMenu;
 
+    private final RestaurantsMenu restaurantsMenu;
+
     private final CustomersMenu customersMenu;
 
     private final SettingsMenu settingsMenu;
 
-    public MainMenu(CouriersMenu couriersMenu,CustomersMenu customersMenu,SettingsMenu settingsMenu) {
+    public MainMenu(CouriersMenu couriersMenu,RestaurantsMenu restaurantsMenu,CustomersMenu customersMenu,SettingsMenu settingsMenu) {
         this.couriersMenu = couriersMenu;
+        this.restaurantsMenu = restaurantsMenu;
         this.customersMenu = customersMenu;
         this.settingsMenu = settingsMenu;
     }
@@ -35,6 +39,7 @@ public class MainMenu extends Menu {
                         couriersMenu.show();
                         break;
                     case RESTAURANTS:
+                        restaurantsMenu.show();
                         break;
                     case CUSTOMERS:
                         customersMenu.show();
@@ -53,13 +58,7 @@ public class MainMenu extends Menu {
 
     private MainMenuOption printMenuOptions() {
         System.out.println("----------Main Menu----------");
-        System.out.println("\n1.Orders\n" +
-                "2.Couriers\n" +
-                "3.Restaurants\n" +
-                "4.Customers\n" +
-                "5.Settings\n" +
-                "6.Back\n");
-
+        MainMenuOption.printOptions();
         System.out.print("Enter your choice : ");
         return getOption(MainMenuOption.class);
     }

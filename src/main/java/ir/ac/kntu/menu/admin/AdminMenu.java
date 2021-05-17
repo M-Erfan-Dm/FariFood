@@ -41,10 +41,7 @@ public class AdminMenu extends Menu{
 
     private AdminOption printMenuOptions() {
         System.out.println("----------Admin Menu----------");
-        System.out.println("\n1.Login\n" +
-                "2.Register\n" +
-                "3.Exit\n");
-
+        AdminOption.printOptions();
         System.out.print("Enter your choice : ");
         return getOption(AdminOption.class);
     }

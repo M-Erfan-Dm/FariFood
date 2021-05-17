@@ -54,6 +54,16 @@ public abstract class Menu {
         return ScannerWrapper.nextLine();
     }
 
+    public Integer getPrice(){
+        System.out.println("Enter price : ");
+        int price =  Integer.parseInt(ScannerWrapper.nextLine());
+        if (price<0){
+            System.out.println("Invalid price");
+            return null;
+        }
+        return price;
+    }
+
     public Time getTime() {
         System.out.print("Enter hour : ");
         int hour = Integer.parseInt(ScannerWrapper.nextLine());
@@ -71,15 +81,7 @@ public abstract class Menu {
     }
 
     public Set<Day> getDays() {
-        System.out.println(
-                "1.Sunday\n" +
-                        "2.Monday\n" +
-                        "3.Tuesday\n" +
-                        "4.Wednesday\n" +
-                        "5.Thursday\n" +
-                        "6.Friday\n" +
-                        "7.Saturday\n" +
-                        "8.All\n");
+        Day.printOptions();
         System.out.println("Enter the days (or 0 to stop) :");
         Set<Day> days = new HashSet<>();
         int day = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
@@ -123,10 +125,7 @@ public abstract class Menu {
     }
 
     public RestaurantPriceType getRestaurantPriceType() {
-        System.out.println(
-                "1.Economical\n" +
-                        "2.Middle\n" +
-                        "3.Luxurious\n");
+        RestaurantPriceType.printOptions();
         System.out.println("Enter restaurant price type : ");
         return getOption(RestaurantPriceType.class);
     }

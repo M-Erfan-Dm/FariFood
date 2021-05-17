@@ -53,13 +53,7 @@ public class CouriersMenu extends Menu {
 
     private CouriersOption printMenuOptions() {
         System.out.println("----------Couriers Menu----------");
-        System.out.println("\n1.Register new courier\n" +
-                "2.Update existing courier\n" +
-                "3.Find courier by phone number\n" +
-                "4.Show all\n" +
-                "5.Remove courier\n" +
-                "6.Back\n");
-
+        CouriersOption.printOptions();
         System.out.print("Enter your choice : ");
         return getOption(CouriersOption.class);
     }
@@ -97,13 +91,10 @@ public class CouriersMenu extends Menu {
             System.out.println("Courier not found");
             return;
         }
-        System.out.println("1.General info\n" +
-                "2.Feedbacks of Courier\n" +
-                "3.Orders history\n");
+        CourierInfoOption.printOptions();
         System.out.println("Enter your choice :");
         CourierInfoOption courierInfoOption = getOption(CourierInfoOption.class);
         if (courierInfoOption==null){
-            System.out.println("Wrong choice!");
             return;
         }
         switch (courierInfoOption) {
@@ -144,12 +135,10 @@ public class CouriersMenu extends Menu {
     private Courier getCourierInfo() {
         String phoneNumber = getPhoneNumber();
         String name = getName();
-        System.out.println("1.Car\n" +
-                "2.Motorcycle\n");
+        VehicleType.printOptions();
         System.out.println("Enter your vehicle type :");
         VehicleType vehicleType = getOption(VehicleType.class);
         if (vehicleType == null){
-            System.out.println("Wrong Choice!");
             return null;
         }
         return new Courier(phoneNumber, name, vehicleType);

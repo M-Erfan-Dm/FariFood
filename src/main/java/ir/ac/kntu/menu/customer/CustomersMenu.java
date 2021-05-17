@@ -52,13 +52,7 @@ public class CustomersMenu extends Menu {
 
     private CustomersOption printMenuOptions() {
         System.out.println("----------Customers Menu----------");
-        System.out.println("\n1.Register new customer\n" +
-                "2.Update existing customer\n" +
-                "3.Find customer by phone number\n" +
-                "4.Show all\n" +
-                "5.Remove customer\n" +
-                "6.Back\n");
-
+        CustomersOption.printOptions();
         System.out.print("Enter your choice : ");
         return getOption(CustomersOption.class);
     }
@@ -90,13 +84,10 @@ public class CustomersMenu extends Menu {
             System.out.println("Customer not found");
             return;
         }
-        System.out.println("1.General info\n" +
-                "2.Feedbacks of Customer\n" +
-                "3.Orders history\n");
+        CustomerInfoOption.printOptions();
         System.out.println("Enter your choice :");
         CustomerInfoOption customerInfoOption = getOption(CustomerInfoOption.class);
         if (customerInfoOption == null) {
-            System.out.println("Wrong choice!");
             return;
         }
         switch (customerInfoOption) {

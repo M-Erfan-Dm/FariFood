@@ -42,13 +42,7 @@ public class RestaurantFoodMenu extends Menu {
 
     private RestaurantFoodMenuOption printMenuOptions() {
         System.out.println("----------Restaurant Food Menu----------");
-        System.out.println("\n1.Add new food\n" +
-                "2.Update existing food\n" +
-                "3.Find food by name\n" +
-                "4.Show all\n" +
-                "5.Remove food\n" +
-                "6.Back\n");
-
+        RestaurantFoodMenuOption.printOptions();
         System.out.print("Enter your choice : ");
         return getOption(RestaurantFoodMenuOption.class);
     }
