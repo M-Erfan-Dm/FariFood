@@ -2,7 +2,6 @@ package ir.ac.kntu.db;
 
 import ir.ac.kntu.models.Admin;
 
-import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
