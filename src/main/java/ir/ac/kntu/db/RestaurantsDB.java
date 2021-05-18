@@ -116,8 +116,18 @@ public class RestaurantsDB {
         return bestFoods;
     }
 
+    public List<Restaurant> getRestaurantsByFood(String foodName) {
+        List<Restaurant> foundRestaurants = new ArrayList<>();
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.getFoodMenu().containsFood(new Food(foodName))) {
+                foundRestaurants.add(restaurant);
+            }
+        }
+        return foundRestaurants;
+    }
+
     public List<Restaurant> getBestRestaurantsByFood(String foodName, int count) {
-        List<Restaurant> orderedList = new ArrayList<>(restaurants);
+        List<Restaurant> orderedList = getRestaurantsByFood(foodName);
         orderedList.sort(new Comparator<Restaurant>() {
             @Override
             public int compare(Restaurant o1, Restaurant o2) {
