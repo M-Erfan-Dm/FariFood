@@ -1,0 +1,1414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="7649.782001332" y="4788.0">ir.ac.kntu.menu.restaurant.RestaurantFoodMenuOption</node>
+    <node x="7225.782001332" y="5492.0">ir.ac.kntu.menu.restaurant.RestaurantFoodMenu</node>
+    <node x="3584.1033970381977" y="4830.0">ir.ac.kntu.menu.order.UpdateOrderOption</node>
+    <node x="5840.243991476495" y="2793.0">ir.ac.kntu.models.Restaurant</node>
+    <node x="9274.919431609289" y="14.5">ir.ac.kntu.models.RestaurantsFilteringStrategy</node>
+    <node x="4116.830669765471" y="3775.0">ir.ac.kntu.models.Courier</node>
+    <node x="6794.770637695637" y="6162.0">ir.ac.kntu.menu.main.MainMenuOption</node>
+    <node x="7738.540105173803" y="6036.0">ir.ac.kntu.menu.restaurant.RestaurantsMenu</node>
+    <node x="6778.770637695637" y="6748.0">ir.ac.kntu.menu.main.MainMenu</node>
+    <node x="5231.792304968558" y="6762.0">ir.ac.kntu.menu.admin.AdminOption</node>
+    <node x="1916.8738782051278" y="4844.0">ir.ac.kntu.menu.order.OrdersFoodOption</node>
+    <node x="5079.774748030945" y="7454.0">ir.ac.kntu.FariFood</node>
+    <node x="9556.798667998666" y="6218.0">ir.ac.kntu.menu.settings.SettingsMenu</node>
+    <node x="7895.282001332" y="2961.0">ir.ac.kntu.models.Salary</node>
+    <node x="362.87387820512686" y="6734.0">ir.ac.kntu.db.AdminsDB</node>
+    <node x="9575.548667998666" y="5534.0">ir.ac.kntu.menu.settings.SettingsOption</node>
+    <node x="3272.8605114885017" y="6148.0">ir.ac.kntu.menu.order.OrdersMenu</node>
+    <node x="3130.158176198033" y="0.0">ir.ac.kntu.models.Rating</node>
+    <node x="6517.770637695637" y="4398.0">ir.ac.kntu.utils.ScannerWrapper</node>
+    <node x="3711.5149943798515" y="5534.0">ir.ac.kntu.menu.order.UpdateOrderMenu</node>
+    <node x="5171.51452719078" y="7082.0">ir.ac.kntu.menu.admin.AdminMenu</node>
+    <node x="8863.548667998666" y="5492.0">ir.ac.kntu.menu.restaurant.RestaurantInfoOption</node>
+    <node x="3071.908176198033" y="371.0">ir.ac.kntu.models.Feedback</node>
+    <node x="6777.623598275955" y="1199.0">ir.ac.kntu.models.Day</node>
+    <node x="8107.782001332" y="5464.0">ir.ac.kntu.menu.restaurant.RestaurantCourierMenu</node>
+    <node x="9313.548667998666" y="385.0">ir.ac.kntu.models.Settings</node>
+    <node x="525.3530448717938" y="6106.0">ir.ac.kntu.menu.customer.CustomersMenu</node>
+    <node x="5625.239387695637" y="4718.0">ir.ac.kntu.menu.Menu</node>
+    <node x="2545.5533970381975" y="1087.0">ir.ac.kntu.models.OrdersService</node>
+    <node x="645.6627216525785" y="5534.0">ir.ac.kntu.menu.customer.CustomerInfoOption</node>
+    <node x="6488.188251332" y="1269.0">ir.ac.kntu.models.Time</node>
+    <node x="8178.048667998666" y="2315.0">ir.ac.kntu.models.SalaryType</node>
+    <node x="2495.6238782051278" y="4314.0">ir.ac.kntu.models.Order</node>
+    <node x="3830.090319372655" y="1059.0">ir.ac.kntu.db.RestaurantsDB</node>
+    <node x="3145.0377216525785" y="4816.0">ir.ac.kntu.menu.order.ShowOrdersOption</node>
+    <node x="6235.243991476495" y="3473.0">ir.ac.kntu.models.CourierJobInfo</node>
+    <node x="5943.942591782448" y="357.0">ir.ac.kntu.models.RestaurantPriceType</node>
+    <node x="2701.7935857051843" y="5394.0">ir.ac.kntu.menu.order.AddOrderMenu</node>
+    <node x="4928.458855173802" y="5534.0">ir.ac.kntu.menu.courier.CourierInfoOption</node>
+    <node x="3535.908176198033" y="371.0">ir.ac.kntu.models.Food</node>
+    <node x="4718.744569459516" y="2231.0">ir.ac.kntu.db.CouriersDB</node>
+    <node x="3314.908176198033" y="413.0">ir.ac.kntu.utils.IdGenerator</node>
+    <node x="8277.048667998666" y="4788.0">ir.ac.kntu.menu.restaurant.RestaurantCourierOption</node>
+    <node x="9207.548667998666" y="5464.0">ir.ac.kntu.menu.restaurant.RestaurantsOption</node>
+    <node x="6189.739387695637" y="2287.0">ir.ac.kntu.models.Schedule</node>
+    <node x="2240.8738782051278" y="4802.0">ir.ac.kntu.menu.order.OrdersRestaurantOption</node>
+    <node x="5248.458855173802" y="5492.0">ir.ac.kntu.menu.courier.CouriersOption</node>
+    <node x="438.99041626896724" y="371.0">ir.ac.kntu.models.Customer</node>
+    <node x="1570.3738782051278" y="5492.0">ir.ac.kntu.menu.order.OrdersOption</node>
+    <node x="2337.1127216525783" y="357.0">ir.ac.kntu.models.OrderState</node>
+    <node x="827.6863782051278" y="4760.0">ir.ac.kntu.db.CustomersDB</node>
+    <node x="5748.508855173803" y="2259.0">ir.ac.kntu.models.FoodMenu</node>
+    <node x="160.11666666666588" y="6218.0">ir.ac.kntu.models.Admin</node>
+    <node x="3267.7877216525785" y="5520.0">ir.ac.kntu.menu.order.ShowOrderMenu</node>
+    <node x="981.6627216525785" y="5492.0">ir.ac.kntu.menu.customer.CustomersOption</node>
+    <node x="4264.880669765471" y="3487.0">ir.ac.kntu.models.VehicleType</node>
+    <node x="5101.274748030945" y="7632.0">ir.ac.kntu.Main</node>
+    <node x="4827.063634333637" y="6106.0">ir.ac.kntu.menu.courier.CouriersMenu</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.OrdersService">
+      <point x="8.522727272727025" y="-274.0" />
+      <point x="7934.562832446529" y="5916.0" />
+      <point x="8097.282001332" y="5916.0" />
+      <point x="8097.282001332" y="3373.0" />
+      <point x="7873.782001332" y="3373.0" />
+      <point x="7873.782001332" y="1761.0" />
+      <point x="2915.745704730505" y="1761.0" />
+      <point x="177.69230769230762" y="288.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CouriersDB" target="ir.ac.kntu.models.OrdersService">
+      <point x="-150.66666666666697" y="-176.0" />
+      <point x="4794.077902792849" y="1861.0" />
+      <point x="2797.284166268967" y="1861.0" />
+      <point x="59.23076923076951" y="288.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.OrderState">
+      <point x="-47.5" y="-246.0" />
+      <point x="2844.2935857051843" y="5174.0" />
+      <point x="2810.5377216525785" y="5174.0" />
+      <point x="2810.5377216525785" y="1901.0" />
+      <point x="2333.368585705184" y="1901.0" />
+      <point x="2333.368585705184" y="839.0" />
+      <point x="2461.6127216525783" y="839.0" />
+      <point x="0.0" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.models.Food">
+      <point x="-67.72499999999991" y="-162.0" />
+      <point x="3355.635511488502" y="5966.0" />
+      <point x="1860.8738782051278" y="5966.0" />
+      <point x="1860.8738782051278" y="1911.0" />
+      <point x="2412.243585705184" y="1911.0" />
+      <point x="2412.243585705184" y="919.0" />
+      <point x="3547.0581761980325" y="919.0" />
+      <point x="-100.35000000000036" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.restaurant.RestaurantsMenu">
+      <point x="37.92000000000007" y="-64.0" />
+      <point x="5236.194748030945" y="7354.0" />
+      <point x="8015.050105173802" y="7354.0" />
+      <point x="8015.050105173802" y="6694.0" />
+      <point x="7972.915105173803" y="6694.0" />
+      <point x="46.875" y="274.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.db.CouriersDB">
+      <point x="-93.75" y="-274.0" />
+      <point x="7832.290105173803" y="5956.0" />
+      <point x="7193.282001332" y="5956.0" />
+      <point x="7193.282001332" y="2693.0" />
+      <point x="5057.744569459516" y="2693.0" />
+      <point x="113.0" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CustomersDB" target="ir.ac.kntu.models.Order">
+      <point x="222.0" y="-176.0" />
+      <point x="1308.6863782051278" y="4678.0" />
+      <point x="2509.8738782051278" y="4678.0" />
+      <point x="-99.75" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.db.CustomersDB">
+      <point x="-127.92500000000018" y="-162.0" />
+      <point x="3295.4355114885016" y="6006.0" />
+      <point x="1548.8738782051278" y="6006.0" />
+      <point x="1548.8738782051278" y="5254.0" />
+      <point x="1183.8113782051278" y="5254.0" />
+      <point x="97.125" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.models.Courier">
+      <point x="-142.60714285714312" y="-204.0" />
+      <point x="4865.956491476494" y="6006.0" />
+      <point x="4675.244569459516" y="6006.0" />
+      <point x="4675.244569459516" y="4294.0" />
+      <point x="4336.164003098804" y="4294.0" />
+      <point x="31.33333333333303" y="204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="25.230769230769056" y="-120.0" />
+      <point x="6968.001406926405" y="6664.0" />
+      <point x="7101.270637695637" y="6664.0" />
+      <point x="7101.270637695637" y="5364.0" />
+      <point x="5822.801887695637" y="5364.0" />
+      <point x="34.0625" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Schedule" target="ir.ac.kntu.models.Time">
+      <point x="-103.875" y="-120.0" />
+      <point x="6224.364387695637" y="2141.0" />
+      <point x="6655.438251332" y="2141.0" />
+      <point x="55.75" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.menu.order.OrdersOption">
+      <point x="-97.82500000000027" y="-162.0" />
+      <point x="3325.5355114885015" y="5986.0" />
+      <point x="1704.8738782051278" y="5986.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="0.0" y="-106.0" />
+      <point x="3888.5149943798515" y="5234.0" />
+      <point x="3917.6033970381977" y="5234.0" />
+      <point x="3917.6033970381977" y="2081.0" />
+      <point x="4098.52510198135" y="2081.0" />
+      <point x="-25.565217391304486" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.CourierJobInfo" target="ir.ac.kntu.models.Schedule">
+      <point x="32.714285714286234" y="-106.0" />
+      <point x="6382.458277190781" y="3453.0" />
+      <point x="6367.114387695637" y="3453.0" />
+      <point x="6367.114387695637" y="2763.0" />
+      <point x="6345.551887695637" y="2763.0" />
+      <point x="17.3125" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.courier.CouriersMenu">
+      <point x="-50.46153846153857" y="-120.0" />
+      <point x="6892.3090992340985" y="6614.0" />
+      <point x="5053.938634333637" y="6614.0" />
+      <point x="45.375" y="204.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.models.Feedback">
+      <point x="-96.5454545454545" y="-106.0" />
+      <point x="3791.969539834397" y="5204.0" />
+      <point x="3573.6033970381977" y="5204.0" />
+      <point x="3573.6033970381977" y="739.0" />
+      <point x="3183.408176198033" y="739.0" />
+      <point x="0.0" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.Food">
+      <point x="-49.0" y="-316.0" />
+      <point x="4075.090319372655" y="709.0" />
+      <point x="3658.5581761980325" y="709.0" />
+      <point x="11.149999999999636" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.menu.courier.CouriersOption">
+      <point x="38.89285714285688" y="-204.0" />
+      <point x="5047.456491476494" y="5966.0" />
+      <point x="5388.458855173802" y="5966.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.Feedback">
+      <point x="-245.0" y="-316.0" />
+      <point x="3879.090319372655" y="729.0" />
+      <point x="3200.5620223518786" y="729.0" />
+      <point x="17.153846153845734" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.AdminsDB" target="ir.ac.kntu.models.Admin">
+      <point x="-101.33333333333394" y="-134.0" />
+      <point x="413.5405448717929" y="6704.0" />
+      <point x="182.41666666666515" y="6704.0" />
+      <point x="-89.20000000000073" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.db.CustomersDB">
+      <point x="-85.31999999999971" y="-64.0" />
+      <point x="5112.954748030946" y="7404.0" />
+      <point x="73.95999999999913" y="7404.0" />
+      <point x="73.95999999999913" y="5364.0" />
+      <point x="924.8113782051278" y="5364.0" />
+      <point x="-161.875" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CouriersDB" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="150.66666666666697" y="-176.0" />
+      <point x="5095.411236126183" y="1841.0" />
+      <point x="4200.785971546567" y="1841.0" />
+      <point x="76.695652173913" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.models.OrderState">
+      <point x="-18.999999999999545" y="-120.0" />
+      <point x="3438.787721652579" y="5244.0" />
+      <point x="3507.6033970381977" y="5244.0" />
+      <point x="3507.6033970381977" y="759.0" />
+      <point x="2532.755578795435" y="759.0" />
+      <point x="71.14285714285688" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.courier.CouriersMenu">
+      <point x="-9.480000000000018" y="-64.0" />
+      <point x="5188.794748030945" y="7324.0" />
+      <point x="4846.750816267066" y="7324.0" />
+      <point x="4846.750816267066" y="6714.0" />
+      <point x="4963.188634333637" y="6714.0" />
+      <point x="-45.375" y="204.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.restaurant.RestaurantsMenu">
+      <point x="75.69230769230762" y="-120.0" />
+      <point x="7018.462945387944" y="6684.0" />
+      <point x="7785.415105173803" y="6684.0" />
+      <point x="-140.625" y="274.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.utils.ScannerWrapper">
+      <point x="96.5454545454545" y="-106.0" />
+      <point x="3985.060448925306" y="5264.0" />
+      <point x="4016.6033970381977" y="5264.0" />
+      <point x="4016.6033970381977" y="4688.0" />
+      <point x="6555.937304362304" y="4688.0" />
+      <point x="-76.33333333333303" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.db.CouriersDB">
+      <point x="-175.3125" y="-260.0" />
+      <point x="5851.931491476495" y="2753.0" />
+      <point x="4960.887426602373" y="2753.0" />
+      <point x="16.142857142856883" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.models.VehicleType">
+      <point x="-90.75" y="-204.0" />
+      <point x="4917.813634333637" y="5986.0" />
+      <point x="4697.244569459516" y="5986.0" />
+      <point x="4697.244569459516" y="3725.0" />
+      <point x="4478.214003098803" y="3725.0" />
+      <point x="85.33333333333303" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="-144.88636363636397" y="-274.0" />
+      <point x="7781.153741537439" y="5986.0" />
+      <point x="7160.282001332" y="5986.0" />
+      <point x="7160.282001332" y="3423.0" />
+      <point x="6067.315420047924" y="3423.0" />
+      <point x="40.07142857142844" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.models.Order">
+      <point x="115.20833333333303" y="-204.0" />
+      <point x="838.0613782051269" y="5996.0" />
+      <point x="1504.8738782051278" y="5996.0" />
+      <point x="1504.8738782051278" y="4688.0" />
+      <point x="2538.3738782051278" y="4688.0" />
+      <point x="-71.25" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.models.Food">
+      <point x="154.0" y="-288.0" />
+      <point x="2892.0533970381975" y="939.0" />
+      <point x="3591.658176198033" y="939.0" />
+      <point x="-55.75" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="148.125" y="-204.0" />
+      <point x="870.9780448717938" y="6006.0" />
+      <point x="1515.8738782051278" y="6006.0" />
+      <point x="1515.8738782051278" y="5274.0" />
+      <point x="5632.051887695637" y="5274.0" />
+      <point x="-156.6875" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.settings.SettingsMenu" target="ir.ac.kntu.models.RestaurantsFilteringStrategy">
+      <point x="128.75" y="-92.0" />
+      <point x="9840.048667998666" y="6016.0" />
+      <point x="9885.048667998666" y="6016.0" />
+      <point x="9885.048667998666" y="327.0" />
+      <point x="9552.819431609289" y="327.0" />
+      <point x="79.39999999999964" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.Schedule">
+      <point x="151.9375" y="-260.0" />
+      <point x="6179.181491476495" y="2753.0" />
+      <point x="6207.051887695637" y="2753.0" />
+      <point x="-121.1875" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Order" target="ir.ac.kntu.models.Courier">
+      <point x="91.19999999999982" y="-162.0" />
+      <point x="2700.8238782051276" y="4274.0" />
+      <point x="4148.164003098804" y="4274.0" />
+      <point x="-156.66666666666697" y="204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.models.CourierJobInfo" target="ir.ac.kntu.models.Restaurant">
+      <point x="-98.14285714285688" y="-106.0" />
+      <point x="6251.601134333638" y="3453.0" />
+      <point x="5987.172562905067" y="3453.0" />
+      <point x="-40.07142857142844" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.models.RestaurantPriceType">
+      <point x="-49.05000000000018" y="-218.0" />
+      <point x="5739.6893876956365" y="4678.0" />
+      <point x="5716.008855173803" y="4678.0" />
+      <point x="5716.008855173803" y="2071.0" />
+      <point x="5978.364387695637" y="2071.0" />
+      <point x="5978.364387695637" y="989.0" />
+      <point x="6075.192591782448" y="989.0" />
+      <point x="-26.25" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="67.72499999999991" y="-162.0" />
+      <point x="3491.0855114885017" y="5966.0" />
+      <point x="4533.18066976547" y="5966.0" />
+      <point x="4533.18066976547" y="2091.0" />
+      <point x="4149.655536763959" y="2091.0" />
+      <point x="25.565217391304486" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.FoodMenu" target="ir.ac.kntu.models.Food">
+      <point x="67.5" y="-148.0" />
+      <point x="5951.008855173803" y="2091.0" />
+      <point x="6044.864387695637" y="2091.0" />
+      <point x="6044.864387695637" y="659.0" />
+      <point x="3703.158176198033" y="659.0" />
+      <point x="55.75" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="-178.97727272727298" y="-274.0" />
+      <point x="7747.062832446529" y="6006.0" />
+      <point x="7127.282001332" y="6006.0" />
+      <point x="7127.282001332" y="5344.0" />
+      <point x="5850.051887695637" y="5344.0" />
+      <point x="61.3125" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.menu.customer.CustomerInfoOption">
+      <point x="16.458333333333485" y="-204.0" />
+      <point x="739.3113782051278" y="5966.0" />
+      <point x="803.6627216525785" y="5966.0" />
+      <point x="0.0" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.FoodMenu">
+      <point x="-128.5625" y="-260.0" />
+      <point x="5898.681491476495" y="2733.0" />
+      <point x="5861.008855173803" y="2733.0" />
+      <point x="-22.5" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.models.Time">
+      <point x="16.350000000000364" y="-218.0" />
+      <point x="5805.089387695637" y="4658.0" />
+      <point x="5738.008855173803" y="4658.0" />
+      <point x="5738.008855173803" y="2121.0" />
+      <point x="6581.104917998668" y="2121.0" />
+      <point x="-18.58333333333303" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="142.9749999999999" y="-162.0" />
+      <point x="3566.3355114885017" y="6016.0" />
+      <point x="4653.244569459516" y="6016.0" />
+      <point x="4653.244569459516" y="5364.0" />
+      <point x="5754.676887695637" y="5364.0" />
+      <point x="-34.0625" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.RestaurantPriceType">
+      <point x="105.1875" y="-260.0" />
+      <point x="6132.431491476495" y="2773.0" />
+      <point x="6118.989387695637" y="2773.0" />
+      <point x="6118.989387695637" y="2171.0" />
+      <point x="6744.688251332" y="2171.0" />
+      <point x="6744.688251332" y="629.0" />
+      <point x="6180.192591782448" y="629.0" />
+      <point x="78.75" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="57.000000000000455" y="-120.0" />
+      <point x="3514.787721652579" y="5264.0" />
+      <point x="3529.6033970381977" y="5264.0" />
+      <point x="3529.6033970381977" y="2061.0" />
+      <point x="4047.394667198742" y="2061.0" />
+      <point x="-76.695652173913" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.menu.order.UpdateOrderOption">
+      <point x="-64.36363636363649" y="-106.0" />
+      <point x="3824.151358016215" y="5194.0" />
+      <point x="3740.1033970381977" y="5194.0" />
+      <point x="0.0" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="32.18181818181802" y="-106.0" />
+      <point x="3920.6968125616695" y="5244.0" />
+      <point x="3994.6033970381977" y="5244.0" />
+      <point x="3994.6033970381977" y="3755.0" />
+      <point x="4036.677178155169" y="3755.0" />
+      <point x="4036.677178155169" y="3433.0" />
+      <point x="5907.02970576221" y="3433.0" />
+      <point x="-120.21428571428532" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.db.CouriersDB">
+      <point x="-104.27999999999975" y="-64.0" />
+      <point x="5093.994748030946" y="7424.0" />
+      <point x="9.479999999999563" y="7424.0" />
+      <point x="9.479999999999563" y="2713.0" />
+      <point x="4767.173140888088" y="2713.0" />
+      <point x="-177.57142857142844" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.settings.SettingsMenu" target="ir.ac.kntu.menu.settings.SettingsOption">
+      <point x="-25.75" y="-92.0" />
+      <point x="9685.548667998666" y="6016.0" />
+      <point x="9714.048667998666" y="6016.0" />
+      <point x="0.0" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="-174.0666666666666" y="-176.0" />
+      <point x="8120.215334665334" y="5304.0" />
+      <point x="5904.551887695637" y="5304.0" />
+      <point x="115.8125" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.menu.courier.CourierInfoOption">
+      <point x="12.964285714286234" y="-204.0" />
+      <point x="5021.5279200479235" y="5956.0" />
+      <point x="5078.458855173802" y="5956.0" />
+      <point x="0.0" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.models.Customer">
+      <point x="-148.125" y="-204.0" />
+      <point x="574.7280448717938" y="6006.0" />
+      <point x="40.95999999999913" y="6006.0" />
+      <point x="40.95999999999913" y="1019.0" />
+      <point x="480.80291626896724" y="1019.0" />
+      <point x="-69.6875" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.db.CouriersDB">
+      <point x="-38.89285714285688" y="-204.0" />
+      <point x="4969.67077719078" y="5966.0" />
+      <point x="4864.010816267065" y="5966.0" />
+      <point x="4864.010816267065" y="2753.0" />
+      <point x="4896.315998030945" y="2753.0" />
+      <point x="-48.42857142857156" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.models.Feedback">
+      <point x="-82.77500000000009" y="-162.0" />
+      <point x="3340.5855114885017" y="5976.0" />
+      <point x="1849.8738782051278" y="5976.0" />
+      <point x="1849.8738782051278" y="1901.0" />
+      <point x="2057.6226278074287" y="1901.0" />
+      <point x="2057.6226278074287" y="869.0" />
+      <point x="3114.792791582648" y="869.0" />
+      <point x="-68.61538461538476" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Order" target="ir.ac.kntu.models.Feedback">
+      <point x="-45.600000000000364" y="-162.0" />
+      <point x="2564.0238782051274" y="4254.0" />
+      <point x="2243.618585705184" y="4254.0" />
+      <point x="2243.618585705184" y="879.0" />
+      <point x="3131.9466377364947" y="879.0" />
+      <point x="-51.46153846153811" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.admin.AdminMenu" target="ir.ac.kntu.db.AdminsDB">
+      <point x="-132.8888888888887" y="-106.0" />
+      <point x="5188.125638301892" y="7062.0" />
+      <point x="552.8738782051269" y="7062.0" />
+      <point x="38.0" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.menu.restaurant.RestaurantInfoOption">
+      <point x="93.75" y="-274.0" />
+      <point x="8019.790105173803" y="5966.0" />
+      <point x="9025.048667998666" y="5966.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.models.OrderState">
+      <point x="-112.875" y="-162.0" />
+      <point x="3310.4855114885017" y="5996.0" />
+      <point x="1559.8738782051278" y="5996.0" />
+      <point x="1559.8738782051278" y="1891.0" />
+      <point x="1846.5377216525785" y="1891.0" />
+      <point x="1846.5377216525785" y="809.0" />
+      <point x="2354.898435938293" y="809.0" />
+      <point x="-106.71428571428532" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.Feedback">
+      <point x="110.79545454545496" y="-274.0" />
+      <point x="8036.835559719257" y="5976.0" />
+      <point x="9197.048667998666" y="5976.0" />
+      <point x="9197.048667998666" y="1731.0" />
+      <point x="8584.202764942622" y="1731.0" />
+      <point x="8584.202764942622" y="619.0" />
+      <point x="3286.33125312111" y="619.0" />
+      <point x="102.92307692307713" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.settings.SettingsMenu" target="ir.ac.kntu.models.Settings">
+      <point x="25.75" y="-92.0" />
+      <point x="9737.048667998666" y="5996.0" />
+      <point x="9863.048667998666" y="5996.0" />
+      <point x="9863.048667998666" y="1039.0" />
+      <point x="9611.503213453212" y="1039.0" />
+      <point x="79.45454545454595" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.menu.restaurant.RestaurantCourierOption">
+      <point x="24.866666666666788" y="-176.0" />
+      <point x="8319.148667998666" y="5314.0" />
+      <point x="8451.048667998666" y="5314.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.models.Courier">
+      <point x="64.36363636363649" y="-106.0" />
+      <point x="3952.878630743488" y="5254.0" />
+      <point x="4005.6033970381977" y="5254.0" />
+      <point x="4005.6033970381977" y="4294.0" />
+      <point x="4273.497336432138" y="4294.0" />
+      <point x="-31.33333333333303" y="204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.admin.AdminMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="66.44444444444434" y="-106.0" />
+      <point x="5387.458971635224" y="7042.0" />
+      <point x="6768.270637695637" y="7042.0" />
+      <point x="6768.270637695637" y="5374.0" />
+      <point x="5809.176887695637" y="5374.0" />
+      <point x="20.4375" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CustomersDB" target="ir.ac.kntu.models.Customer">
+      <point x="-148.0" y="-176.0" />
+      <point x="938.6863782051278" y="4688.0" />
+      <point x="237.9350307192717" y="4688.0" />
+      <point x="237.9350307192717" y="1039.0" />
+      <point x="536.5529162689672" y="1039.0" />
+      <point x="-13.9375" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.order.OrdersMenu">
+      <point x="-28.440000000000055" y="-64.0" />
+      <point x="5169.834748030946" y="7344.0" />
+      <point x="2447.4696474358966" y="7344.0" />
+      <point x="2447.4696474358966" y="6694.0" />
+      <point x="3385.7355114885017" y="6694.0" />
+      <point x="-37.625" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.models.OrdersService">
+      <point x="-56.999999999999545" y="-120.0" />
+      <point x="3400.787721652579" y="5234.0" />
+      <point x="3496.6033970381977" y="5234.0" />
+      <point x="3496.6033970381977" y="1881.0" />
+      <point x="2738.0533970381975" y="1881.0" />
+      <point x="0.0" y="288.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.settings.SettingsMenu">
+      <point x="66.36000000000013" y="-64.0" />
+      <point x="5264.634748030945" y="7384.0" />
+      <point x="9759.403667998666" y="7384.0" />
+      <point x="9759.403667998666" y="6714.0" />
+      <point x="9827.173667998666" y="6714.0" />
+      <point x="115.875" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.db.AdminsDB">
+      <point x="-56.88000000000011" y="-64.0" />
+      <point x="5141.394748030945" y="7374.0" />
+      <point x="443.61387820512755" y="7374.0" />
+      <point x="443.61387820512755" y="7062.0" />
+      <point x="476.87387820512686" y="7062.0" />
+      <point x="-38.0" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Order" target="ir.ac.kntu.models.Customer">
+      <point x="-91.19999999999982" y="-162.0" />
+      <point x="2518.423878205128" y="4284.0" />
+      <point x="2210.618585705184" y="4284.0" />
+      <point x="2210.618585705184" y="789.0" />
+      <point x="620.1779162689672" y="789.0" />
+      <point x="69.6875" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Settings" target="ir.ac.kntu.models.RestaurantsFilteringStrategy">
+      <point x="-109.25" y="-78.0" />
+      <point x="9422.798667998666" y="337.0" />
+      <point x="9394.01943160929" y="337.0" />
+      <point x="-79.40000000000009" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.customer.CustomersMenu">
+      <point x="-47.40000000000009" y="-64.0" />
+      <point x="5150.874748030945" y="7364.0" />
+      <point x="786.6030448717938" y="7364.0" />
+      <point x="786.6030448717938" y="6714.0" />
+      <point x="673.4780448717938" y="6714.0" />
+      <point x="-49.375" y="204.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.Customer">
+      <point x="-142.5" y="-246.0" />
+      <point x="2749.2935857051843" y="5224.0" />
+      <point x="1906.3738782051278" y="5224.0" />
+      <point x="1906.3738782051278" y="1881.0" />
+      <point x="1172.6060857051843" y="1881.0" />
+      <point x="1172.6060857051843" y="1039.0" />
+      <point x="564.4279162689672" y="1039.0" />
+      <point x="13.9375" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.main.MainMenu">
+      <point x="18.960000000000036" y="-64.0" />
+      <point x="5217.234748030945" y="7334.0" />
+      <point x="6983.770637695637" y="7334.0" />
+      <point x="41.0" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.menu.customer.CustomersOption">
+      <point x="49.375" y="-204.0" />
+      <point x="772.2280448717938" y="5976.0" />
+      <point x="1129.6627216525785" y="5976.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.models.Day">
+      <point x="114.44999999999982" y="-218.0" />
+      <point x="5903.1893876956365" y="4678.0" />
+      <point x="6507.270637695637" y="4678.0" />
+      <point x="6507.270637695637" y="2211.0" />
+      <point x="6952.623598275955" y="2211.0" />
+      <point x="75.0" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.models.Rating">
+      <point x="-81.75" y="-218.0" />
+      <point x="5706.989387695637" y="4658.0" />
+      <point x="5634.133855173803" y="4658.0" />
+      <point x="5634.133855173803" y="2061.0" />
+      <point x="5836.614387695637" y="2061.0" />
+      <point x="5836.614387695637" y="327.0" />
+      <point x="3311.8248428647" y="327.0" />
+      <point x="72.66666666666697" y="148.5" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.models.CourierJobInfo">
+      <point x="-49.733333333333576" y="-176.0" />
+      <point x="8244.548667998666" y="5254.0" />
+      <point x="8173.548667998666" y="5254.0" />
+      <point x="8173.548667998666" y="3735.0" />
+      <point x="6445.160658143161" y="3735.0" />
+      <point x="95.41666666666606" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.models.Order">
+      <point x="-132.99999999999955" y="-120.0" />
+      <point x="3324.787721652579" y="5214.0" />
+      <point x="3463.5377216525785" y="5214.0" />
+      <point x="3463.5377216525785" y="4698.0" />
+      <point x="2652.3738782051278" y="4698.0" />
+      <point x="42.75" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.models.CourierJobInfo">
+      <point x="142.60714285714312" y="-204.0" />
+      <point x="5151.17077719078" y="6006.0" />
+      <point x="6757.270637695637" y="6006.0" />
+      <point x="6757.270637695637" y="3755.0" />
+      <point x="6368.8273248098285" y="3755.0" />
+      <point x="19.08333333333394" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.utils.ScannerWrapper">
+      <point x="-124.33333333333303" y="-176.0" />
+      <point x="8169.948667998668" y="5284.0" />
+      <point x="8075.282001332" y="5284.0" />
+      <point x="8075.282001332" y="4698.0" />
+      <point x="6708.60397102897" y="4698.0" />
+      <point x="76.33333333333303" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.menu.order.UpdateOrderMenu">
+      <point x="22.574999999999818" y="-162.0" />
+      <point x="3445.9355114885016" y="5936.0" />
+      <point x="3800.0149943798515" y="5936.0" />
+      <point x="-88.5" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.Schedule">
+      <point x="-8.522727272727025" y="-274.0" />
+      <point x="7917.517377901075" y="5906.0" />
+      <point x="7639.282001332" y="5906.0" />
+      <point x="7639.282001332" y="2663.0" />
+      <point x="6414.801887695637" y="2663.0" />
+      <point x="86.5625" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.Courier">
+      <point x="-93.5" y="260.0" />
+      <point x="5933.743991476495" y="3443.0" />
+      <point x="4254.380669765471" y="3443.0" />
+      <point x="4254.380669765471" y="3755.0" />
+      <point x="4286.0306697654705" y="3755.0" />
+      <point x="-18.800000000000182" y="-204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.OrdersService">
+      <point x="-81.8125" y="-260.0" />
+      <point x="5945.431491476495" y="2713.0" />
+      <point x="6029.008855173803" y="2713.0" />
+      <point x="6029.008855173803" y="1821.0" />
+      <point x="2856.5149354997357" y="1821.0" />
+      <point x="118.46153846153811" y="288.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.Day">
+      <point x="128.5625" y="-260.0" />
+      <point x="6155.806491476495" y="2773.0" />
+      <point x="6142.239387695637" y="2773.0" />
+      <point x="6142.239387695637" y="2181.0" />
+      <point x="6802.623598275955" y="2181.0" />
+      <point x="-75.0" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.menu.order.ShowOrdersOption">
+      <point x="-170.99999999999955" y="-120.0" />
+      <point x="3286.787721652579" y="5264.0" />
+      <point x="3299.0377216525785" y="5264.0" />
+      <point x="0.0" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.models.Feedback">
+      <point x="168.53571428571377" y="-204.0" />
+      <point x="5177.099348619351" y="6016.0" />
+      <point x="7138.282001332" y="6016.0" />
+      <point x="7138.282001332" y="2091.0" />
+      <point x="6477.688251332" y="2091.0" />
+      <point x="6477.688251332" y="649.0" />
+      <point x="3269.1774069672633" y="649.0" />
+      <point x="85.76923076923049" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.menu.order.AddOrderMenu">
+      <point x="-37.625" y="-162.0" />
+      <point x="3385.7355114885017" y="5946.0" />
+      <point x="2796.7935857051843" y="5946.0" />
+      <point x="-95.0" y="246.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.models.Courier">
+      <point x="29.615384615384755" y="288.0" />
+      <point x="2767.6687816535823" y="1871.0" />
+      <point x="3992.677178155169" y="1871.0" />
+      <point x="3992.677178155169" y="3735.0" />
+      <point x="4135.630669765471" y="3735.0" />
+      <point x="-169.19999999999982" y="-204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.models.Settings">
+      <point x="82.77500000000009" y="-162.0" />
+      <point x="3506.135511488502" y="5976.0" />
+      <point x="4609.244569459516" y="5976.0" />
+      <point x="4609.244569459516" y="1029.0" />
+      <point x="9452.59412254412" y="1029.0" />
+      <point x="-79.45454545454595" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.models.Feedback">
+      <point x="-115.20833333333303" y="-204.0" />
+      <point x="607.6447115384608" y="5996.0" />
+      <point x="51.95999999999913" y="5996.0" />
+      <point x="51.95999999999913" y="1911.0" />
+      <point x="1303.1002216525785" y="1911.0" />
+      <point x="1303.1002216525785" y="849.0" />
+      <point x="3080.4850992749557" y="849.0" />
+      <point x="-102.92307692307713" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="180.5" y="-246.0" />
+      <point x="3072.2935857051843" y="5304.0" />
+      <point x="5672.926887695637" y="5304.0" />
+      <point x="-115.8125" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantFoodMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="-125.9375" y="-148.0" />
+      <point x="7301.344501332" y="5314.0" />
+      <point x="5890.926887695637" y="5314.0" />
+      <point x="102.1875" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.models.Schedule">
+      <point x="149.19999999999982" y="-176.0" />
+      <point x="8443.482001332" y="5364.0" />
+      <point x="8679.548667998666" y="5364.0" />
+      <point x="8679.548667998666" y="2623.0" />
+      <point x="6449.426887695637" y="2623.0" />
+      <point x="121.1875" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu">
+      <point x="25.568181818181984" y="-274.0" />
+      <point x="7951.608286991985" y="5926.0" />
+      <point x="8201.032001332" y="5926.0" />
+      <point x="-93.25" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.models.RestaurantsFilteringStrategy">
+      <point x="113.76000000000022" y="-64.0" />
+      <point x="5312.034748030946" y="7434.0" />
+      <point x="9938.343667998664" y="7434.0" />
+      <point x="9938.343667998664" y="317.0" />
+      <point x="9632.21943160929" y="317.0" />
+      <point x="158.80000000000018" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="95.00000000000045" y="-120.0" />
+      <point x="3552.787721652579" y="5264.0" />
+      <point x="3540.6033970381977" y="5264.0" />
+      <point x="3540.6033970381977" y="3755.0" />
+      <point x="3981.677178155169" y="3755.0" />
+      <point x="3981.677178155169" y="3423.0" />
+      <point x="5880.315420047924" y="3423.0" />
+      <point x="-146.92857142857156" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.Settings">
+      <point x="178.97727272727298" y="-274.0" />
+      <point x="8105.017377901075" y="6016.0" />
+      <point x="9543.048667998666" y="6016.0" />
+      <point x="9543.048667998666" y="1039.0" />
+      <point x="9571.77594072594" y="1039.0" />
+      <point x="39.727272727272975" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.menu.order.ShowOrderMenu">
+      <point x="-7.525000000000091" y="-162.0" />
+      <point x="3415.8355114885017" y="5926.0" />
+      <point x="3362.7877216525785" y="5926.0" />
+      <point x="-95.0" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Feedback" target="ir.ac.kntu.models.Rating">
+      <point x="-55.75" y="-92.0" />
+      <point x="3127.658176198033" y="337.0" />
+      <point x="3166.491509531366" y="337.0" />
+      <point x="-72.66666666666697" y="148.5" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.db.CouriersDB">
+      <point x="99.46666666666624" y="-176.0" />
+      <point x="8393.748667998667" y="5344.0" />
+      <point x="8657.548667998666" y="5344.0" />
+      <point x="8657.548667998666" y="2643.0" />
+      <point x="5122.315998030945" y="2643.0" />
+      <point x="177.57142857142844" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.models.OrderState">
+      <point x="-77.0" y="-288.0" />
+      <point x="2661.0533970381975" y="769.0" />
+      <point x="2497.1841502240068" y="769.0" />
+      <point x="35.57142857142844" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CustomersDB" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="148.0" y="-176.0" />
+      <point x="1234.6863782051278" y="4698.0" />
+      <point x="1247.544836102883" y="4698.0" />
+      <point x="1247.544836102883" y="2001.0" />
+      <point x="3894.003362850916" y="2001.0" />
+      <point x="-230.086956521739" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="142.5" y="-246.0" />
+      <point x="3034.2935857051843" y="5264.0" />
+      <point x="3134.5377216525785" y="5264.0" />
+      <point x="3134.5377216525785" y="3745.0" />
+      <point x="3562.6033970381977" y="3745.0" />
+      <point x="3562.6033970381977" y="3413.0" />
+      <point x="5853.601134333638" y="3413.0" />
+      <point x="-173.64285714285688" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="116.67857142857065" y="-204.0" />
+      <point x="5125.242205762208" y="5996.0" />
+      <point x="5780.614387695637" y="5996.0" />
+      <point x="5780.614387695637" y="5374.0" />
+      <point x="5781.926887695637" y="5374.0" />
+      <point x="-6.8125" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.Settings">
+      <point x="245.0" y="-316.0" />
+      <point x="4369.090319372655" y="1019.0" />
+      <point x="9412.866849816848" y="1019.0" />
+      <point x="-119.18181818181824" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.models.Order">
+      <point x="-160.909090909091" y="-106.0" />
+      <point x="3727.6059034707605" y="5224.0" />
+      <point x="3485.6033970381977" y="5224.0" />
+      <point x="3485.6033970381977" y="4688.0" />
+      <point x="2680.8738782051278" y="4688.0" />
+      <point x="71.25" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Salary" target="ir.ac.kntu.models.SalaryType">
+      <point x="-55.75" y="-92.0" />
+      <point x="7951.032001332" y="2743.0" />
+      <point x="8219.548667998666" y="2743.0" />
+      <point x="-83.0" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Order" target="ir.ac.kntu.models.Food">
+      <point x="-15.199999999999818" y="-162.0" />
+      <point x="2594.423878205128" y="4234.0" />
+      <point x="2344.493585705184" y="4234.0" />
+      <point x="2344.493585705184" y="1921.0" />
+      <point x="2423.243585705184" y="1921.0" />
+      <point x="2423.243585705184" y="929.0" />
+      <point x="3569.3581761980327" y="929.0" />
+      <point x="-78.05000000000018" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.menu.order.OrdersFoodOption">
+      <point x="-123.5" y="-246.0" />
+      <point x="2768.2935857051843" y="5214.0" />
+      <point x="2068.8738782051278" y="5214.0" />
+      <point x="0.0" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantFoodMenu" target="ir.ac.kntu.models.FoodMenu">
+      <point x="75.5625" y="-148.0" />
+      <point x="7502.844501332" y="5354.0" />
+      <point x="8053.282001332" y="5354.0" />
+      <point x="8053.282001332" y="3383.0" />
+      <point x="7884.782001332" y="3383.0" />
+      <point x="7884.782001332" y="2653.0" />
+      <point x="5996.008855173803" y="2653.0" />
+      <point x="112.5" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.models.Schedule">
+      <point x="49.05000000000018" y="-218.0" />
+      <point x="5837.789387695637" y="4658.0" />
+      <point x="6224.743991476495" y="4658.0" />
+      <point x="6224.743991476495" y="2773.0" />
+      <point x="6276.301887695637" y="2773.0" />
+      <point x="-51.9375" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Courier" target="ir.ac.kntu.models.Time">
+      <point x="-131.60000000000036" y="-204.5" />
+      <point x="4173.23066976547" y="3725.0" />
+      <point x="4003.677178155169" y="3725.0" />
+      <point x="4003.677178155169" y="2101.0" />
+      <point x="6506.771584665334" y="2101.0" />
+      <point x="-92.91666666666697" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.models.Feedback">
+      <point x="0.0" y="-288.0" />
+      <point x="2738.0533970381975" y="899.0" />
+      <point x="3166.254330044187" y="899.0" />
+      <point x="-17.153846153845734" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.menu.restaurant.RestaurantsOption">
+      <point x="127.84090909090901" y="-274.0" />
+      <point x="8053.881014264711" y="5986.0" />
+      <point x="9359.048667998666" y="5986.0" />
+      <point x="0.0" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.settings.SettingsMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="-128.75" y="-92.0" />
+      <point x="9582.548667998666" y="6016.0" />
+      <point x="9554.048667998666" y="6016.0" />
+      <point x="9554.048667998666" y="5224.0" />
+      <point x="5931.801887695637" y="5224.0" />
+      <point x="143.0625" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.models.Feedback">
+      <point x="-114.44999999999982" y="-218.0" />
+      <point x="5674.289387695637" y="4668.0" />
+      <point x="5623.133855173803" y="4668.0" />
+      <point x="5623.133855173803" y="689.0" />
+      <point x="3234.869714659571" y="689.0" />
+      <point x="51.46153846153811" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.admin.AdminMenu" target="ir.ac.kntu.models.Admin">
+      <point x="-66.44444444444434" y="-106.0" />
+      <point x="5254.570082746335" y="7042.0" />
+      <point x="4899.028594044843" y="7042.0" />
+      <point x="4899.028594044843" y="6674.0" />
+      <point x="316.21666666666624" y="6674.0" />
+      <point x="44.600000000000364" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CustomersDB" target="ir.ac.kntu.models.Feedback">
+      <point x="-74.0" y="-176.0" />
+      <point x="1012.6863782051278" y="4678.0" />
+      <point x="474.7547422577336" y="4678.0" />
+      <point x="474.7547422577336" y="1921.0" />
+      <point x="1314.1002216525785" y="1921.0" />
+      <point x="1314.1002216525785" y="859.0" />
+      <point x="3097.6389454288023" y="859.0" />
+      <point x="-85.76923076923049" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.Time">
+      <point x="58.4375" y="-260.0" />
+      <point x="6085.681491476495" y="2773.0" />
+      <point x="6096.989387695637" y="2773.0" />
+      <point x="6096.989387695637" y="2131.0" />
+      <point x="6618.271584665334" y="2131.0" />
+      <point x="18.58333333333303" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.db.CustomersDB">
+      <point x="-180.5" y="-246.0" />
+      <point x="2711.2935857051843" y="5244.0" />
+      <point x="1248.5613782051278" y="5244.0" />
+      <point x="161.875" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.Main" target="ir.ac.kntu.FariFood">
+      <point x="-48.5" y="-35.5" />
+      <point x="5149.774748030945" y="7607.0" />
+      <point x="5139.024748030945" y="7607.0" />
+      <point x="-59.25" y="64.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CustomersDB" target="ir.ac.kntu.models.OrdersService">
+      <point x="0.0" y="-176.0" />
+      <point x="1086.6863782051278" y="4668.0" />
+      <point x="485.7547422577336" y="4668.0" />
+      <point x="485.7547422577336" y="1931.0" />
+      <point x="2560.36108934589" y="1931.0" />
+      <point x="-177.69230769230762" y="288.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.CourierJobInfo" target="ir.ac.kntu.models.Salary">
+      <point x="65.42857142857065" y="-106.0" />
+      <point x="6415.172562905065" y="3443.0" />
+      <point x="7923.157001332" y="3443.0" />
+      <point x="-83.625" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.RestaurantPriceType">
+      <point x="147.0" y="-316.0" />
+      <point x="4271.090319372655" y="979.0" />
+      <point x="6022.692591782448" y="979.0" />
+      <point x="-78.75" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.models.Customer">
+      <point x="-154.0" y="-288.0" />
+      <point x="2584.0533970381975" y="779.0" />
+      <point x="648.0529162689672" y="779.0" />
+      <point x="97.5625" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.admin.AdminMenu" target="ir.ac.kntu.menu.main.MainMenu">
+      <point x="99.66666666666697" y="-106.0" />
+      <point x="5420.6811938574465" y="7052.0" />
+      <point x="6819.770637695637" y="7052.0" />
+      <point x="-123.0" y="120.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Courier" target="ir.ac.kntu.models.CourierJobInfo">
+      <point x="94.0" y="-204.5" />
+      <point x="4398.830669765471" y="3735.0" />
+      <point x="6254.3273248098285" y="3735.0" />
+      <point x="-95.41666666666697" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.menu.order.OrdersRestaurantOption">
+      <point x="-104.5" y="-246.0" />
+      <point x="2787.2935857051843" y="5204.0" />
+      <point x="2412.8738782051278" y="5204.0" />
+      <point x="0.0" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.db.CustomersDB">
+      <point x="-16.45833333333303" y="-204.0" />
+      <point x="706.3947115384608" y="5966.0" />
+      <point x="635.1627216525785" y="5966.0" />
+      <point x="635.1627216525785" y="5374.0" />
+      <point x="989.5613782051278" y="5374.0" />
+      <point x="-97.125" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="64.82142857142935" y="-204.0" />
+      <point x="5073.385062905067" y="5976.0" />
+      <point x="5538.958855173802" y="5976.0" />
+      <point x="5538.958855173802" y="1831.0" />
+      <point x="4226.3511889378715" y="1831.0" />
+      <point x="102.26086956521704" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Order" target="ir.ac.kntu.models.OrderState">
+      <point x="-60.80000000000018" y="-162.0" />
+      <point x="2548.8238782051276" y="4264.0" />
+      <point x="2232.618585705184" y="4264.0" />
+      <point x="2232.618585705184" y="829.0" />
+      <point x="2426.04129308115" y="829.0" />
+      <point x="-35.57142857142844" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.models.Order">
+      <point x="-88.84615384615427" y="288.0" />
+      <point x="2649.2072431920433" y="1961.0" />
+      <point x="2605.923878205128" y="1961.0" />
+      <point x="2605.923878205128" y="4214.0" />
+      <point x="2624.8238782051276" y="4214.0" />
+      <point x="15.199999999999818" y="-162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Schedule" target="ir.ac.kntu.models.Day">
+      <point x="34.625" y="-120.0" />
+      <point x="6362.864387695637" y="2191.0" />
+      <point x="6852.623598275955" y="2191.0" />
+      <point x="-25.0" y="176.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.Settings">
+      <point x="9.5" y="-246.0" />
+      <point x="2901.2935857051843" y="5194.0" />
+      <point x="3057.5377216525785" y="5194.0" />
+      <point x="3057.5377216525785" y="999.0" />
+      <point x="9333.412304362302" y="999.0" />
+      <point x="-198.63636363636397" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.customer.CustomersMenu">
+      <point x="-151.38461538461524" y="-120.0" />
+      <point x="6791.386022311021" y="6654.0" />
+      <point x="772.2280448717938" y="6654.0" />
+      <point x="49.375" y="204.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="85.32000000000016" y="-64.0" />
+      <point x="5283.594748030946" y="7404.0" />
+      <point x="9909.903667998666" y="7404.0" />
+      <point x="9909.903667998666" y="1711.0" />
+      <point x="4405.307710677002" y="1711.0" />
+      <point x="281.21739130434753" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.Order">
+      <point x="-85.5" y="-246.0" />
+      <point x="2806.2935857051843" y="5194.0" />
+      <point x="2595.3738782051278" y="5194.0" />
+      <point x="-14.25" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.models.Settings">
+      <point x="104.2800000000002" y="-64.0" />
+      <point x="5302.554748030945" y="7424.0" />
+      <point x="9928.863667998665" y="7424.0" />
+      <point x="9928.863667998665" y="1009.0" />
+      <point x="9730.68503163503" y="1009.0" />
+      <point x="198.63636363636397" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.Feedback">
+      <point x="35.0625" y="-260.0" />
+      <point x="6062.306491476495" y="2763.0" />
+      <point x="6085.989387695637" y="2763.0" />
+      <point x="6085.989387695637" y="1771.0" />
+      <point x="5825.614387695637" y="1771.0" />
+      <point x="5825.614387695637" y="679.0" />
+      <point x="3252.0235608134176" y="679.0" />
+      <point x="68.61538461538476" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.courier.CouriersMenu" target="ir.ac.kntu.models.Order">
+      <point x="-168.53571428571377" y="-204.0" />
+      <point x="4840.0279200479235" y="6016.0" />
+      <point x="4664.244569459516" y="6016.0" />
+      <point x="4664.244569459516" y="4678.0" />
+      <point x="2709.3738782051278" y="4678.0" />
+      <point x="99.75" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="160.909090909091" y="-106.0" />
+      <point x="4049.4240852889425" y="5344.0" />
+      <point x="5727.426887695637" y="5344.0" />
+      <point x="-61.3125" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.Menu" target="ir.ac.kntu.utils.ScannerWrapper">
+      <point x="147.14999999999964" y="-218.0" />
+      <point x="5935.889387695636" y="4698.0" />
+      <point x="6632.270637695637" y="4698.0" />
+      <point x="0.0" y="78.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="112.875" y="-162.0" />
+      <point x="3536.2355114885017" y="5996.0" />
+      <point x="4631.244569459516" y="5996.0" />
+      <point x="4631.244569459516" y="3453.0" />
+      <point x="5960.458277190781" y="3453.0" />
+      <point x="-66.78571428571468" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.models.Courier">
+      <point x="-99.46666666666715" y="-176.0" />
+      <point x="8194.815334665333" y="5274.0" />
+      <point x="8151.548667998666" y="5274.0" />
+      <point x="8151.548667998666" y="4274.0" />
+      <point x="4461.497336432138" y="4274.0" />
+      <point x="156.66666666666697" y="204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.Restaurant">
+      <point x="178.95652173913004" y="316.0" />
+      <point x="4303.046841111785" y="1781.0" />
+      <point x="6073.008855173803" y="1781.0" />
+      <point x="6073.008855173803" y="2753.0" />
+      <point x="6038.931491476495" y="2753.0" />
+      <point x="11.6875" y="-260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.order.OrdersMenu">
+      <point x="-100.92307692307713" y="-120.0" />
+      <point x="6841.8475607725595" y="6634.0" />
+      <point x="3460.9855114885017" y="6634.0" />
+      <point x="37.625" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Restaurant" target="ir.ac.kntu.models.CourierJobInfo">
+      <point x="13.357142857143117" y="260.0" />
+      <point x="6040.601134333638" y="3433.0" />
+      <point x="6317.029705762208" y="3433.0" />
+      <point x="-32.714285714286234" y="-106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.utils.IdGenerator">
+      <point x="-147.0" y="-316.0" />
+      <point x="3977.090319372655" y="719.0" />
+      <point x="3465.658176198033" y="719.0" />
+      <point x="50.25" y="50.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.RestaurantPriceType">
+      <point x="-9.5" y="-246.0" />
+      <point x="2882.2935857051843" y="5184.0" />
+      <point x="3046.5377216525785" y="5184.0" />
+      <point x="3046.5377216525785" y="969.0" />
+      <point x="5970.192591782448" y="969.0" />
+      <point x="-131.25" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="59.65909090909099" y="-274.0" />
+      <point x="7985.699196082893" y="5946.0" />
+      <point x="8701.548667998666" y="5946.0" />
+      <point x="8701.548667998666" y="2603.0" />
+      <point x="8167.548667998666" y="2603.0" />
+      <point x="8167.548667998666" y="1751.0" />
+      <point x="4328.612058503089" y="1751.0" />
+      <point x="204.52173913043453" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.FoodMenu">
+      <point x="104.5" y="-246.0" />
+      <point x="2996.2935857051843" y="5244.0" />
+      <point x="3112.5377216525785" y="5244.0" />
+      <point x="3112.5377216525785" y="2763.0" />
+      <point x="5771.008855173803" y="2763.0" />
+      <point x="-112.5" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.FariFood" target="ir.ac.kntu.menu.admin.AdminMenu">
+      <point x="0.0" y="-64.0" />
+      <point x="5198.274748030945" y="7314.0" />
+      <point x="5246.26452719078" y="7314.0" />
+      <point x="-74.75" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.models.SalaryType">
+      <point x="174.0666666666666" y="-176.0" />
+      <point x="8468.348667998667" y="5374.0" />
+      <point x="8690.548667998666" y="5374.0" />
+      <point x="8690.548667998666" y="2613.0" />
+      <point x="8385.548667998666" y="2613.0" />
+      <point x="83.0" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.Courier" target="ir.ac.kntu.models.VehicleType">
+      <point x="18.800000000000182" y="-204.5" />
+      <point x="4323.630669765471" y="3755.0" />
+      <point x="4307.547336432137" y="3755.0" />
+      <point x="-85.33333333333303" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.customer.CustomersMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="-49.375" y="-204.0" />
+      <point x="673.4780448717938" y="5976.0" />
+      <point x="603.7488782051278" y="5976.0" />
+      <point x="603.7488782051278" y="1991.0" />
+      <point x="3868.4381454596114" y="1991.0" />
+      <point x="-255.6521739130435" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.db.RestaurantsDB">
+      <point x="85.5" y="-246.0" />
+      <point x="2977.2935857051843" y="5234.0" />
+      <point x="3101.5377216525785" y="5234.0" />
+      <point x="3101.5377216525785" y="2041.0" />
+      <point x="3996.2642324161334" y="2041.0" />
+      <point x="-127.82608695652152" y="316.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.menu.restaurant.RestaurantFoodMenu">
+      <point x="-42.61363636363603" y="-274.0" />
+      <point x="7883.426468810167" y="5926.0" />
+      <point x="7326.532001332" y="5926.0" />
+      <point x="-100.75" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.admin.AdminMenu" target="ir.ac.kntu.menu.admin.AdminOption">
+      <point x="0.0" y="-106.0" />
+      <point x="5321.01452719078" y="7022.0" />
+      <point x="5365.292304968558" y="7022.0" />
+      <point x="0.0" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.RestaurantPriceType">
+      <point x="144.88636363636397" y="-274.0" />
+      <point x="8070.926468810167" y="5996.0" />
+      <point x="9521.048667998666" y="5996.0" />
+      <point x="9521.048667998666" y="589.0" />
+      <point x="6232.692591782448" y="589.0" />
+      <point x="131.25" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.main.MainMenuOption">
+      <point x="0.0" y="-120.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.models.OrdersService" target="ir.ac.kntu.utils.IdGenerator">
+      <point x="77.0" y="-288.0" />
+      <point x="2815.0533970381975" y="909.0" />
+      <point x="3365.158176198033" y="909.0" />
+      <point x="-50.25" y="50.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CouriersDB" target="ir.ac.kntu.models.Courier">
+      <point x="-113.0" y="176.0" />
+      <point x="4831.744569459516" y="2733.0" />
+      <point x="4014.677178155169" y="2733.0" />
+      <point x="4014.677178155169" y="3715.0" />
+      <point x="4210.830669765471" y="3715.0" />
+      <point x="-94.0" y="-204.5" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.Order">
+      <point x="-204.52173913043498" y="316.0" />
+      <point x="3919.56858024222" y="2011.0" />
+      <point x="2725.8377216525787" y="2011.0" />
+      <point x="2725.8377216525787" y="4254.0" />
+      <point x="2670.423878205128" y="4254.0" />
+      <point x="60.80000000000018" y="-162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.ShowOrderMenu" target="ir.ac.kntu.menu.Menu">
+      <point x="133.00000000000045" y="-120.0" />
+      <point x="3590.787721652579" y="5314.0" />
+      <point x="5686.551887695637" y="5314.0" />
+      <point x="-102.1875" y="218.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantFoodMenu" target="ir.ac.kntu.menu.restaurant.RestaurantFoodMenuOption">
+      <point x="-75.5625" y="-148.0" />
+      <point x="7351.719501332" y="5324.0" />
+      <point x="7835.282001332" y="5324.0" />
+      <point x="0.0" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantFoodMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="25.1875" y="-148.0" />
+      <point x="7452.469501332" y="5344.0" />
+      <point x="8042.282001332" y="5344.0" />
+      <point x="8042.282001332" y="3393.0" />
+      <point x="6147.458277190781" y="3393.0" />
+      <point x="120.21428571428532" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantFoodMenu" target="ir.ac.kntu.models.Food">
+      <point x="125.9375" y="-148.0" />
+      <point x="7553.219501332" y="5364.0" />
+      <point x="8064.282001332" y="5364.0" />
+      <point x="8064.282001332" y="3443.0" />
+      <point x="8208.282001332" y="3443.0" />
+      <point x="8208.282001332" y="2763.0" />
+      <point x="8437.548667998666" y="2763.0" />
+      <point x="8437.548667998666" y="2201.0" />
+      <point x="8595.202764942622" y="2201.0" />
+      <point x="8595.202764942622" y="609.0" />
+      <point x="3725.458176198033" y="609.0" />
+      <point x="78.05000000000018" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.UpdateOrderMenu" target="ir.ac.kntu.models.OrderState">
+      <point x="-128.72727272727252" y="-106.0" />
+      <point x="3759.787721652579" y="5214.0" />
+      <point x="3551.6033970381977" y="5214.0" />
+      <point x="3551.6033970381977" y="749.0" />
+      <point x="2568.3270073668646" y="749.0" />
+      <point x="106.71428571428623" y="106.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.models.Salary">
+      <point x="74.60000000000036" y="-176.0" />
+      <point x="8368.882001332" y="5334.0" />
+      <point x="8646.548667998666" y="5334.0" />
+      <point x="8646.548667998666" y="3333.0" />
+      <point x="8090.407001332" y="3333.0" />
+      <point x="83.625" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.AddOrderMenu" target="ir.ac.kntu.models.Food">
+      <point x="-28.5" y="-246.0" />
+      <point x="2863.2935857051843" y="5174.0" />
+      <point x="3035.5377216525785" y="5174.0" />
+      <point x="3035.5377216525785" y="959.0" />
+      <point x="3636.258176198033" y="959.0" />
+      <point x="-11.149999999999636" y="92.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.CouriersDB" target="ir.ac.kntu.models.Order">
+      <point x="-145.28571428571468" y="176.0" />
+      <point x="4799.458855173802" y="2723.0" />
+      <point x="2736.8377216525787" y="2723.0" />
+      <point x="2736.8377216525787" y="4264.0" />
+      <point x="2685.6238782051278" y="4264.0" />
+      <point x="76.0" y="-162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantsMenu" target="ir.ac.kntu.models.FoodMenu">
+      <point x="-59.65909090909099" y="-274.0" />
+      <point x="7866.381014264711" y="5936.0" />
+      <point x="7215.282001332" y="5936.0" />
+      <point x="7215.282001332" y="2673.0" />
+      <point x="5951.008855173803" y="2673.0" />
+      <point x="67.5" y="148.0" />
+    </edge>
+    <edge source="ir.ac.kntu.db.RestaurantsDB" target="ir.ac.kntu.models.RestaurantsFilteringStrategy">
+      <point x="49.0" y="-316.0" />
+      <point x="4173.090319372655" y="959.0" />
+      <point x="4226.965319372655" y="959.0" />
+      <point x="4226.965319372655" y="337.0" />
+      <point x="9314.619431609288" y="337.0" />
+      <point x="-158.80000000000018" y="134.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.order.OrdersMenu" target="ir.ac.kntu.models.Order">
+      <point x="-52.67500000000018" y="-162.0" />
+      <point x="3370.6855114885016" y="5956.0" />
+      <point x="1871.8738782051278" y="5956.0" />
+      <point x="1871.8738782051278" y="4698.0" />
+      <point x="2566.8738782051278" y="4698.0" />
+      <point x="-42.75" y="162.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.restaurant.RestaurantCourierMenu" target="ir.ac.kntu.models.Restaurant">
+      <point x="-24.866666666666788" y="-176.0" />
+      <point x="8269.415334665333" y="5244.0" />
+      <point x="8184.548667998666" y="5244.0" />
+      <point x="8184.548667998666" y="3363.0" />
+      <point x="6174.172562905067" y="3363.0" />
+      <point x="146.92857142857156" y="260.0" />
+    </edge>
+    <edge source="ir.ac.kntu.menu.main.MainMenu" target="ir.ac.kntu.menu.settings.SettingsMenu">
+      <point x="126.15384615384619" y="-120.0" />
+      <point x="7068.924483849483" y="6704.0" />
+      <point x="9595.423667998666" y="6704.0" />
+      <point x="-115.875" y="92.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="5115.791681285289" y="7027.0" />
+  <SelectedNodes>
+    <node>ir.ac.kntu.Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
