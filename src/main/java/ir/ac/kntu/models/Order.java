@@ -111,11 +111,11 @@ public class Order {
         } else {
             feedBackString = feedback.toString();
         }
-        return "id=" + id +
+        return "{id=" + id +
                 ", food=" + food +
                 ", feedback=" + feedBackString +
                 ", customer=" + customer +
                 ", courier=" + courier +
-                ", orderState=" + orderState;
+                ", orderState=" + orderState + "}";
     }
 }

@@ -13,10 +13,6 @@ public class CouriersDB {
         this.couriers = couriers;
     }
 
-    public Set<Courier> getCouriers() {
-        return new HashSet<>(couriers);
-    }
-
     public void setCouriers(Set<Courier> couriers) {
         this.couriers = couriers;
     }
@@ -91,6 +87,6 @@ public class CouriersDB {
 
     @Override
     public String toString() {
-        return "couriers=" + couriers;
+        return "{couriers=" + couriers + "}";
     }
 }

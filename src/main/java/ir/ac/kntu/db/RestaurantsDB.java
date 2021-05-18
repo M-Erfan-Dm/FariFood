@@ -12,10 +12,6 @@ public class RestaurantsDB {
         this.restaurants = restaurants;
     }
 
-    public Set<Restaurant> getRestaurants() {
-        return new HashSet<>(restaurants);
-    }
-
     public void setRestaurants(Set<Restaurant> restaurants) {
         this.restaurants = restaurants;
     }
@@ -222,4 +218,27 @@ public class RestaurantsDB {
         System.out.println(restaurants.size() + " restaurants found");
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o){
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()){
+            return false;
+        }
+        RestaurantsDB that = (RestaurantsDB) o;
+        return restaurants.equals(that.restaurants);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(restaurants);
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "restaurants=" + restaurants +
+                '}';
+    }
 }

@@ -184,6 +184,6 @@ public class OrdersService {
 
     @Override
     public String toString() {
-        return "orders=" + orders;
+        return "{orders=" + orders + "}";
     }
 }

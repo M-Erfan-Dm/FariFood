@@ -47,7 +47,7 @@ public class Admin {
 
     @Override
     public String toString() {
-        return "username='" + username + '\'' +
-                ", password='" + password + '\'';
+        return "{username='" + username + '\'' +
+                ", password='" + password + '\'' + "}";
     }
 }

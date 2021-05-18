@@ -117,9 +117,9 @@ public class Courier {
 
     @Override
     public String toString() {
-        return "phoneNumber='" + phoneNumber + '\'' +
+        return "{phoneNumber='" + phoneNumber + '\'' +
                 ", name='" + name + '\'' +
                 ", vehicleType=" + vehicleType +
-                ", courierWorksInfo=" + Arrays.toString(jobsInfo);
+                ", courierWorksInfo=" + Arrays.toString(jobsInfo) + "}";
     }
 }

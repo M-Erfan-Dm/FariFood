@@ -14,10 +14,6 @@ public class AdminsDB {
         this.admins = admins;
     }
 
-    public Set<Admin> getAdmins() {
-        return new HashSet<>(admins);
-    }
-
     public void setAdmins(Set<Admin> admins) {
         this.admins = admins;
     }
@@ -63,6 +59,6 @@ public class AdminsDB {
 
     @Override
     public String toString() {
-        return "admins=" + admins;
+        return "{admins=" + admins + "}";
     }
 }

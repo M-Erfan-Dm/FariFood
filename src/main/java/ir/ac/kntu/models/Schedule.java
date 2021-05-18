@@ -64,8 +64,8 @@ public class Schedule {
 
     @Override
     public String toString() {
-        return "startTime=" + startTime +
+        return "{startTime=" + startTime +
                 ", endTime=" + endTime +
-                ", days=" + days;
+                ", days=" + days + "}";
     }
 }

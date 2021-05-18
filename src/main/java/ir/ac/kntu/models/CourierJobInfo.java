@@ -58,8 +58,9 @@ public class CourierJobInfo {
 
     @Override
     public String toString() {
-        return "restaurant=" + restaurant +
+        return "{restaurant=" + restaurant +
                 ", schedule=" + schedule +
-                ", salary=" + salary;
+                ", salary=" + salary + "}";
+
     }
 }

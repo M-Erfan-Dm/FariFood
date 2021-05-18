@@ -64,6 +64,6 @@ public class Time {
     @Override
     public String toString() {
         DecimalFormat decimalFormat = new DecimalFormat("00");
-        return decimalFormat.format(hour) + ":" + decimalFormat.format(minute);
+        return "{" + decimalFormat.format(hour) + ":" + decimalFormat.format(minute) + "}";
     }
 }

@@ -188,13 +188,13 @@ public class Restaurant {
         } else {
             isActive = "No";
         }
-        return "id=" + id +
+        return "{id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", schedule=" + schedule +
                 ", priceType=" + priceType +
                 ", rating=" + rating +
                 ", alpha score=" + getAlphaScore() +
-                ", is active=" + isActive;
+                ", is active=" + isActive + "}";
     }
 }

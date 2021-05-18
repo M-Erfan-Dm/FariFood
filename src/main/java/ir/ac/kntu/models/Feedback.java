@@ -47,7 +47,7 @@ public class Feedback {
 
     @Override
     public String toString() {
-        return "rating=" + rating.getValue() +
-                ", comment='" + comment + '\'';
+        return "{rating=" + rating.getValue() +
+                ", comment='" + comment + '\'' + "}";
     }
 }

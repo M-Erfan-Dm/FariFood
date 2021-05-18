@@ -36,6 +36,6 @@ public class Settings {
 
     @Override
     public String toString() {
-        return "restaurants listing strategy = " + restaurantsFilteringStrategy;
+        return "{restaurants listing strategy = " + restaurantsFilteringStrategy + "}";
     }
 }

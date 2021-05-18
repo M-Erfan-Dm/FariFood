@@ -67,6 +67,6 @@ public class FoodMenu {
 
     @Override
     public String toString() {
-        return "foods=" + foods;
+        return "{foods=" + foods + "}";
     }
 }

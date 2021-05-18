@@ -47,7 +47,7 @@ public class Salary {
 
     @Override
     public String toString() {
-        return "salaryType=" + salaryType +
-                ", amount=" + amount;
+        return "{salaryType=" + salaryType +
+                ", amount=" + amount + "}";
     }
 }

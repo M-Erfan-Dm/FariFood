@@ -14,10 +14,6 @@ public class CustomersDB {
         this.customers = customers;
     }
 
-    public Set<Customer> getCustomers() {
-        return new HashSet<>(customers);
-    }
-
     public void setCustomers(Set<Customer> customers) {
         this.customers = customers;
     }
@@ -93,7 +89,7 @@ public class CustomersDB {
 
     @Override
     public String toString() {
-        return "customers=" + customers;
+        return "{customers=" + customers + "}";
     }
 }
 
