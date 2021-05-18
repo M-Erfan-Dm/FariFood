@@ -8,7 +8,7 @@ public enum RestaurantInfoOption {
     FEEDBACK,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println(
                 "\n1.General info\n" +
                         "2.Food\n" +

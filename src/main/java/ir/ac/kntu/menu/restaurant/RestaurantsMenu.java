@@ -17,7 +17,7 @@ public class RestaurantsMenu extends Menu {
 
     private final CouriersDB couriersDB;
 
-    public RestaurantsMenu(RestaurantsDB restaurantsDB, Settings settings , CouriersDB couriersDB) {
+    public RestaurantsMenu(RestaurantsDB restaurantsDB, Settings settings, CouriersDB couriersDB) {
         this.restaurantsDB = restaurantsDB;
         this.settings = settings;
         this.couriersDB = couriersDB;
@@ -49,6 +49,8 @@ public class RestaurantsMenu extends Menu {
                         break;
                     case REMOVE:
                         removeRestaurant();
+                        break;
+                    default:
                         break;
                 }
             }
@@ -107,7 +109,7 @@ public class RestaurantsMenu extends Menu {
         RestaurantInfoOption.printOptions();
         System.out.println("Enter your choice :");
         RestaurantInfoOption restaurantInfoOption = getOption(RestaurantInfoOption.class);
-        while (restaurantInfoOption!=null && restaurantInfoOption!=RestaurantInfoOption.BACK) {
+        while (restaurantInfoOption != null && restaurantInfoOption != RestaurantInfoOption.BACK) {
             switch (restaurantInfoOption) {
                 case GENERAL:
                     showRestaurantGeneralInfo(restaurant);
@@ -123,6 +125,8 @@ public class RestaurantsMenu extends Menu {
                     break;
                 case FEEDBACK:
                     showFeedbacks(restaurant);
+                    break;
+                default:
                     break;
             }
             RestaurantInfoOption.printOptions();
@@ -176,29 +180,29 @@ public class RestaurantsMenu extends Menu {
         return new Restaurant(name, address, schedule, restaurantPriceType);
     }
 
-    private void showRestaurantGeneralInfo(Restaurant restaurant){
+    private void showRestaurantGeneralInfo(Restaurant restaurant) {
         System.out.println(restaurant);
     }
 
-    private void showRestaurantFoodMenu(Restaurant restaurant){
+    private void showRestaurantFoodMenu(Restaurant restaurant) {
         RestaurantFoodMenu restaurantFoodMenu = new RestaurantFoodMenu(restaurant);
         restaurantFoodMenu.show();
     }
 
-    private void showRestaurantCouriers(Restaurant restaurant){
-        RestaurantCourierMenu restaurantCourierMenu = new RestaurantCourierMenu(couriersDB,restaurant);
+    private void showRestaurantCouriers(Restaurant restaurant) {
+        RestaurantCourierMenu restaurantCourierMenu = new RestaurantCourierMenu(couriersDB, restaurant);
         restaurantCourierMenu.show();
     }
 
-    private void showOrders(Restaurant restaurant){
+    private void showOrders(Restaurant restaurant) {
         restaurant.getOrdersService().printAllOrders();
     }
 
-    private void showFeedbacks(Restaurant restaurant){
+    private void showFeedbacks(Restaurant restaurant) {
         List<Feedback> feedbacks = restaurant.getOrdersService().getAllFeedbacks();
-        for (int i = 0;i< feedbacks.size();i++){
+        for (int i = 0; i < feedbacks.size(); i++) {
             Feedback feedback = feedbacks.get(i);
-            System.out.println("No."+(i+1)+" "+feedback);
+            System.out.println("No." + (i + 1) + " " + feedback);
         }
         System.out.println(feedbacks.size() + " feedbacks found");
     }

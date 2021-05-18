@@ -11,7 +11,7 @@ public class Courier {
 
     private VehicleType vehicleType;
 
-    private CourierJobInfo[] jobsInfo = new CourierJobInfo[2];
+    private final CourierJobInfo[] jobsInfo = new CourierJobInfo[2];
 
     public Courier(String phoneNumber, String name, VehicleType vehicleType) {
         this.phoneNumber = phoneNumber;

@@ -7,7 +7,7 @@ public enum OrdersRestaurantOption {
     SHOW_RESTAURANTS_BY_PRICE_TYPE,
     SHOW_FIVE_BEST_RESTAURANTS_BY_FOOD;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Show active restaurants\n" +
                 "2.Show three of best restaurant\n" +
                 "3.Show restaurants by name\n" +

@@ -20,24 +20,50 @@ public class FariFood {
 
     private AdminMenu adminMenu;
 
-    public void start(){
+    private AdminsDB adminsDB;
+
+    private CouriersDB couriersDB;
+
+    private RestaurantsDB restaurantsDB;
+
+    private CustomersDB customersDB;
+
+    private Settings settings;
+
+    private SettingsMenu settingsMenu;
+
+    private CustomersMenu customersMenu;
+
+    private CouriersMenu couriersMenu;
+
+    private RestaurantsMenu restaurantsMenu;
+
+    private OrdersMenu ordersMenu;
+
+    private MainMenu mainMenu;
+
+    public void start() {
         initialize();
         adminMenu.show();
     }
 
-    private void initialize(){
-        AdminsDB adminsDB = new AdminsDB(new HashSet<>());
-        CouriersDB couriersDB = new CouriersDB(new HashSet<>());
-        RestaurantsDB restaurantsDB = new RestaurantsDB(new HashSet<>());
-        CustomersDB customersDB = new CustomersDB(new HashSet<>());
+    private void initialize() {
+        adminsDB = new AdminsDB(new HashSet<>());
+        couriersDB = new CouriersDB(new HashSet<>());
+        restaurantsDB = new RestaurantsDB(new HashSet<>());
+        customersDB = new CustomersDB(new HashSet<>());
 
-        Settings settings = new Settings(RestaurantsFilteringStrategy.BY_RATING_DESCENDING);
-        SettingsMenu settingsMenu = new SettingsMenu(settings);
-        CustomersMenu customersMenu = new CustomersMenu(customersDB,restaurantsDB);
-        CouriersMenu couriersMenu = new CouriersMenu(couriersDB, restaurantsDB);
-        RestaurantsMenu restaurantsMenu = new RestaurantsMenu(restaurantsDB,settings,couriersDB);
-        OrdersMenu ordersMenu = new OrdersMenu(restaurantsDB,customersDB,settings);
-        MainMenu mainMenu = new MainMenu(ordersMenu,couriersMenu,restaurantsMenu,customersMenu,settingsMenu);
-        adminMenu = new AdminMenu(adminsDB,mainMenu);
+        settings = new Settings(RestaurantsFilteringStrategy.BY_RATING_DESCENDING);
+        settingsMenu = new SettingsMenu(settings);
+        customersMenu = new CustomersMenu(customersDB, restaurantsDB);
+        couriersMenu = new CouriersMenu(couriersDB, restaurantsDB);
+        restaurantsMenu = new RestaurantsMenu(restaurantsDB, settings, couriersDB);
+        ordersMenu = new OrdersMenu(restaurantsDB, customersDB, settings);
+        mainMenu = new MainMenu(ordersMenu, couriersMenu, restaurantsMenu, customersMenu, settingsMenu);
+        adminMenu = new AdminMenu(adminsDB, mainMenu);
+    }
+
+    private void generateFakeData() {
+
     }
 }

@@ -53,10 +53,10 @@ public class CouriersDB {
         return couriers.contains(courier);
     }
 
-    public List<Courier> getAvailableCouriers(int restaurantId){
+    public List<Courier> getAvailableCouriers(int restaurantId) {
         List<Courier> foundCouriers = new ArrayList<>();
-        for (Courier courier : couriers){
-            if (courier.isAvailable(restaurantId)){
+        for (Courier courier : couriers) {
+            if (courier.isAvailable(restaurantId)) {
                 foundCouriers.add(courier);
             }
         }

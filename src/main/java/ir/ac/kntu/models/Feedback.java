@@ -33,7 +33,7 @@ public class Feedback {
         if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Feedback feedback = (Feedback) o;
@@ -48,6 +48,6 @@ public class Feedback {
     @Override
     public String toString() {
         return "rating=" + rating.getValue() +
-                ", comment='" + comment + '\'' ;
+                ", comment='" + comment + '\'';
     }
 }

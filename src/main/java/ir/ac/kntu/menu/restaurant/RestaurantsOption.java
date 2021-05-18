@@ -10,7 +10,7 @@ public enum RestaurantsOption {
     REMOVE,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Add restaurant\n" +
                 "2.Update existing restaurant\n" +
                 "3.Find restaurant by id\n" +

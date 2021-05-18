@@ -147,9 +147,9 @@ public class OrdersService {
         return orders.size();
     }
 
-    public boolean containsOrder(int id){
-        for (Order order : orders){
-            if (order.getId()==id){
+    public boolean containsOrder(int id) {
+        for (Order order : orders) {
+            if (order.getId() == id) {
                 return true;
             }
         }

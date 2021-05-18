@@ -8,7 +8,7 @@ public enum CouriersOption {
     REMOVE,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Register new courier\n" +
                 "2.Update existing courier\n" +
                 "3.Find courier by phone number\n" +

@@ -37,6 +37,8 @@ public class RestaurantCourierMenu extends Menu {
                     case SHOW_ALL:
                         showAll();
                         break;
+                    default:
+                        break;
                 }
             }
             restaurantCourierOption = printMenuOption();
@@ -57,7 +59,7 @@ public class RestaurantCourierMenu extends Menu {
             System.out.println("Courier hasn't registered");
             return;
         }
-        if (restaurant.getHiredCouriers().containsCourier(courier)){
+        if (restaurant.getHiredCouriers().containsCourier(courier)) {
             System.out.println("Courier is already hired");
             return;
         }
@@ -107,17 +109,17 @@ public class RestaurantCourierMenu extends Menu {
         }
     }
 
-    private void findByPhoneNumber(){
+    private void findByPhoneNumber() {
         String phoneNumber = getPhoneNumber();
         Courier courier = restaurant.getHiredCouriers().getCourierByPhoneNumber(phoneNumber);
-        if (courier==null){
+        if (courier == null) {
             System.out.println("Courier isn't hired");
             return;
         }
         System.out.println(courier);
     }
 
-    private void showAll(){
+    private void showAll() {
         restaurant.getHiredCouriers().printAllCouriers();
     }
 

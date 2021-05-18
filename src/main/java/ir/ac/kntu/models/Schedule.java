@@ -1,6 +1,5 @@
 package ir.ac.kntu.models;
 
-import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -42,16 +41,16 @@ public class Schedule {
         this.days = new HashSet<>(days);
     }
 
-    public boolean isTimeInInterval(Time time){
+    public boolean isTimeInInterval(Time time) {
         return time.isAfter(startTime) && endTime.isAfter(time);
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Schedule schedule = (Schedule) o;

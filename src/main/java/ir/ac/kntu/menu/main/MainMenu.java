@@ -1,14 +1,11 @@
 package ir.ac.kntu.menu.main;
 
-import ir.ac.kntu.db.CustomersDB;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.menu.courier.CouriersMenu;
 import ir.ac.kntu.menu.customer.CustomersMenu;
 import ir.ac.kntu.menu.order.OrdersMenu;
 import ir.ac.kntu.menu.restaurant.RestaurantsMenu;
 import ir.ac.kntu.menu.settings.SettingsMenu;
-import ir.ac.kntu.models.Settings;
-import ir.ac.kntu.utils.ScannerWrapper;
 
 public class MainMenu extends Menu {
 
@@ -22,7 +19,7 @@ public class MainMenu extends Menu {
 
     private final SettingsMenu settingsMenu;
 
-    public MainMenu(OrdersMenu ordersMenu ,CouriersMenu couriersMenu,RestaurantsMenu restaurantsMenu,CustomersMenu customersMenu,SettingsMenu settingsMenu) {
+    public MainMenu(OrdersMenu ordersMenu, CouriersMenu couriersMenu, RestaurantsMenu restaurantsMenu, CustomersMenu customersMenu, SettingsMenu settingsMenu) {
         this.ordersMenu = ordersMenu;
         this.couriersMenu = couriersMenu;
         this.restaurantsMenu = restaurantsMenu;
@@ -51,13 +48,14 @@ public class MainMenu extends Menu {
                     case SETTINGS:
                         settingsMenu.show();
                         break;
+                    default:
+                        break;
                 }
 
             }
             mainMenuOption = printMenuOptions();
         }
     }
-
 
 
     private MainMenuOption printMenuOptions() {

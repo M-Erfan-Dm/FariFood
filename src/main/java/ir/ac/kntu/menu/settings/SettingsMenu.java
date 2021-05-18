@@ -3,7 +3,6 @@ package ir.ac.kntu.menu.settings;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.models.RestaurantsFilteringStrategy;
 import ir.ac.kntu.models.Settings;
-import ir.ac.kntu.utils.ScannerWrapper;
 
 public class SettingsMenu extends Menu {
 
@@ -16,21 +15,22 @@ public class SettingsMenu extends Menu {
     @Override
     public void show() {
         SettingsOption settingsOption = printMenuOptions();
-        while (settingsOption!=SettingsOption.BACK){
-            if (settingsOption!=null){
-                switch (settingsOption){
+        while (settingsOption != SettingsOption.BACK) {
+            if (settingsOption != null) {
+                switch (settingsOption) {
                     case RESTAURANTS_FILTERING:
                         filterRestaurants();
                         break;
                     case SHOW_SETTINGS:
                         showSettings();
                         break;
+                    default:
+                        break;
                 }
             }
             settingsOption = printMenuOptions();
         }
     }
-
 
 
     private SettingsOption printMenuOptions() {
@@ -40,17 +40,17 @@ public class SettingsMenu extends Menu {
         return getOption(SettingsOption.class);
     }
 
-    private void filterRestaurants(){
+    private void filterRestaurants() {
         RestaurantsFilteringStrategy.printOptions();
         System.out.println("Enter your choice of filtering restaurants :");
         RestaurantsFilteringStrategy restaurantsFilteringStrategy = getOption(RestaurantsFilteringStrategy.class);
-        if (restaurantsFilteringStrategy==null){
+        if (restaurantsFilteringStrategy == null) {
             return;
         }
         settings.setRestaurantsFilteringStrategy(restaurantsFilteringStrategy);
     }
 
-    private void showSettings(){
+    private void showSettings() {
         System.out.println(settings);
     }
 }

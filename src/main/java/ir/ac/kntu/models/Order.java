@@ -77,10 +77,10 @@ public class Order {
         this.orderState = orderState;
     }
 
-    public OrderState getNextOrderState(){
-        if (orderState==OrderState.PROCESSING){
+    public OrderState getNextOrderState() {
+        if (orderState == OrderState.PROCESSING) {
             return OrderState.SENDING;
-        }else if (orderState==OrderState.SENDING) {
+        } else if (orderState == OrderState.SENDING) {
             return OrderState.DELIVERED;
         }
         return null;
@@ -88,10 +88,10 @@ public class Order {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Order order = (Order) o;
@@ -106,9 +106,9 @@ public class Order {
     @Override
     public String toString() {
         String feedBackString;
-        if (feedback==null){
+        if (feedback == null) {
             feedBackString = "No Feedback Inserted";
-        }else {
+        } else {
             feedBackString = feedback.toString();
         }
         return "id=" + id +

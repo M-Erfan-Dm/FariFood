@@ -42,6 +42,8 @@ public class CustomersMenu extends Menu {
                     case REMOVE:
                         removeCustomer();
                         break;
+                    default:
+                        break;
                 }
             }
             customersOption = printMenuOptions();
@@ -99,6 +101,8 @@ public class CustomersMenu extends Menu {
                 break;
             case ORDERS_HISTORY:
                 showOrdersHistoryOfCustomer(customer);
+                break;
+            default:
                 break;
         }
     }

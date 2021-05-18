@@ -15,7 +15,7 @@ public class OrdersMenu extends Menu {
 
     private final Settings settings;
 
-    public OrdersMenu(RestaurantsDB restaurantsDB, CustomersDB customersDB,Settings settings) {
+    public OrdersMenu(RestaurantsDB restaurantsDB, CustomersDB customersDB, Settings settings) {
         this.restaurantsDB = restaurantsDB;
         this.customersDB = customersDB;
         this.settings = settings;
@@ -42,6 +42,8 @@ public class OrdersMenu extends Menu {
                     case SHOW_FEEDBACKS_OF_FOOD:
                         showFeedbacksOfFood();
                         break;
+                    default:
+                        break;
                 }
             }
             ordersOption = printMenuOptions();
@@ -56,7 +58,7 @@ public class OrdersMenu extends Menu {
     }
 
     private void addOrder() {
-        AddOrderMenu addOrderMenu = new AddOrderMenu(customersDB,restaurantsDB,settings);
+        AddOrderMenu addOrderMenu = new AddOrderMenu(customersDB, restaurantsDB, settings);
         addOrderMenu.show();
     }
 
@@ -65,39 +67,39 @@ public class OrdersMenu extends Menu {
         updateOrderMenu.show();
     }
 
-    private void cancelOrder(){
+    private void cancelOrder() {
         int id = getId();
         Restaurant restaurant = restaurantsDB.getRestaurantByOrderId(id);
-        if (restaurant==null){
+        if (restaurant == null) {
             System.out.println("Order not found");
             return;
         }
         Order order = restaurant.getOrdersService().getOrderById(id);
         OrderState orderState = order.getOrderState();
-        if (orderState==OrderState.PROCESSING || orderState==OrderState.SENDING){
+        if (orderState == OrderState.PROCESSING || orderState == OrderState.SENDING) {
             boolean isRemoved = restaurant.getOrdersService().removeOrder(order);
-            if (isRemoved){
+            if (isRemoved) {
                 System.out.println("Order is canceled");
-            }else {
+            } else {
                 System.out.println("Order not found");
             }
-        }else {
+        } else {
             System.out.println("Can't cancel order , it is already delivered");
         }
     }
 
-    private void showOrders(){
+    private void showOrders() {
         ShowOrderMenu showOrderMenu = new ShowOrderMenu(restaurantsDB);
         showOrderMenu.show();
     }
 
-    private void showFeedbacksOfFood(){
+    private void showFeedbacksOfFood() {
         System.out.println("Food name : ");
         String foodName = getName();
         List<Feedback> feedbacks = restaurantsDB.getAllFeedbacksOfFood(new Food(foodName));
-        for (int i = 0;i<feedbacks.size();i++){
+        for (int i = 0; i < feedbacks.size(); i++) {
             Feedback feedback = feedbacks.get(i);
-            System.out.println("No."+(i+1) + " " + feedback);
+            System.out.println("No." + (i + 1) + " " + feedback);
         }
         System.out.println(feedbacks.size() + " feedbacks found");
     }

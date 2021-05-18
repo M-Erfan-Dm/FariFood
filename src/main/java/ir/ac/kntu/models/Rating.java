@@ -7,7 +7,8 @@ public enum Rating {
     FOUR(4),
     FIVE(5);
     private final int value;
-    Rating(int value){
+
+    Rating(int value) {
         this.value = value;
     }
 
@@ -15,7 +16,7 @@ public enum Rating {
         return value;
     }
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("1.One 2.Two 3.Three 4.Four 5.Five");
     }
 }

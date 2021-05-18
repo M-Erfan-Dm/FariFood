@@ -7,7 +7,7 @@ public enum RestaurantsFilteringStrategy {
     BY_FEEDBACKS_COUNT_DESCENDING,
     BY_ALPHA_SCORE;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Ascending by rating\n" +
                 "2.Descending by rating\n" +
                 "3.Ascending by feedbacks count\n" +

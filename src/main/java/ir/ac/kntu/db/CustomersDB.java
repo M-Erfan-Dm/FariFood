@@ -1,6 +1,9 @@
 package ir.ac.kntu.db;
 
-import ir.ac.kntu.models.*;
+import ir.ac.kntu.models.Customer;
+import ir.ac.kntu.models.Feedback;
+import ir.ac.kntu.models.Order;
+import ir.ac.kntu.models.OrdersService;
 
 import java.util.*;
 
@@ -19,50 +22,50 @@ public class CustomersDB {
         this.customers = customers;
     }
 
-    public void addCustomer(Customer customer){
+    public void addCustomer(Customer customer) {
         removeCustomer(customer);
         customers.add(customer);
     }
 
-    public boolean removeCustomer(Customer customer){
+    public boolean removeCustomer(Customer customer) {
         return customers.remove(customer);
     }
 
-    public boolean containsCustomer(Customer customer){
+    public boolean containsCustomer(Customer customer) {
         return customers.contains(customer);
     }
 
-    public Customer getCustomerByPhoneNumber(String phoneNumber){
-        for (Customer customer : customers){
-            if (customer.getPhoneNumber().equals(phoneNumber)){
+    public Customer getCustomerByPhoneNumber(String phoneNumber) {
+        for (Customer customer : customers) {
+            if (customer.getPhoneNumber().equals(phoneNumber)) {
                 return customer;
             }
         }
         return null;
     }
 
-    public Set<Order> getOrdersOfCustomer(String customerPhoneNumber, RestaurantsDB restaurantsDB){
+    public Set<Order> getOrdersOfCustomer(String customerPhoneNumber, RestaurantsDB restaurantsDB) {
         Customer customer = getCustomerByPhoneNumber(customerPhoneNumber);
-        if (customer!=null){
+        if (customer != null) {
             OrdersService ordersService = new OrdersService(restaurantsDB.getAllOrders());
             return ordersService.getOrdersByCustomer(customer);
         }
         return null;
     }
 
-    public List<Feedback> getFeedbacksOfCustomer(String customerPhoneNumber, RestaurantsDB restaurantsDB){
+    public List<Feedback> getFeedbacksOfCustomer(String customerPhoneNumber, RestaurantsDB restaurantsDB) {
         List<Feedback> feedbacks = new ArrayList<>();
-        Set<Order> orders = getOrdersOfCustomer(customerPhoneNumber,restaurantsDB);
-        for (Order order : orders){
+        Set<Order> orders = getOrdersOfCustomer(customerPhoneNumber, restaurantsDB);
+        for (Order order : orders) {
             Feedback feedback = order.getFeedback();
-            if (feedback!=null){
+            if (feedback != null) {
                 feedbacks.add(feedback);
             }
         }
         return feedbacks;
     }
 
-    public void printAllCustomers(){
+    public void printAllCustomers() {
         List<Customer> customersList = new ArrayList<>(customers);
         for (int i = 0; i < customersList.size(); i++) {
             Customer customer = customersList.get(i);
@@ -73,10 +76,10 @@ public class CustomersDB {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         CustomersDB that = (CustomersDB) o;

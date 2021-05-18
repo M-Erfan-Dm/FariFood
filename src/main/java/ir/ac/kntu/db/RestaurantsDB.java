@@ -135,9 +135,9 @@ public class RestaurantsDB {
         return orderedList;
     }
 
-    public Restaurant getRestaurantByOrderId(int orderId){
-        for (Restaurant restaurant : restaurants){
-            if (restaurant.getOrdersService().containsOrder(orderId)){
+    public Restaurant getRestaurantByOrderId(int orderId) {
+        for (Restaurant restaurant : restaurants) {
+            if (restaurant.getOrdersService().containsOrder(orderId)) {
                 return restaurant;
             }
         }
@@ -187,8 +187,8 @@ public class RestaurantsDB {
         return orderedRestaurants;
     }
 
-    public List<Restaurant> getOrderedListOfRestaurants(Settings settings){
-        switch (settings.getRestaurantsFilteringStrategy()){
+    public List<Restaurant> getOrderedListOfRestaurants(Settings settings) {
+        switch (settings.getRestaurantsFilteringStrategy()) {
             case BY_RATING_ASCENDING:
                 return getOrderedListOfRestaurantsByRating(true);
             case BY_RATING_DESCENDING:
@@ -199,6 +199,8 @@ public class RestaurantsDB {
                 return getOrderedListOfRestaurantsByFeedbacksCount(false);
             case BY_ALPHA_SCORE:
                 return getWeakerRestaurants();
+            default:
+                break;
         }
         return getOrderedListOfRestaurantsByRating(false);
     }

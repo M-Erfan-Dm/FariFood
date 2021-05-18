@@ -8,7 +8,7 @@ public enum RestaurantCourierOption {
     SHOW_ALL,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Hire courier\n" +
                 "2.Update courier job info\n" +
                 "3.Dismiss courier\n" +

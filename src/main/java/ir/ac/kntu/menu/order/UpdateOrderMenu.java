@@ -20,20 +20,22 @@ public class UpdateOrderMenu extends Menu {
     public void show() {
         int id = getId();
         Restaurant restaurant = restaurantsDB.getRestaurantByOrderId(id);
-        if (restaurant==null){
+        if (restaurant == null) {
             System.out.println("Order not found");
             return;
         }
         Order order = restaurant.getOrdersService().getOrderById(id);
         UpdateOrderOption updateOrderOption = printMenuOptions();
         while (updateOrderOption != UpdateOrderOption.BACK) {
-            if (updateOrderOption!=null) {
+            if (updateOrderOption != null) {
                 switch (updateOrderOption) {
                     case ORDER_STATE:
                         updateOrderState(order, restaurant);
                         break;
                     case FEEDBACK:
-                        updateFeedback(order,restaurant);
+                        updateFeedback(order, restaurant);
+                        break;
+                    default:
                         break;
                 }
             }
@@ -41,7 +43,7 @@ public class UpdateOrderMenu extends Menu {
         }
     }
 
-    private UpdateOrderOption printMenuOptions(){
+    private UpdateOrderOption printMenuOptions() {
         UpdateOrderOption.printOptions();
         System.out.println("Enter your choice :");
         return getOption(UpdateOrderOption.class);
@@ -49,7 +51,7 @@ public class UpdateOrderMenu extends Menu {
 
     private void updateOrderState(Order order, Restaurant restaurant) {
         System.out.println("Current state of order : " + order.getOrderState());
-        if (order.getOrderState()== OrderState.DELIVERED){
+        if (order.getOrderState() == OrderState.DELIVERED) {
             System.out.println("Can't change order state anymore");
             return;
         }
@@ -61,8 +63,8 @@ public class UpdateOrderMenu extends Menu {
                 case SENDING:
                     Courier courier = getRandomCourier(restaurant);
                     if (courier != null) {
-                        System.out.println("Courier of order : phone number : "+
-                                courier.getPhoneNumber() + " , name : " +courier.getName());
+                        System.out.println("Courier of order : phone number : " +
+                                courier.getPhoneNumber() + " , name : " + courier.getName());
                         order.setCourier(courier);
                         order.setOrderState(nextOrderState);
                     }
@@ -73,12 +75,14 @@ public class UpdateOrderMenu extends Menu {
                     order.setOrderState(nextOrderState);
                     restaurant.updateRating();
                     break;
+                default:
+                    break;
             }
         }
     }
 
-    private void updateFeedback(Order order,Restaurant restaurant) {
-        if (order.getOrderState()!=OrderState.DELIVERED){
+    private void updateFeedback(Order order, Restaurant restaurant) {
+        if (order.getOrderState() != OrderState.DELIVERED) {
             System.out.println("Order isn't delivered yet");
             return;
         }

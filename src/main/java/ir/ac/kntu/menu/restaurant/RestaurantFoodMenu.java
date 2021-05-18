@@ -5,11 +5,9 @@ import ir.ac.kntu.models.Food;
 import ir.ac.kntu.models.FoodMenu;
 import ir.ac.kntu.models.Restaurant;
 
-import java.util.ArrayList;
-
 public class RestaurantFoodMenu extends Menu {
 
-    private Restaurant restaurant;
+    private final Restaurant restaurant;
 
     public RestaurantFoodMenu(Restaurant restaurant) {
         this.restaurant = restaurant;
@@ -36,6 +34,8 @@ public class RestaurantFoodMenu extends Menu {
                     case REMOVE:
                         removeFood();
                         break;
+                    default:
+                        break;
                 }
             }
             restaurantFoodMenuOption = printMenuOptions();
@@ -49,13 +49,13 @@ public class RestaurantFoodMenu extends Menu {
         return getOption(RestaurantFoodMenuOption.class);
     }
 
-    private void addFood(){
+    private void addFood() {
         Food food = getFoodInfo();
-        if (food == null){
+        if (food == null) {
             return;
         }
         FoodMenu foodMenu = restaurant.getFoodMenu();
-        if (foodMenu.containsFood(food)){
+        if (foodMenu.containsFood(food)) {
             System.out.println("Food already exists!");
             return;
         }
@@ -63,13 +63,13 @@ public class RestaurantFoodMenu extends Menu {
         System.out.println("Food id added");
     }
 
-    private void updateFood(){
+    private void updateFood() {
         Food food = getFoodInfo();
-        if (food==null){
+        if (food == null) {
             return;
         }
         FoodMenu foodMenu = restaurant.getFoodMenu();
-        if (!foodMenu.containsFood(food)){
+        if (!foodMenu.containsFood(food)) {
             System.out.println("Food not found");
             return;
         }
@@ -77,41 +77,41 @@ public class RestaurantFoodMenu extends Menu {
         System.out.println("Food is updated");
     }
 
-    private void findByName(){
+    private void findByName() {
         String name = getName();
         FoodMenu foodMenu = restaurant.getFoodMenu();
         Food food = foodMenu.getFoodByName(name);
-        if(food==null){
+        if (food == null) {
             System.out.println("Food not found");
             return;
         }
         System.out.println(food);
     }
 
-    private void showAll(){
+    private void showAll() {
         FoodMenu foodMenu = restaurant.getFoodMenu();
         foodMenu.printAllFoods();
     }
 
-    private void removeFood(){
+    private void removeFood() {
         String name = getName();
         FoodMenu foodMenu = restaurant.getFoodMenu();
-        Food food = new Food(name,0);
+        Food food = new Food(name, 0);
         boolean isRemoved = foodMenu.removeFood(food);
-        if (isRemoved){
+        if (isRemoved) {
             System.out.println("Food is removed");
-        }else {
+        } else {
             System.out.println("Food not found");
         }
     }
 
-    private Food getFoodInfo(){
+    private Food getFoodInfo() {
         String name = getName();
         Integer price = getPrice();
-        if (price==null){
+        if (price == null) {
             return null;
         }
-        return new Food(name,price);
+        return new Food(name, price);
     }
 
 }

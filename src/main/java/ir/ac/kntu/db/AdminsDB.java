@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class AdminsDB {
 
-    private Set<Admin> admins ;
+    private Set<Admin> admins;
 
     public AdminsDB(Set<Admin> admins) {
         this.admins = admins;
@@ -22,22 +22,22 @@ public class AdminsDB {
         this.admins = admins;
     }
 
-    public boolean addAdmin(Admin admin){
+    public boolean addAdmin(Admin admin) {
         return admins.add(admin);
     }
 
-    public boolean removeAdmin(Admin admin){
+    public boolean removeAdmin(Admin admin) {
         return admins.remove(admin);
     }
 
-    public boolean containsUsername(String username){
-        return admins.contains(new Admin(username,""));
+    public boolean containsUsername(String username) {
+        return admins.contains(new Admin(username, ""));
     }
 
-    public boolean isAdminValid(Admin admin){
-        for (Admin existingAdmin : admins){
+    public boolean isAdminValid(Admin admin) {
+        for (Admin existingAdmin : admins) {
             if (existingAdmin.getUsername().equals(admin.getUsername()) &&
-                    existingAdmin.getPassword().equals(admin.getPassword())){
+                    existingAdmin.getPassword().equals(admin.getPassword())) {
                 return true;
             }
         }
@@ -46,10 +46,10 @@ public class AdminsDB {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         AdminsDB adminsDB = (AdminsDB) o;

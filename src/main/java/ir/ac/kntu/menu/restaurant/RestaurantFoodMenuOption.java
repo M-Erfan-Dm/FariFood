@@ -8,7 +8,7 @@ public enum RestaurantFoodMenuOption {
     REMOVE,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Add new food\n" +
                 "2.Update existing food\n" +
                 "3.Find food by name\n" +

@@ -2,7 +2,6 @@ package ir.ac.kntu.models;
 
 import ir.ac.kntu.db.CouriersDB;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
@@ -28,8 +27,8 @@ public class Restaurant {
     private OrdersService ordersService;
 
     public Restaurant(int id, String name, String address, FoodMenu foodMenu,
-                      Schedule schedule, RestaurantPriceType priceType
-            , CouriersDB hiredCouriers, OrdersService ordersService) {
+                      Schedule schedule, RestaurantPriceType priceType,
+                      CouriersDB hiredCouriers, OrdersService ordersService) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -41,8 +40,8 @@ public class Restaurant {
     }
 
     public Restaurant(String name, String address, FoodMenu foodMenu,
-                      Schedule schedule, RestaurantPriceType priceType
-            , CouriersDB hiredCouriers, OrdersService ordersService) {
+                      Schedule schedule, RestaurantPriceType priceType,
+                      CouriersDB hiredCouriers, OrdersService ordersService) {
         this.name = name;
         this.address = address;
         this.foodMenu = foodMenu;
@@ -123,26 +122,26 @@ public class Restaurant {
         this.ordersService = ordersService;
     }
 
-    public double updateRating(){
+    public double updateRating() {
         List<Feedback> feedbacks = ordersService.getAllFeedbacks();
         double sum = 5;
-        for (Feedback feedback : feedbacks){
-            sum+=feedback.getRating().getValue();
+        for (Feedback feedback : feedbacks) {
+            sum += feedback.getRating().getValue();
         }
-        double avg = sum/(feedbacks.size()+1);
+        double avg = sum / (feedbacks.size() + 1);
         rating = avg;
         return avg;
     }
 
-    public boolean isActive(){
+    public boolean isActive() {
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
         int minute = calendar.get(Calendar.MINUTE);
-        Day day = Day.values()[calendar.get(Calendar.DAY_OF_WEEK)-1];
+        Day day = Day.values()[calendar.get(Calendar.DAY_OF_WEEK) - 1];
         return schedule.getDays().contains(day) && schedule.isTimeInInterval(new Time(hour, minute));
     }
 
-    public boolean hireCourier(Courier courier,CourierJobInfo courierJobInfo){
+    public boolean hireCourier(Courier courier, CourierJobInfo courierJobInfo) {
         boolean isCourierHired = courier.addJob(courierJobInfo);
         if (isCourierHired) {
             hiredCouriers.addCourier(courier);
@@ -151,25 +150,25 @@ public class Restaurant {
         return false;
     }
 
-    public boolean dismissCourier(String courierPhoneNumber){
+    public boolean dismissCourier(String courierPhoneNumber) {
         Courier courier = hiredCouriers.getCourierByPhoneNumber(courierPhoneNumber);
-        if (courier!=null){
+        if (courier != null) {
             courier.quitJob(id);
             return hiredCouriers.removeCourier(courier);
         }
         return false;
     }
 
-    public double getAlphaScore(){
+    public double getAlphaScore() {
         return 2 * rating + ordersService.getCount();
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o){
+        if (this == o) {
             return true;
         }
-        if (o == null || getClass() != o.getClass()){
+        if (o == null || getClass() != o.getClass()) {
             return false;
         }
         Restaurant that = (Restaurant) o;
@@ -184,9 +183,9 @@ public class Restaurant {
     @Override
     public String toString() {
         String isActive;
-        if (isActive()){
+        if (isActive()) {
             isActive = "Yes";
-        }else {
+        } else {
             isActive = "No";
         }
         return "id=" + id +
@@ -194,8 +193,8 @@ public class Restaurant {
                 ", address='" + address + '\'' +
                 ", schedule=" + schedule +
                 ", priceType=" + priceType +
-                ", rating=" + rating+
-                ", alpha score="+getAlphaScore()+
-                ", is active="+isActive;
+                ", rating=" + rating +
+                ", alpha score=" + getAlphaScore() +
+                ", is active=" + isActive;
     }
 }

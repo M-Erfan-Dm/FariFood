@@ -5,7 +5,6 @@ import ir.ac.kntu.db.RestaurantsDB;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.models.*;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -18,7 +17,7 @@ public class AddOrderMenu extends Menu {
 
     private final Settings settings;
 
-    public AddOrderMenu(CustomersDB customersDB, RestaurantsDB restaurantsDB,Settings settings) {
+    public AddOrderMenu(CustomersDB customersDB, RestaurantsDB restaurantsDB, Settings settings) {
         this.customersDB = customersDB;
         this.restaurantsDB = restaurantsDB;
         this.settings = settings;
@@ -74,6 +73,8 @@ public class AddOrderMenu extends Menu {
                 return showRestaurantsByPriceType();
             case SHOW_FIVE_BEST_RESTAURANTS_BY_FOOD:
                 return showFiveBestRestaurantsByFood();
+            default:
+                break;
         }
         return null;
     }
@@ -90,6 +91,8 @@ public class AddOrderMenu extends Menu {
                 return showAllFoods(restaurant);
             case SHOW_THREE_BEST:
                 return showThreeBestFoods(restaurant);
+            default:
+                break;
         }
         return null;
     }

@@ -4,7 +4,6 @@ import ir.ac.kntu.db.CouriersDB;
 import ir.ac.kntu.db.RestaurantsDB;
 import ir.ac.kntu.menu.Menu;
 import ir.ac.kntu.models.*;
-import ir.ac.kntu.utils.ScannerWrapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,13 +41,14 @@ public class CouriersMenu extends Menu {
                     case REMOVE:
                         removeCourier();
                         break;
+                    default:
+                        break;
                 }
 
             }
             couriersOption = printMenuOptions();
         }
     }
-
 
 
     private CouriersOption printMenuOptions() {
@@ -94,7 +94,7 @@ public class CouriersMenu extends Menu {
         CourierInfoOption.printOptions();
         System.out.println("Enter your choice :");
         CourierInfoOption courierInfoOption = getOption(CourierInfoOption.class);
-        if (courierInfoOption==null){
+        if (courierInfoOption == null) {
             return;
         }
         switch (courierInfoOption) {
@@ -106,6 +106,8 @@ public class CouriersMenu extends Menu {
                 break;
             case ORDERS_HISTORY:
                 showOrdersHistoryOfCourier(courier);
+                break;
+            default:
                 break;
         }
 
@@ -138,7 +140,7 @@ public class CouriersMenu extends Menu {
         VehicleType.printOptions();
         System.out.println("Enter your vehicle type :");
         VehicleType vehicleType = getOption(VehicleType.class);
-        if (vehicleType == null){
+        if (vehicleType == null) {
             return null;
         }
         return new Courier(phoneNumber, name, vehicleType);

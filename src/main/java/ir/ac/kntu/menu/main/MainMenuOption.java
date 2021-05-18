@@ -8,7 +8,7 @@ public enum MainMenuOption {
     SETTINGS,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Orders\n" +
                 "2.Couriers\n" +
                 "3.Restaurants\n" +

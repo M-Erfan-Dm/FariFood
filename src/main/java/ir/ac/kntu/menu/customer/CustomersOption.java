@@ -8,7 +8,7 @@ public enum CustomersOption {
     REMOVE,
     BACK;
 
-    public static void printOptions(){
+    public static void printOptions() {
         System.out.println("\n1.Register new customer\n" +
                 "2.Update existing customer\n" +
                 "3.Find customer by phone number\n" +

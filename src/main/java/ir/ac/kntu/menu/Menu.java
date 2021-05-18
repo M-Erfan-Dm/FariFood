@@ -51,10 +51,10 @@ public abstract class Menu {
         return ScannerWrapper.nextLine();
     }
 
-    public Integer getPrice(){
+    public Integer getPrice() {
         System.out.println("Enter price : ");
-        int price =  Integer.parseInt(ScannerWrapper.nextLine());
-        if (price<0){
+        int price = Integer.parseInt(ScannerWrapper.nextLine());
+        if (price < 0) {
             System.out.println("Invalid price");
             return null;
         }
@@ -84,8 +84,8 @@ public abstract class Menu {
         int day = Integer.parseInt(ScannerWrapper.nextLine()) - 1;
         Day[] daysNames = Day.values();
         while (day >= 0 && day < 8) {
-            if (day==7){
-                days.addAll(Arrays.asList(daysNames).subList(0,7));
+            if (day == 7) {
+                days.addAll(Arrays.asList(daysNames).subList(0, 7));
                 break;
             }
             days.add(daysNames[day]);
@@ -108,7 +108,7 @@ public abstract class Menu {
         if (endTime == null) {
             return null;
         }
-        if (startTime.isAfter(endTime)){
+        if (startTime.isAfter(endTime)) {
             System.out.println("start time is after end time!");
             return null;
         }
@@ -127,15 +127,15 @@ public abstract class Menu {
         return getOption(RestaurantPriceType.class);
     }
 
-    public Feedback getFeedback(){
+    public Feedback getFeedback() {
         System.out.println("Enter rating :");
         Rating.printOptions();
         Rating rating = getOption(Rating.class);
-        if (rating==null){
+        if (rating == null) {
             rating = Rating.FIVE;
         }
         System.out.println("Enter comment :");
         String comment = ScannerWrapper.nextLine();
-        return new Feedback(rating,comment);
+        return new Feedback(rating, comment);
     }
 }

@@ -2,7 +2,10 @@ package ir.ac.kntu.menu.order;
 
 import ir.ac.kntu.db.RestaurantsDB;
 import ir.ac.kntu.menu.Menu;
-import ir.ac.kntu.models.*;
+import ir.ac.kntu.models.Order;
+import ir.ac.kntu.models.OrderState;
+import ir.ac.kntu.models.OrdersService;
+import ir.ac.kntu.models.Restaurant;
 
 public class ShowOrderMenu extends Menu {
 
@@ -15,9 +18,9 @@ public class ShowOrderMenu extends Menu {
     @Override
     public void show() {
         ShowOrdersOption showOrdersOption = printShowOrderOptions();
-        while (showOrdersOption!=ShowOrdersOption.BACK){
-            if (showOrdersOption!=null){
-                switch (showOrdersOption){
+        while (showOrdersOption != ShowOrdersOption.BACK) {
+            if (showOrdersOption != null) {
+                switch (showOrdersOption) {
                     case SHOW_ALL:
                         showAllOrders();
                         break;
@@ -27,26 +30,28 @@ public class ShowOrderMenu extends Menu {
                     case SHOW_BY_STATE:
                         showOrderByState();
                         break;
+                    default:
+                        break;
                 }
             }
             showOrdersOption = printShowOrderOptions();
         }
     }
 
-    private ShowOrdersOption printShowOrderOptions(){
+    private ShowOrdersOption printShowOrderOptions() {
         ShowOrdersOption.printOptions();
         System.out.println("Enter your choice");
         return getOption(ShowOrdersOption.class);
     }
 
-    private void showAllOrders(){
+    private void showAllOrders() {
         new OrdersService(restaurantsDB.getAllOrders()).printAllOrders();
     }
 
-    private void showOrderById(){
+    private void showOrderById() {
         int id = getId();
         Restaurant restaurant = restaurantsDB.getRestaurantByOrderId(id);
-        if (restaurant==null){
+        if (restaurant == null) {
             System.out.println("Order not found");
             return;
         }
@@ -54,9 +59,9 @@ public class ShowOrderMenu extends Menu {
         System.out.println("Order : " + order);
     }
 
-    private void showOrderByState(){
+    private void showOrderByState() {
         OrderState orderState = getOrderState();
-        if (orderState==null){
+        if (orderState == null) {
             return;
         }
         OrdersService allOrdersService = new OrdersService(restaurantsDB.getAllOrders());
@@ -64,7 +69,7 @@ public class ShowOrderMenu extends Menu {
         foundOrders.printAllOrders();
     }
 
-    private OrderState getOrderState(){
+    private OrderState getOrderState() {
         OrderState.printOptions();
         System.out.println("Enter your choice :");
         return getOption(OrderState.class);
